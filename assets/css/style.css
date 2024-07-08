@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.menu .navbar {
+  height: 80px;
+}
+.menu .navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.menu .nav-link {
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+}
+.menu .nav-link:hover {
+  text-decoration: underline;
+}
+.menu .to-trains {
+  font-size: 24px;
+}
+.menu .dropdown-menu {
+  border: none;
+  background: none;
+}
+.menu .dropdown-menu .dropdown-item {
+  text-transform: uppercase;
+}
+.menu .dropdown-menu .dropdown-item:hover {
+  text-decoration: underline;
+  background: none;
+}
+
+/*# sourceMappingURL=style.css.map */
