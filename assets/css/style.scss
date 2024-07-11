@@ -6,14 +6,16 @@
 }
 
 body {
-  background: black;
   color: white;
   font-family: "Open Sans";
   font-size: 16px;
+  background-image: url('../img/background.jpg');
+  background-color: black;
 }
 
 .menu {
   .navbar {
+    background-color: black;
     height: 50px;
     font-family: 'Centure Gothic';
   }
@@ -30,7 +32,7 @@ body {
     &.to-trains {
       font-family: 'Centure Gothic Bold';
     }
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -47,8 +49,6 @@ body {
 }
 
 .promo-text {
-  display: flex;
-  flex-direction: column;
   min-height: 380px;
   padding-top: 70px;
   align-items: center;
@@ -56,7 +56,7 @@ body {
   font-family: 'Centure Gothic';
   font-size: 20px;
 
-  p{
+  p {
     max-width: 1000px;
     color: #9A9A9A;
     text-align: center;
@@ -64,11 +64,86 @@ body {
   }
 }
 
-.divider{
+.what {
+  height: 1080px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  h2 {
+    font-family: "Algerian TYGRA";
+    font-size: 48px;
+  }
+  .row {
+    gap: 22px
+  }
+  .left, .right {
+    border-radius: 10px;
+    height: 750px;
+  }
+
+  .left {
+    background-color: rgba(40, 40, 40, 0.6);
+  }
+  .right {
+    background-image: url("../img/mark.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.why {
+  height: 1080px;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  gap: 68px;
+
+  h2 {
+    font-family: "Algerian TYGRA";
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .cards{
+    
+    .card{
+      width: 490px;
+      color: #9A9A9A;
+      text-align: center;
+      background-color: rgba(40, 40, 40, 0.3);
+
+      .title{
+        font-size: 48px;
+        font-family: "Algerian TYGRA";
+
+      }
+      .description {
+        font-family: 'Centure Gothic';
+      }
+    }
+  }
+  button {
+    height: 50px;
+    max-width: 390px;
+    padding: 0 50px;
+    box-shadow: 0px 10px 30px 0px #00000040;
+    border-radius: 50px;
+    font-family: "Algerian TYGRA";
+    background-color: rgba(40, 40, 40, 0.3);
+    color: white;
+    font-size: 20px;
+    border: none;
+    &:hover{
+      background-color: rgba(40, 40, 40, 0.6);
+    }
+  }
+}
+
+.divider {
   width: 46px;
   height: 3px;
   background: white;
 }
+
 
 
 @font-face {
