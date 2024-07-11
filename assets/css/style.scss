@@ -1,72 +1,87 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 body {
   background: black;
-  color: white
+  color: white;
+  font-family: "Open Sans";
+  font-size: 16px;
 }
 
 .menu {
   .navbar {
-    height: 80px;
+    height: 50px;
+    font-family: 'Centure Gothic';
   }
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .nav-link {
-    text-transform: uppercase;
     color: white;
-    font-size: 18px;
-    &:hover{
+    font-size: 10px;
+    &.active {
       text-decoration: underline;
     }
-  }
-  .to-trains {
-    font-size: 24px;
-  }
-  .dropdown-menu{
-    border: none;
-    background: none;
-
-    .dropdown-item{
-      text-transform: uppercase;
-      &:hover{
-        text-decoration: underline;
-        background: none;
-      }
+    &.to-trains {
+      font-family: 'Centure Gothic Bold';
+    }
+    &:hover{
+      text-decoration: underline;
     }
   }
 }
 
 .promo {
-  height: calc(100vh - 30vh);
-  background-image: url("../img/promo.jpg");
-  background-size: cover;
+  height: 650px;
+  background-image: url('../img/banner.jpg');
   background-position: center;
-  padding-bottom: 50px;
-  .container{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    .logo{
-      width: 100%;
-      max-width: 124px;
-      height:100%;
-      max-height: 180px;
-    }
-    .logo-text{
-      width: 100%;
-      max-width: 550px;
-      height:100%;
-      max-height: 100px;
-    }
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding-top: 75px;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  padding-top: 70px;
+  align-items: center;
+  background-image: url('../img/background.jpg');
+  font-family: 'Centure Gothic';
+  font-size: 20px;
+
+  p{
+    max-width: 1000px;
+    color: #9A9A9A;
+    text-align: center;
+    margin-bottom: 50px;
   }
+}
+
+.divider{
+  width: 46px;
+  height: 3px;
+  background: white;
+}
+
+
+@font-face {
+  font-family: "Algerian TYGRA";
+  src: url('../fonts/algeriantygra.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Centure Gothic";
+  src: url('../fonts/centurygothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Centure Gothic Bold";
+  src: url('../fonts/centurygothic_bold.ttf') format('truetype');
 }
