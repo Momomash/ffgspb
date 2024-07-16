@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+$grey: #9A9A9A;
+$navbarHeight: 50px;
+$navbarMobileHeight: 70px;
+$shadow: 0px 10px 30px 0px #00000040;
+
+@mixin light-grey-back {
+  background-image: url('../img/background.jpg');
+  filter: brightness(1.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +26,13 @@ body {
 .menu {
   .navbar {
     background-color: black;
-    height: 50px;
+    height: $navbarHeight;
     font-family: 'Centure Gothic';
+
+    @media screen and (max-width: 991px) {
+      height: $navbarMobileHeight;
+      padding: 0;
+    }
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 10px;
@@ -43,46 +58,90 @@ body {
   background-image: url('../img/banner.jpg');
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
   padding-top: 75px;
+
+  @media screen and (max-width: 900px) {
+   height: calc(100vh - $navbarMobileHeight);
+  }
+
+  .logo-text {
+    max-width: 874px;
+    height: 148px;
+
+    @media screen and (max-width: 900px) {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .promo-text {
   min-height: 380px;
-  padding-top: 70px;
+  padding: 70px 0;
   align-items: center;
   background-image: url('../img/background.jpg');
   font-family: 'Centure Gothic';
   font-size: 20px;
 
+  @media screen and (max-width: 991px) {
+    min-height: 100vh;
+    padding: 20px 0;
+    justify-content: center;
+  }
+
   p {
     max-width: 1000px;
-    color: #9A9A9A;
+    color: $grey;
     text-align: center;
     margin-bottom: 50px;
   }
 }
 
 .what {
-  height: 1080px;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  height: 100vh;
+  padding: 30px 0 50px 0;
+  line-height: 26px;
+  p{
+    margin: 0;
+  }
+
+  .hema {
+    margin: 10px 0;
+    width: 230px;
+    text-align: left;
+    span{
+      font-family: "Algerian TYGRA";
+      font-size: 30px;
+    }
+    p{
+      margin: 0;
+    }
+  }
 
   h2 {
     font-family: "Algerian TYGRA";
     font-size: 48px;
+    margin-bottom: 50px;
   }
   .row {
-    gap: 22px
+    gap: 22px;
+    height: 100%;
   }
   .left, .right {
+    display: flex;
     border-radius: 10px;
-    height: 750px;
+    height: 100%;
+    max-height: 850px;
+    box-shadow: $shadow;
   }
 
   .left {
-    background-color: rgba(40, 40, 40, 0.6);
+    @include light-grey-back;
+    color: $grey;
+    font-family: 'Centure Gothic';
+    font-size: 20px;
+    text-align: center;
+
   }
   .right {
     background-image: url("../img/mark.jpg");
@@ -107,7 +166,7 @@ body {
     
     .card{
       width: 490px;
-      color: #9A9A9A;
+      color: $grey;
       text-align: center;
       background-color: rgba(40, 40, 40, 0.3);
 
@@ -125,7 +184,7 @@ body {
     height: 50px;
     max-width: 390px;
     padding: 0 50px;
-    box-shadow: 0px 10px 30px 0px #00000040;
+    box-shadow: $shadow;
     border-radius: 50px;
     font-family: "Algerian TYGRA";
     background-color: rgba(40, 40, 40, 0.3);
