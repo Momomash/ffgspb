@@ -12,6 +12,11 @@ body {
   background-color: black;
 }
 
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1520px;
+  }
+}
 .menu .navbar {
   background-color: black;
   height: 50px;
@@ -29,7 +34,7 @@ body {
 }
 .menu .nav-link {
   color: white;
-  font-size: 10px;
+  font-size: 16px;
 }
 .menu .nav-link.active {
   text-decoration: underline;
@@ -42,16 +47,46 @@ body {
 }
 
 .promo {
-  height: 650px;
+  height: calc(100vh - 50px);
+}
+@media screen and (max-width: 1200px) {
+  .promo {
+    height: auto;
+  }
+}
+.promo .promo-top {
   background-image: url("../img/banner.jpg");
   background-position: center;
   background-size: cover;
   padding-top: 75px;
+  height: 60%;
 }
-@media screen and (max-width: 900px) {
-  .promo {
-    height: calc(100vh - 70px);
+@media screen and (max-width: 1200px) {
+  .promo .promo-top {
+    height: calc(100vh - 50px);
   }
+}
+.promo .promo-text {
+  padding-top: 70px;
+  align-items: center;
+  height: 40%;
+  background-image: url("../img/background.jpg");
+  font-family: "Centure Gothic";
+  font-size: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .promo .promo-text {
+    min-height: 400px;
+    height: auto;
+    padding: 20px 0;
+    justify-content: center;
+  }
+}
+.promo .promo-text p {
+  max-width: 1000px;
+  color: #9A9A9A;
+  text-align: center;
+  margin-bottom: 50px;
 }
 .promo .logo-text {
   max-width: 874px;
@@ -64,56 +99,43 @@ body {
   }
 }
 
-.promo-text {
-  min-height: 380px;
-  padding: 70px 0;
-  align-items: center;
-  background-image: url("../img/background.jpg");
-  font-family: "Centure Gothic";
-  font-size: 20px;
-}
-@media screen and (max-width: 991px) {
-  .promo-text {
-    min-height: 100vh;
-    padding: 20px 0;
-    justify-content: center;
-  }
-}
-.promo-text p {
-  max-width: 1000px;
-  color: #9A9A9A;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .what {
   height: 100vh;
-  padding: 30px 0 50px 0;
+  padding-top: 30px;
+  padding-bottom: 50px;
   line-height: 26px;
 }
+@media screen and (max-width: 1200px) {
+  .what {
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
 .what p {
-  margin: 0;
-}
-.what .hema {
-  margin: 10px 0;
-  width: 230px;
-  text-align: left;
-}
-.what .hema span {
-  font-family: "Algerian TYGRA";
-  font-size: 30px;
-}
-.what .hema p {
   margin: 0;
 }
 .what h2 {
   font-family: "Algerian TYGRA";
   font-size: 48px;
+  text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 500px) {
+  .what h2 {
+    font-size: 30px;
+  }
 }
 .what .row {
   gap: 22px;
   height: 100%;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .what .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 .what .left, .what .right {
   display: flex;
@@ -128,12 +150,35 @@ body {
   color: #9A9A9A;
   font-family: "Centure Gothic";
   font-size: 20px;
+  padding: 40px;
   text-align: center;
+}
+@media screen and (max-width: 1400px) {
+  .what .left {
+    padding: 20px;
+  }
+}
+.what .left .hema {
+  margin: 10px 0;
+  width: 180px;
+  text-align: left;
+}
+.what .left .hema span {
+  font-family: "Algerian TYGRA";
+  font-size: 30px;
+}
+.what .left .hema p {
+  margin: 0;
 }
 .what .right {
   background-image: url("../img/mark.jpg");
   background-position: center;
   background-size: cover;
+}
+@media screen and (max-width: 1200px) {
+  .what .right {
+    height: 400px;
+  }
 }
 
 .why {
