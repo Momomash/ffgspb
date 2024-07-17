@@ -39,7 +39,7 @@ body {
 .menu .nav-link.active {
   text-decoration: underline;
 }
-.menu .nav-link.to-trains {
+.menu .nav-link.main {
   font-family: "Centure Gothic Bold";
 }
 .menu .nav-link:hover {
@@ -65,28 +65,6 @@ body {
   .promo .promo-top {
     height: calc(100vh - 50px);
   }
-}
-.promo .promo-text {
-  padding-top: 70px;
-  align-items: center;
-  height: 40%;
-  background-image: url("../img/background.jpg");
-  font-family: "Centure Gothic";
-  font-size: 20px;
-}
-@media screen and (max-width: 1200px) {
-  .promo .promo-text {
-    min-height: 400px;
-    height: auto;
-    padding: 20px 0;
-    justify-content: center;
-  }
-}
-.promo .promo-text p {
-  max-width: 1000px;
-  color: #9A9A9A;
-  text-align: center;
-  margin-bottom: 50px;
 }
 .promo .logo-text {
   max-width: 874px;
@@ -153,6 +131,9 @@ body {
   padding: 40px;
   text-align: center;
 }
+.what .left b {
+  font-family: "Centure Gothic Bold";
+}
 @media screen and (max-width: 1400px) {
   .what .left {
     padding: 20px;
@@ -181,8 +162,24 @@ body {
   }
 }
 
+.promo-with-photo {
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 110px;
+}
+@media screen and (max-width: 1200px) {
+  .promo-with-photo {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+.promo-with-photo img {
+  border-radius: 10px;
+}
+
 .why {
-  height: 1080px;
+  height: 100vh;
   padding-top: 60px;
   padding-bottom: 90px;
   gap: 68px;
@@ -191,6 +188,13 @@ body {
   font-family: "Algerian TYGRA";
   font-size: 48px;
   text-align: center;
+  margin: 50px 10px;
+  max-width: 940px;
+}
+@media screen and (max-width: 500px) {
+  .why h2 {
+    font-size: 30px;
+  }
 }
 .why .cards .card {
   width: 490px;
@@ -225,6 +229,48 @@ body {
   width: 46px;
   height: 3px;
   background: white;
+}
+
+.promo-text {
+  max-width: 1000px;
+  align-items: center;
+  background-image: url("../img/background.jpg");
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+}
+.promo-text b {
+  font-family: "Centure Gothic Bold";
+}
+@media screen and (max-width: 1200px) {
+  .promo-text {
+    min-height: 300px;
+    height: auto;
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+.promo-text p {
+  max-width: 1000px;
+  color: #9A9A9A;
+  text-align: center;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 1200px) {
+  .mb-70 {
+    margin-bottom: 30px;
+  }
 }
 
 @font-face {
