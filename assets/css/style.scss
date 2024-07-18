@@ -40,38 +40,36 @@ body {
   }
 }
 
-.menu {
-  .navbar {
-    background-color: black;
-    height: $navbarHeight;
-    font-family: 'Centure Gothic';
+.navbar {
+  background-color: black;
+  height: $navbarHeight;
+  font-family: 'Centure Gothic';
 
-    @media screen and (max-width: 991px) {
-      height: $navbarMobileHeight;
-      padding: 0;
-    }
+  @media screen and (max-width: 991px) {
+    height: $navbarMobileHeight;
+    padding: 0;
+  }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+
+  &.active {
+    text-decoration: underline;
   }
 
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-left: 10px;
-    padding-right: 10px;
+  &.main {
+    font-family: 'Centure Gothic Bold';
   }
 
-  .nav-link {
-    color: white;
-    font-size: 16px;
-
-    &.active {
-      text-decoration: underline;
-    }
-
-    &.main {
-      font-family: 'Centure Gothic Bold';
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -248,6 +246,24 @@ body {
 
     &:hover {
       background-color: rgba(40, 40, 40, 0.6);
+    }
+  }
+}
+
+.footer {
+  padding: 30px 0;
+  min-height: 190px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  ul{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
     }
   }
 }
