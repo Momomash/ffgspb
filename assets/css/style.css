@@ -166,25 +166,54 @@ body {
 
 .promo-with-photo {
   height: 100vh;
+  min-height: 1080px;
   padding-top: 50px;
   padding-bottom: 110px;
 }
 @media screen and (max-width: 1200px) {
   .promo-with-photo {
     height: auto;
+    min-height: auto;
     padding-top: 20px;
     padding-bottom: 50px;
   }
 }
-.promo-with-photo img {
+.promo-with-photo .image {
+  height: 650px;
   border-radius: 10px;
+  background-color: transparent;
+  background-image: url("../img/promo-photo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 1200px) {
+  .promo-with-photo .image {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .promo-with-photo .image {
+    height: 300px;
+  }
 }
 
 .why {
-  height: 100vh;
   padding-top: 60px;
   padding-bottom: 90px;
   gap: 68px;
+  background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+}
+@media screen and (max-width: 1400px) {
+  .why {
+    background-size: 600px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .why {
+    background-image: url("../img/meyer-left.png");
+  }
 }
 .why h2 {
   font-family: "Algerian TYGRA";
@@ -198,18 +227,67 @@ body {
     font-size: 30px;
   }
 }
-.why .cards .card {
+.why .cards-wrapper {
+  width: calc(100vw - 40%);
+  height: 650px;
+  position: relative;
+  overflow-x: scroll;
+  margin-left: 40%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 1400px) {
+  .why .cards-wrapper {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .why .cards-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.why .cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.why .cards-wrapper .cards {
+  position: absolute;
+  overflow-x: scroll;
+}
+.why .cards-wrapper .cards .card {
   width: 490px;
+  height: 650px;
+  padding: 50px;
   color: #9A9A9A;
   text-align: center;
   background-color: rgba(40, 40, 40, 0.3);
+  margin: 0 12px;
 }
-.why .cards .card .title {
+@media screen and (max-width: 1400px) {
+  .why .cards-wrapper .cards .card {
+    width: 400px;
+    height: 550px;
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .why .cards-wrapper .cards .card {
+    width: calc(100vw - 12px);
+  }
+}
+.why .cards-wrapper .cards .card .title {
   font-size: 48px;
+  margin-bottom: 50px;
   font-family: "Algerian TYGRA";
 }
-.why .cards .card .description {
+@media screen and (max-width: 1400px) {
+  .why .cards-wrapper .cards .card .title {
+    margin-bottom: 25px;
+  }
+}
+.why .cards-wrapper .cards .card .description {
   font-family: "Centure Gothic";
+  line-height: 24px;
 }
 .why button {
   height: 50px;
@@ -235,14 +313,19 @@ body {
   justify-content: center;
 }
 .footer ul {
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
+  .footer ul {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 650px) {
   .footer ul {
     flex-direction: column;
-    gap: 10px;
     text-align: center;
   }
 }
