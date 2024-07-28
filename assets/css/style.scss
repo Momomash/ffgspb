@@ -235,73 +235,99 @@ body {
     max-width: 940px;
   }
 
-  .cards-wrapper {
-    width: calc(100vw - 40%);
-    height: 650px;
-    position: relative;
-    overflow-x: scroll;
-    margin-left: 40%;
+  .controls-wrapper {
+    width: 100%;
 
-    @media screen and (max-width: 1400px) {
-      height: 550px;
-    }
-
-    @media screen and (max-width: 700px) {
-      margin-left: 0;
-      width: 100%;
-    }
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    .cards {
+    .controls {
       position: absolute;
+      width: 100%;
+      height: 550px;
+      z-index: 2;
+      padding: 0 10px;
+      display: none;
+
+      @media screen and (max-width: 700px) {
+        display: flex;
+      }
+    }
+
+    .cards-wrapper {
+      width: calc(100vw - 40%);
+      height: 650px;
+      position: relative;
       overflow-x: scroll;
+      margin-left: 40%;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
 
-      .card {
-        width: 490px;
-        height: 650px;
-        padding: 50px;
-        color: $grey;
-        text-align: center;
-        background-color: rgba(40, 40, 40, 0.3);
-        margin: 0 12px;
+      @media screen and (max-width: 1400px) {
+        height: 550px;
+      }
 
-        @media screen and (max-width: 1400px) {
-          width: 400px;
-          height: 550px;
-          padding: 25px;
-        }
-        @media screen and (max-width: 700px) {
-          width: calc(100vw - 12px);
-        }
+      @media screen and (max-width: 700px) {
+        margin-left: 0;
+        width: 100%;
+      }
 
-        .title {
-          font-size: 48px;
-          margin-bottom: 50px;
-          font-family: "Algerian TYGRA";
-          @media screen and (max-width: 1400px) {
-            margin-bottom: 25px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
+      .cards {
+        position: absolute;
+        overflow-x: scroll;
+        z-index: 1;
+
+        .card {
+          width: 490px;
+          height: 650px;
+          padding: 50px;
+          color: $grey;
+          text-align: center;
+          background-color: rgba(40, 40, 40, 0.3);
+          margin: 0 12px;
+
+          &:first-child {
+            margin-left: 0;
           }
 
-        }
+          &:last-child {
+            margin-right: 0;
+          }
 
-        .description {
-          font-family: 'Centure Gothic';
-          line-height: 24px;
+          @media screen and (max-width: 1400px) {
+            width: 400px;
+            height: 550px;
+          }
+
+          @media screen and (max-width: 700px) {
+            width: calc(100vw - 12px);
+          }
+
+          .title {
+            font-size: 48px;
+            margin-bottom: 50px;
+            font-family: "Algerian TYGRA";
+            @media screen and (max-width: 1400px) {
+              margin-bottom: 25px;
+            }
+          }
+
+          .description {
+            font-family: 'Centure Gothic';
+            line-height: 24px;
+          }
         }
       }
     }
   }
 
-  button {
+  a {
+    display: flex;
+    align-items: center;
     height: 50px;
     max-width: 390px;
+    text-decoration: none;
     padding: 0 50px;
     box-shadow: $shadow;
     border-radius: 50px;

@@ -227,7 +227,23 @@ body {
     font-size: 30px;
   }
 }
-.why .cards-wrapper {
+.why .controls-wrapper {
+  width: 100%;
+}
+.why .controls-wrapper .controls {
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  z-index: 2;
+  padding: 0 10px;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .why .controls-wrapper .controls {
+    display: flex;
+  }
+}
+.why .controls-wrapper .cards-wrapper {
   width: calc(100vw - 40%);
   height: 650px;
   position: relative;
@@ -237,24 +253,25 @@ body {
   scrollbar-width: none;
 }
 @media screen and (max-width: 1400px) {
-  .why .cards-wrapper {
+  .why .controls-wrapper .cards-wrapper {
     height: 550px;
   }
 }
 @media screen and (max-width: 700px) {
-  .why .cards-wrapper {
+  .why .controls-wrapper .cards-wrapper {
     margin-left: 0;
     width: 100%;
   }
 }
-.why .cards-wrapper::-webkit-scrollbar {
+.why .controls-wrapper .cards-wrapper::-webkit-scrollbar {
   display: none;
 }
-.why .cards-wrapper .cards {
+.why .controls-wrapper .cards-wrapper .cards {
   position: absolute;
   overflow-x: scroll;
+  z-index: 1;
 }
-.why .cards-wrapper .cards .card {
+.why .controls-wrapper .cards-wrapper .cards .card {
   width: 490px;
   height: 650px;
   padding: 50px;
@@ -263,35 +280,43 @@ body {
   background-color: rgba(40, 40, 40, 0.3);
   margin: 0 12px;
 }
+.why .controls-wrapper .cards-wrapper .cards .card:first-child {
+  margin-left: 0;
+}
+.why .controls-wrapper .cards-wrapper .cards .card:last-child {
+  margin-right: 0;
+}
 @media screen and (max-width: 1400px) {
-  .why .cards-wrapper .cards .card {
+  .why .controls-wrapper .cards-wrapper .cards .card {
     width: 400px;
     height: 550px;
-    padding: 25px;
   }
 }
 @media screen and (max-width: 700px) {
-  .why .cards-wrapper .cards .card {
+  .why .controls-wrapper .cards-wrapper .cards .card {
     width: calc(100vw - 12px);
   }
 }
-.why .cards-wrapper .cards .card .title {
+.why .controls-wrapper .cards-wrapper .cards .card .title {
   font-size: 48px;
   margin-bottom: 50px;
   font-family: "Algerian TYGRA";
 }
 @media screen and (max-width: 1400px) {
-  .why .cards-wrapper .cards .card .title {
+  .why .controls-wrapper .cards-wrapper .cards .card .title {
     margin-bottom: 25px;
   }
 }
-.why .cards-wrapper .cards .card .description {
+.why .controls-wrapper .cards-wrapper .cards .card .description {
   font-family: "Centure Gothic";
   line-height: 24px;
 }
-.why button {
+.why a {
+  display: flex;
+  align-items: center;
   height: 50px;
   max-width: 390px;
+  text-decoration: none;
   padding: 0 50px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
   border-radius: 50px;
@@ -301,7 +326,7 @@ body {
   font-size: 20px;
   border: none;
 }
-.why button:hover {
+.why a:hover {
   background-color: rgba(40, 40, 40, 0.6);
 }
 
