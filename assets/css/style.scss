@@ -215,6 +215,7 @@ body {
 }
 
 .why {
+  height: 100vh;
   padding-top: 60px;
   padding-bottom: 90px;
   gap: 68px;
@@ -325,9 +326,9 @@ body {
   a {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     height: 50px;
     max-width: 390px;
-    text-decoration: none;
     padding: 0 50px;
     box-shadow: $shadow;
     border-radius: 50px;
@@ -335,6 +336,7 @@ body {
     background-color: rgba(40, 40, 40, 0.3);
     color: white;
     font-size: 20px;
+    text-decoration: none;
     border: none;
 
     &:hover {
