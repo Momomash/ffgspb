@@ -228,24 +228,7 @@ body {
     font-size: 30px;
   }
 }
-.why .controls-wrapper {
-  width: 100%;
-  position: relative;
-}
-.why .controls-wrapper .controls {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  padding: 0 10px;
-  display: none;
-}
-@media screen and (max-width: 1000px) {
-  .why .controls-wrapper .controls {
-    display: flex;
-  }
-}
-.why .controls-wrapper .cards-wrapper {
+.why .cards-wrapper {
   width: calc(100vw - 40%);
   height: 650px;
   position: relative;
@@ -255,28 +238,28 @@ body {
   scrollbar-width: none;
 }
 @media screen and (max-width: 1000px) {
-  .why .controls-wrapper .cards-wrapper {
+  .why .cards-wrapper {
     margin-left: 0;
     width: 100%;
     overflow-x: visible;
   }
 }
-.why .controls-wrapper .cards-wrapper::-webkit-scrollbar {
+.why .cards-wrapper::-webkit-scrollbar {
   display: none;
 }
-.why .controls-wrapper .cards-wrapper .cards {
+.why .cards-wrapper .cards {
   position: absolute;
   overflow-x: scroll;
   z-index: 1;
   height: 100%;
 }
 @media screen and (max-width: 1000px) {
-  .why .controls-wrapper .cards-wrapper .cards {
+  .why .cards-wrapper .cards {
     position: inherit;
     overflow-x: visible;
   }
 }
-.why .controls-wrapper .cards-wrapper .cards .card {
+.why .cards-wrapper .cards .card {
   width: 490px;
   height: 100%;
   padding: 50px;
@@ -285,48 +268,48 @@ body {
   background-color: rgba(40, 40, 40, 0.3);
   margin: 0 12px;
 }
-.why .controls-wrapper .cards-wrapper .cards .card:first-child {
+.why .cards-wrapper .cards .card:first-child {
   margin-left: 0;
 }
-.why .controls-wrapper .cards-wrapper .cards .card:last-child {
+.why .cards-wrapper .cards .card:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 1400px) {
-  .why .controls-wrapper .cards-wrapper .cards .card {
+  .why .cards-wrapper .cards .card {
     width: 400px;
   }
 }
 @media screen and (max-width: 1000px) {
-  .why .controls-wrapper .cards-wrapper .cards .card {
+  .why .cards-wrapper .cards .card {
     position: inherit;
     overflow-x: visible;
   }
 }
 @media screen and (max-width: 700px) {
-  .why .controls-wrapper .cards-wrapper .cards .card {
+  .why .cards-wrapper .cards .card {
     margin: 0;
   }
 }
-.why .controls-wrapper .cards-wrapper .cards .card .title {
+.why .cards-wrapper .cards .card .title {
   font-size: 48px;
   margin-bottom: 50px;
   font-family: "Algerian TYGRA";
 }
 @media screen and (max-width: 1400px) {
-  .why .controls-wrapper .cards-wrapper .cards .card .title {
+  .why .cards-wrapper .cards .card .title {
     margin-bottom: 25px;
   }
 }
 @media screen and (max-width: 1000px) {
-  .why .controls-wrapper .cards-wrapper .cards .card .title {
+  .why .cards-wrapper .cards .card .title {
     font-size: 38px;
   }
 }
-.why .controls-wrapper .cards-wrapper .cards .card .description {
+.why .cards-wrapper .cards .card .description {
   font-family: "Centure Gothic";
   line-height: 24px;
 }
-.why .controls-wrapper .cards-wrapper .cards .slick-list, .why .controls-wrapper .cards-wrapper .cards .slick-track {
+.why .cards-wrapper .cards .slick-list, .why .cards-wrapper .cards .slick-track {
   height: 100%;
 }
 
@@ -347,6 +330,74 @@ body {
 .aboutGuild p span {
   font-family: "Algerian TYGRA";
   text-transform: capitalize;
+}
+
+.groups {
+  gap: 50px;
+}
+.groups .image {
+  height: 400px;
+  width: 100%;
+  background-image: url("../img/groupsBackground.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.groups h2 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 500px) {
+  .groups h2 {
+    font-size: 30px;
+  }
+}
+.groups .cards {
+  gap: 20px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1200px) {
+  .groups .cards {
+    gap: 10px;
+  }
+}
+.groups .cards .card {
+  width: 100%;
+  height: 450px;
+  background-color: rgba(40, 40, 40, 0.3);
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 1400px) {
+  .groups .cards .card {
+    height: 350px;
+  }
+}
+.groups .cards .card .image {
+  height: 356px;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 1400px) {
+  .groups .cards .card .image {
+    height: 256px;
+  }
+}
+.groups .cards .card .text {
+  padding-top: 10px;
+  height: 94px;
+  flex-shrink: 0;
+}
+.groups .cards .card .text .name {
+  height: 34px;
+  margin: 0;
+  font-size: 18px;
+}
+.groups .cards .card .text .description {
+  color: #9A9A9A;
+  font-size: 12px;
+  margin: 0;
 }
 
 .promo-text {
@@ -440,6 +491,25 @@ body {
 }
 .button_link:hover {
   background-color: rgba(40, 40, 40, 0.6);
+}
+
+.controls-wrapper {
+  width: 100%;
+  position: relative;
+}
+.controls-wrapper .controls {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 0 10px;
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .controls-wrapper .controls {
+    display: flex;
+  }
 }
 
 @font-face {

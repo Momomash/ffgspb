@@ -236,103 +236,85 @@ body {
     max-width: 940px;
   }
 
-  .controls-wrapper {
-    width: 100%;
+  .cards-wrapper {
+    width: calc(100vw - 40%);
+    height: 650px;
     position: relative;
+    overflow-x: scroll;
+    margin-left: 40%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
-    .controls {
-      position: absolute;
+    @media screen and (max-width: 1000px) {
+      margin-left: 0;
       width: 100%;
-      height: 100%;
-      z-index: 2;
-      padding: 0 10px;
-      display: none;
-
-      @media screen and (max-width: 1000px) {
-        display: flex;
-      }
+      overflow-x: visible;
     }
 
-    .cards-wrapper {
-      width: calc(100vw - 40%);
-      height: 650px;
-      position: relative;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cards {
+      position: absolute;
       overflow-x: scroll;
-      margin-left: 40%;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+      z-index: 1;
+      height: 100%;
 
       @media screen and (max-width: 1000px) {
-        margin-left: 0;
-        width: 100%;
+        position: inherit;
         overflow-x: visible;
       }
 
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      .cards {
-        position: absolute;
-        overflow-x: scroll;
-        z-index: 1;
+      .card {
+        width: 490px;
         height: 100%;
+        padding: 50px;
+        color: $grey;
+        text-align: center;
+        background-color: rgba(40, 40, 40, 0.3);
+        margin: 0 12px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @media screen and (max-width: 1400px) {
+          width: 400px;
+        }
 
         @media screen and (max-width: 1000px) {
           position: inherit;
           overflow-x: visible;
         }
+        @media screen and (max-width: 700px) {
+          margin: 0;
+        }
 
-        .card {
-          width: 490px;
-          height: 100%;
-          padding: 50px;
-          color: $grey;
-          text-align: center;
-          background-color: rgba(40, 40, 40, 0.3);
-          margin: 0 12px;
-
-          &:first-child {
-            margin-left: 0;
-          }
-
-          &:last-child {
-            margin-right: 0;
-          }
-
+        .title {
+          font-size: 48px;
+          margin-bottom: 50px;
+          font-family: "Algerian TYGRA";
           @media screen and (max-width: 1400px) {
-            width: 400px;
+            margin-bottom: 25px;
           }
-
           @media screen and (max-width: 1000px) {
-            position: inherit;
-            overflow-x: visible;
-          }
-          @media screen and (max-width: 700px) {
-            margin: 0;
-          }
-
-          .title {
-            font-size: 48px;
-            margin-bottom: 50px;
-            font-family: "Algerian TYGRA";
-            @media screen and (max-width: 1400px) {
-              margin-bottom: 25px;
-            }
-            @media screen and (max-width: 1000px) {
-              font-size: 38px;
-            }
-          }
-
-          .description {
-            font-family: 'Centure Gothic';
-            line-height: 24px;
+            font-size: 38px;
           }
         }
 
-        .slick-list, .slick-track {
-          height: 100%;
+        .description {
+          font-family: 'Centure Gothic';
+          line-height: 24px;
         }
+      }
+
+      .slick-list, .slick-track {
+        height: 100%;
       }
     }
   }
@@ -362,6 +344,71 @@ body {
   //  background-size: 600px;
   //}
 
+}
+
+.groups {
+  gap: 50px;
+
+  .image {
+    height: 400px;
+    width: 100%;
+    background-image: url("../img/groupsBackground.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  h2 {
+    @include h2;
+    margin-bottom: 50px;
+  }
+
+  .cards {
+    gap: 20px;
+    margin-bottom: 80px;
+    @media screen and (max-width: 1200px) {
+      gap: 10px;
+    }
+
+    .card {
+      width: 100%;
+      height: 450px;
+      background-color: rgba(40, 40, 40, 0.3);
+      color: white;
+      text-align: center;
+      @media screen and (max-width: 1400px) {
+        height: 350px;
+      }
+
+
+      .image {
+        height: 356px;
+        background-size: cover;
+        background-position: center;
+        @media screen and (max-width: 1400px) {
+          height: 256px;
+        }
+      }
+
+      .text {
+        padding-top: 10px;
+        height: 94px;
+        flex-shrink: 0;
+
+        .name {
+          height: 34px;
+          margin: 0;
+          font-size: 18px;
+        }
+
+        .description {
+          color: $grey;
+          font-size: 12px;
+          margin: 0;
+
+        }
+      }
+    }
+  }
 }
 
 .promo-text {
@@ -452,6 +499,25 @@ body {
 
   &:hover {
     background-color: rgba(40, 40, 40, 0.6);
+  }
+}
+
+.controls-wrapper {
+  width: 100%;
+  position: relative;
+
+  .controls {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 0 10px;
+    display: none;
+
+    @media screen and (max-width: 1000px) {
+      display: flex;
+    }
   }
 }
 
