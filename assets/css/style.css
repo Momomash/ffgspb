@@ -57,8 +57,7 @@ body {
   }
 }
 .promo .promo-top {
-  background-image: url("../img/banner.jpg");
-  background-position: center;
+  background: url("../img/banner.jpg") center;
   background-size: cover;
   padding-top: 75px;
   height: 60%;
@@ -316,8 +315,7 @@ body {
 .aboutGuild {
   padding: 50px 10px;
   gap: 55px;
-  background-image: url("../img/aboutGuildeBackground.png");
-  background-position: center;
+  background: url("../img/meyersMens.png") center;
   background-size: cover;
 }
 .aboutGuild p {
@@ -443,6 +441,50 @@ body {
     flex-direction: column;
     text-align: center;
   }
+}
+
+.to_trains {
+  text-align: center;
+  padding: 30px 10px;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/meyersMens.png") center;
+  background-size: cover;
+}
+@media screen and (max-width: 650px) {
+  .to_trains {
+    height: auto;
+    padding: 50px 10px;
+  }
+}
+.to_trains h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 38px;
+  text-align: center;
+}
+.to_trains p {
+  font-size: 15px;
+  color: #9A9A9A;
+}
+.to_trains .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 362px;
+  width: 100%;
+}
+.to_trains .socials a {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  gap: 20px;
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 50px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 .divider {

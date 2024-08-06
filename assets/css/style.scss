@@ -4,6 +4,8 @@ $grey: #9A9A9A;
 $navbarHeight: 50px;
 $navbarMobileHeight: 70px;
 $shadow: 0px 10px 30px 0px #00000040;
+$transparentGrey: rgba(40, 40, 40, 0.3);
+$transparentGreyHover: rgba(40, 40, 40, 0.5);
 
 @mixin light-grey-back {
   background-image: url('../img/background.jpg');
@@ -80,8 +82,7 @@ body {
   }
 
   .promo-top {
-    background-image: url('../img/banner.jpg');
-    background-position: center;
+    background: url('../img/banner.jpg') center;
     background-size: cover;
     padding-top: 75px;
     height: 60%;
@@ -272,7 +273,7 @@ body {
         padding: 50px;
         color: $grey;
         text-align: center;
-        background-color: rgba(40, 40, 40, 0.3);
+        background-color: $transparentGrey;
         margin: 0 12px;
 
         &:first-child {
@@ -323,8 +324,7 @@ body {
 .aboutGuild {
   padding: 50px 10px;
   gap: 55px;
-  background-image: url('../img/aboutGuildeBackground.png');
-  background-position: center;
+  background: url('../img/meyersMens.png') center;
   background-size: cover;
 
   p {
@@ -450,6 +450,53 @@ body {
   }
 }
 
+.to_trains {
+  text-align: center;
+  padding: 30px 10px;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/meyersMens.png') center;
+  background-size: cover;
+
+  @media screen and (max-width: 650px) {
+    height: auto;
+    padding: 50px 10px;
+  }
+
+  h1 {
+    font-family: "Algerian TYGRA";
+    font-size: 38px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    color: $grey;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 362px;
+    width: 100%;
+
+    a {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #ffffff;
+      gap: 20px;
+      background-color: $transparentGrey;
+      border-radius: 50px;
+      box-shadow: $shadow;
+    }
+  }
+}
+
 .divider {
   width: 46px;
   height: 3px;
@@ -481,7 +528,7 @@ body {
   box-shadow: $shadow;
   border-radius: 50px;
   font-family: "Algerian TYGRA";
-  background-color: rgba(40, 40, 40, 0.3);
+  background-color: $transparentGrey;
   color: white;
   font-size: 20px;
   text-decoration: none;
