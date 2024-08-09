@@ -32,7 +32,7 @@ body {
   }
 }
 
-@mixin h2 {
+@mixin mainH {
   font-family: "Algerian TYGRA";
   font-size: 48px;
   text-align: center;
@@ -119,7 +119,7 @@ body {
   }
 
   h2 {
-    @include h2;
+    @include mainH;
     margin-bottom: 50px;
   }
 
@@ -232,7 +232,7 @@ body {
   }
 
   h2 {
-    @include h2;
+    @include mainH;
     margin: 50px 10px;
     max-width: 940px;
   }
@@ -344,9 +344,33 @@ body {
 .groups {
   gap: 50px;
 
-  h2 {
-    @include h2;
-    margin-bottom: 50px;
+  h2, h1 {
+    @include mainH;
+  }
+
+  .image {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    @media screen and (max-width: 1200px) {
+      height: 250px;
+    }
+    @media screen and (max-width: 765px) {
+      display: none
+    }
+  }
+
+  .promo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+
+    @media screen and (max-width: 765px) {
+      display: none
+    }
   }
 
   .cards {
