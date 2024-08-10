@@ -425,6 +425,78 @@ body {
   }
 }
 
+.masters {
+  gap: 50px;
+
+  h1 {
+    @include mainH;
+  }
+
+  .promo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+
+    @media screen and (max-width: 765px) {
+      display: none
+    }
+  }
+
+  .cards {
+    gap: 20px;
+    margin-bottom: 80px;
+    @media screen and (max-width: 1200px) {
+      gap: 10px;
+    }
+
+    .card {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      height: 450px;
+      background-position: center;
+      background-size: 110% 110%;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-size: 115% 115%;
+        transition: all 0.5s ease-out;
+      }
+
+      @media screen and (max-width: 1400px) {
+        height: 350px;
+      }
+
+      @media screen and (max-width: 578px) {
+        height: 450px;
+      }
+
+      .text {
+        height: 94px;
+
+        .name {
+          height: 34px;
+          margin: 0;
+          font-size: 18px;
+        }
+
+        .description {
+          color: $grey;
+          font-size: 12px;
+          margin: 0;
+
+        }
+      }
+    }
+  }
+}
+
+
 .promo-text {
   max-width: 1000px;
 

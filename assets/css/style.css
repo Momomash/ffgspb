@@ -420,6 +420,80 @@ body {
   margin: 0;
 }
 
+.masters {
+  gap: 50px;
+}
+.masters h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .masters h1 {
+    font-size: 30px;
+  }
+}
+.masters .promo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+@media screen and (max-width: 765px) {
+  .masters .promo {
+    display: none;
+  }
+}
+.masters .cards {
+  gap: 20px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1200px) {
+  .masters .cards {
+    gap: 10px;
+  }
+}
+.masters .cards .card {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 450px;
+  background-position: center;
+  background-size: 110% 110%;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.masters .cards .card:hover {
+  background-size: 115% 115%;
+  transition: all 0.5s ease-out;
+}
+@media screen and (max-width: 1400px) {
+  .masters .cards .card {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 578px) {
+  .masters .cards .card {
+    height: 450px;
+  }
+}
+.masters .cards .card .text {
+  height: 94px;
+}
+.masters .cards .card .text .name {
+  height: 34px;
+  margin: 0;
+  font-size: 18px;
+}
+.masters .cards .card .text .description {
+  color: #9A9A9A;
+  font-size: 12px;
+  margin: 0;
+}
+
 .promo-text {
   max-width: 1000px;
   align-items: center;
