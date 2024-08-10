@@ -494,6 +494,109 @@ body {
   margin: 0;
 }
 
+.master {
+  padding-top: 50px;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #9A9A9A;
+}
+.master h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 500px) {
+  .master h1 {
+    font-size: 30px;
+  }
+}
+.master h2 {
+  line-height: 24px;
+  font-size: 20px;
+}
+.master .controls {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 0 10px;
+}
+.master .photos img {
+  border-radius: 15px;
+  margin: 0 12px;
+}
+@media screen and (max-width: 1200px) {
+  .master .photos img {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .master .photos img {
+    height: 350px;
+  }
+}
+.master .about {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+.master .schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.master .schedule .card {
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 10px;
+  padding: 25px 10px 10px 10px;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  color: #9A9A9A;
+}
+@media screen and (max-width: 430px) {
+  .master .schedule .card {
+    height: auto;
+    width: 100%;
+    margin: 0 10px;
+  }
+}
+.master .schedule .card .day {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-transform: capitalize;
+  margin-bottom: 45px;
+}
+.master .schedule .card .time {
+  color: white;
+  font-family: "Centure Gothic Bold";
+  margin-bottom: 15px;
+}
+.master .schedule .card .group {
+  font-size: 16px;
+}
+.master .button_link {
+  margin: 50px auto;
+}
+.master .footer-image {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 760px) {
+  .master .footer-image {
+    height: 200px;
+  }
+}
+
 .promo-text {
   max-width: 1000px;
   align-items: center;
@@ -626,6 +729,11 @@ body {
   font-size: 20px;
   text-decoration: none;
   border: none;
+}
+@media screen and (max-width: 400px) {
+  .button_link {
+    font-size: 15px;
+  }
 }
 .button_link:hover {
   background-color: rgba(40, 40, 40, 0.6);

@@ -496,6 +496,110 @@ body {
   }
 }
 
+.master {
+  padding-top: 50px;
+
+  font-family: 'Centure Gothic';
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: $grey;
+
+  h1 {
+    @include mainH;
+    color: white;
+  }
+
+  h2 {
+    line-height: 24px;
+    font-size: 20px;
+  }
+
+  .controls {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 0 10px;
+  }
+
+  .photos {
+    img {
+      border-radius: 15px;
+      margin: 0 12px;
+      @media screen and (max-width: 1200px) {
+        height: 550px;
+      }
+      @media screen and (max-width: 750px) {
+        height: 350px;
+      }
+    }
+  }
+
+  .about {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 10px;
+  }
+
+  .schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .card {
+      background-color: $transparentGrey;
+      border-radius: 10px;
+      padding: 25px 10px 10px 10px;
+      width: 200px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      color: $grey;
+
+      @media screen and (max-width: 430px) {
+        height: auto;
+        width: 100%;
+        margin: 0 10px;
+      }
+
+      .day {
+        font-family: "Algerian TYGRA";
+        font-size: 48px;
+        text-transform: capitalize;
+        margin-bottom: 45px;
+      }
+
+      .time {
+        color: white;
+        font-family: 'Centure Gothic Bold';
+        margin-bottom: 15px;
+      }
+
+      .group {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .button_link {
+    margin: 50px auto;
+  }
+
+  .footer-image {
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    @media screen and (max-width: 760px) {
+      height: 200px;
+    }
+  }
+}
+
 
 .promo-text {
   max-width: 1000px;
@@ -629,6 +733,10 @@ body {
   font-size: 20px;
   text-decoration: none;
   border: none;
+
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+  }
 
   &:hover {
     background-color: rgba(40, 40, 40, 0.6);
