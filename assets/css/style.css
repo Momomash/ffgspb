@@ -494,7 +494,7 @@ body {
   margin: 0;
 }
 
-.master {
+.master-page {
   padding-top: 50px;
   font-family: "Centure Gothic";
   font-size: 20px;
@@ -502,22 +502,22 @@ body {
   text-align: center;
   color: #9A9A9A;
 }
-.master h1 {
+.master-page h1 {
   font-family: "Algerian TYGRA";
   font-size: 48px;
   text-align: center;
   color: white;
 }
 @media screen and (max-width: 500px) {
-  .master h1 {
+  .master-page h1 {
     font-size: 30px;
   }
 }
-.master h2 {
+.master-page h2 {
   line-height: 24px;
   font-size: 20px;
 }
-.master .controls {
+.master-page .controls {
   position: absolute;
   z-index: 2;
   display: flex;
@@ -526,33 +526,33 @@ body {
   top: 0;
   padding: 0 10px;
 }
-.master .photos img {
+.master-page .photos img {
   border-radius: 15px;
   margin: 0 12px;
 }
 @media screen and (max-width: 1200px) {
-  .master .photos img {
+  .master-page .photos img {
     height: 550px;
   }
 }
 @media screen and (max-width: 750px) {
-  .master .photos img {
+  .master-page .photos img {
     height: 350px;
   }
 }
-.master .about {
+.master-page .about {
   max-width: 850px;
   margin: 50px auto;
   padding: 0 10px;
 }
-.master .schedule {
+.master-page .schedule {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
 }
-.master .schedule .card {
+.master-page .schedule .card {
   background-color: rgba(40, 40, 40, 0.3);
   border-radius: 10px;
   padding: 20px 10px;
@@ -563,60 +563,142 @@ body {
   color: #9A9A9A;
   gap: 14px;
 }
-.master .schedule .card.big {
+.master-page .schedule .card.big {
   min-height: 400px;
 }
 @media screen and (max-width: 430px) {
-  .master .schedule .card.big {
+  .master-page .schedule .card.big {
     min-height: auto;
   }
 }
 @media screen and (max-width: 430px) {
-  .master .schedule .card {
+  .master-page .schedule .card {
     min-height: auto;
     width: 100%;
     margin: 0 10px;
   }
 }
-.master .schedule .card .day {
+.master-page .schedule .card .day {
   font-family: "Algerian TYGRA";
   font-size: 48px;
   line-height: 43px;
   height: 50px;
   text-transform: capitalize;
 }
-.master .schedule .card .time {
+.master-page .schedule .card .time {
   color: white;
   line-height: 25px;
   font-family: "Centure Gothic Bold";
 }
-.master .schedule .card .group {
+.master-page .schedule .card .group {
   font-size: 16px;
   height: 70px;
 }
 @media screen and (max-width: 430px) {
-  .master .schedule .card .group {
+  .master-page .schedule .card .group {
     height: auto;
   }
 }
-.master .schedule .card .divider {
+.master-page .schedule .card .divider {
   width: 46px;
   height: 3px;
   background: white;
   margin: 6px auto 24px auto;
 }
-.master .button_link {
+.master-page .button_link {
   margin: 50px auto;
 }
-.master .footer-image {
+.master-page .footer-image {
   height: 350px;
   background-position: center;
   background-size: cover;
 }
 @media screen and (max-width: 760px) {
-  .master .footer-image {
+  .master-page .footer-image {
     height: 200px;
   }
+}
+
+.schedule {
+  padding: 50px 0 90px 0;
+  background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+}
+@media screen and (max-width: 1400px) {
+  .schedule {
+    background-size: 600px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .schedule {
+    background-image: url("../img/meyer-left.png");
+  }
+}
+.schedule h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .schedule h1 {
+    font-size: 30px;
+  }
+}
+.schedule .days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px 24px;
+  margin: 40px 0 120px 0;
+}
+@media screen and (max-width: 1200px) {
+  .schedule .days {
+    margin: 20px 0 60px 0;
+  }
+}
+.schedule .days .day .head {
+  font-family: "Algerian TYGRA";
+  font-size: 32px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.schedule .days .day table {
+  border-collapse: collapse;
+  font-family: "Centure Gothic";
+}
+.schedule .days .day table td {
+  border: 3px solid #9A9A9A;
+  padding: 10px;
+}
+@media screen and (max-width: 760px) {
+  .schedule .days .day table td {
+    padding: 5px;
+  }
+}
+.schedule .days .day table td.day {
+  font-size: 24px;
+}
+.schedule .days .day table td.master {
+  max-width: 170px;
+  padding-right: 20px;
+}
+@media screen and (max-width: 760px) {
+  .schedule .days .day table td.master {
+    padding-right: 5px;
+  }
+}
+.schedule .days .day table td.sword {
+  background: rgba(12, 86, 19, 0.1);
+}
+.schedule .days .day table td.saber {
+  background: rgba(12, 33, 86, 0.1);
+}
+.schedule .days .day table td.rapier {
+  background: rgba(94, 29, 96, 0.1);
+}
+.schedule .days .day table td.buckler {
+  background: rgba(86, 65, 12, 0.1);
 }
 
 .promo-text {

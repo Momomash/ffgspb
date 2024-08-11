@@ -496,7 +496,7 @@ body {
   }
 }
 
-.master {
+.master-page {
   padding-top: 50px;
 
   font-family: 'Centure Gothic';
@@ -616,6 +616,86 @@ body {
     background-size: cover;
     @media screen and (max-width: 760px) {
       height: 200px;
+    }
+  }
+}
+
+.schedule {
+  padding: 50px 0 90px 0;
+  background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+
+  @media screen and (max-width: 1400px) {
+    background-size: 600px;
+  }
+  @media screen and (max-width: 800px) {
+    background-image: url("../img/meyer-left.png");
+  }
+
+  h1 {
+    @include mainH;
+  }
+
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px 24px;
+    margin: 40px 0 120px 0;
+
+    @media screen and (max-width: 1200px) {
+      margin: 20px 0 60px 0;
+    }
+
+    .day {
+      .head {
+        font-family: "Algerian TYGRA";
+        font-size: 32px;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      table {
+        border-collapse: collapse;
+        font-family: 'Centure Gothic';
+
+        td {
+          border: 3px solid $grey;
+          padding: 10px;
+          @media screen and (max-width: 760px) {
+            padding: 5px;
+          }
+
+          &.day {
+            font-size: 24px;
+          }
+
+          &.master {
+            max-width: 170px;
+            padding-right: 20px;
+            @media screen and (max-width: 760px) {
+              padding-right: 5px;
+            }
+          }
+
+          &.sword {
+            background: rgba(12, 86, 19, 0.1);
+          }
+
+          &.saber {
+            background: rgba(12, 33, 86, 0.1);
+          }
+
+          &.rapier {
+            background: rgba(94, 29, 96, 0.1);
+          }
+
+          &.buckler {
+            background: rgba(86, 65, 12, 0.1);
+          }
+        }
+      }
     }
   }
 }
