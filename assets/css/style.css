@@ -559,7 +559,7 @@ body {
   width: 185px;
   min-height: 250px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: #9A9A9A;
   gap: 14px;
 }
