@@ -701,6 +701,102 @@ body {
   background: rgba(86, 65, 12, 0.1);
 }
 
+.price .promo {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price .promo h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .price .promo h1 {
+    font-size: 30px;
+  }
+}
+.price .wrapper {
+  background-image: url("../img/mensBackground.png");
+  background-position: center;
+  background-size: cover;
+}
+.price .subsriptions {
+  margin: 0 auto;
+  padding: 40px 10px 0 10px;
+  max-width: 1520px;
+  width: 100%;
+}
+.price .subsriptions .button_link {
+  margin: 0 auto 70px auto;
+}
+.price .subsription {
+  padding: 40px 0;
+  margin-bottom: 50px;
+  color: #9A9A9A;
+}
+.price .subsription .head {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 500px) {
+  .price .subsription .head {
+    font-size: 30px;
+  }
+}
+.price .subsription .cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.price .subsription .cards .card {
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 360px;
+  height: 245px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px 20px 20px;
+  color: #9A9A9A;
+}
+.price .subsription .cards .card p {
+  margin: 0;
+}
+.price .subsription .cards .card .description {
+  text-align: center;
+  width: 200px;
+  font-family: "Centure Gothic";
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.price .subsription .cards .card .cost {
+  font-family: "Algerian TYGRA";
+  font-size: 32px;
+}
+.price .subsription .text {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  color: #9A9A9A;
+  margin: 50px auto 0 auto;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+}
+
 .promo-text {
   max-width: 1000px;
   align-items: center;

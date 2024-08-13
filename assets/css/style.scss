@@ -700,6 +700,102 @@ body {
   }
 }
 
+.price {
+  .promo {
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      @include mainH;
+    }
+  }
+
+  .wrapper {
+    background-image: url('../img/mensBackground.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .subsriptions {
+    margin: 0 auto;
+    padding: 40px 10px 0 10px;
+    max-width: 1520px;
+    width: 100%;
+
+    .button_link {
+      margin: 0 auto 70px auto;
+    }
+  }
+
+  .subsription {
+    padding: 40px 0;
+    margin-bottom: 50px;
+    color: $grey;
+
+    .head {
+      @include mainH;
+      color: white;
+      font-size: 32px;
+      line-height: 28px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .card {
+        background-color: $transparentGrey;
+        border-radius: 10px;
+        box-shadow: $shadow;
+        width: 360px;
+        height: 245px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 20px 20px 20px;
+        color: $grey;
+
+        p {
+          margin: 0;
+        }
+
+        .description {
+          text-align: center;
+          width: 200px;
+          font-family: 'Centure Gothic';
+          font-size: 16px;
+          line-height: 19px;
+          text-transform: uppercase;
+        }
+
+        .cost {
+          font-family: "Algerian TYGRA";
+          font-size: 32px;
+        }
+      }
+    }
+
+    .text {
+      max-width: 1000px;
+      width: 100%;
+      text-align: center;
+      color: $grey;
+      margin: 50px auto 0 auto;
+      font-family: "Centure Gothic";
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}
+
 
 .promo-text {
   max-width: 1000px;
