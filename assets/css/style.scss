@@ -341,7 +341,7 @@ body {
   }
 }
 
-.groups {
+.groups-page {
   gap: 50px;
 
   h2, h1 {
@@ -425,7 +425,7 @@ body {
   }
 }
 
-.masters {
+.masters-page {
   gap: 50px;
 
   h1 {
@@ -589,7 +589,7 @@ body {
         font-family: 'Centure Gothic Bold';
       }
 
-      .group {
+      .group_name {
         font-size: 16px;
         height: 70px;
         @media screen and (max-width: 430px) {
@@ -620,7 +620,7 @@ body {
   }
 }
 
-.schedule {
+.schedule-page {
   padding: 50px 0 90px 0;
   background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
   background-position: left top, right top;
@@ -678,29 +678,13 @@ body {
               padding-right: 5px;
             }
           }
-
-          &.sword {
-            background: rgba(12, 86, 19, 0.1);
-          }
-
-          &.saber {
-            background: rgba(12, 33, 86, 0.1);
-          }
-
-          &.rapier {
-            background: rgba(94, 29, 96, 0.1);
-          }
-
-          &.buckler {
-            background: rgba(86, 65, 12, 0.1);
-          }
         }
       }
     }
   }
 }
 
-.price {
+.price-page {
   .promo {
     height: 250px;
     background-position: center;
@@ -796,6 +780,140 @@ body {
   }
 }
 
+.group-page {
+  padding: 50px 0 130px 0;
+
+  background-image: url("../img/meyer-ochs.png"), url("../img/logo_transparent.png");
+  background-position: left bottom, right bottom 70px;
+  background-repeat: no-repeat, no-repeat;
+
+  @media screen and (max-width: 1300px) {
+    background-image: url("../img/meyer-ochs.png");
+  }
+  @media screen and (max-width: 800px) {
+    background-size: 700px 700px;
+  }
+
+  h1, h2 {
+    @include mainH;
+  }
+
+  .promo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    gap: 24px;
+
+    @media screen and (max-width: 1200px) {
+      height: 500px;
+    }
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .left {
+      border-radius: 10px;
+      flex-shrink: 0;
+      width: 500px;
+      height: 100%;
+      padding: 10px 40px;
+      @include light-grey-back;
+      color: $grey;
+      font-size: 20px;
+      line-height: 24px;
+      font-family: "Centure Gothic";
+
+      @media screen and (max-width: 1200px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 990px) {
+        width: 100%;
+        padding: 10px 20px;
+
+      }
+    }
+
+    .right {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      @media screen and (max-width: 990px) {
+        height: 300px;
+      }
+
+    }
+  }
+
+  .description {
+    max-width: 1000px;
+    color: $grey;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Centure Gothic";
+  }
+
+  .divider {
+    margin: 50px 0;
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 750px;
+
+    table {
+      border-collapse: collapse;
+      font-family: 'Centure Gothic';
+      line-height: 18px;
+
+      td {
+        border: 3px solid $grey;
+        padding: 10px;
+        font-size: 20px;
+        @media screen and (max-width: 760px) {
+          padding: 5px;
+          font-size: 16px;
+        }
+
+        &.day {
+          width: 130px;
+          font-size: 24px;
+          text-align: center;
+          @media screen and (max-width: 760px) {
+            font-size: 20px;
+          }
+        }
+
+        &.time {
+          font-size: 24px;
+          text-align: center;
+          width: 160px;
+          padding: 10px 0;
+          @media screen and (max-width: 760px) {
+            font-size: 20px;
+          }
+        }
+
+        &.master {
+          width: 180px;
+          padding-right: 20px;
+          @media screen and (max-width: 760px) {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+
+}
 
 .promo-text {
   max-width: 1000px;
@@ -846,6 +964,7 @@ body {
   }
 }
 
+
 .to_trains {
   text-align: center;
   padding: 30px 10px;
@@ -893,6 +1012,7 @@ body {
   }
 }
 
+
 .divider {
   width: 46px;
   height: 3px;
@@ -914,6 +1034,26 @@ body {
   }
 }
 
+td {
+  background-color: $transparentGrey;
+}
+
+td.sword {
+  background: rgba(12, 86, 19, 0.1);
+}
+
+td.saber {
+  background: rgba(12, 33, 86, 0.1);
+}
+
+td.rapier {
+  background: rgba(94, 29, 96, 0.1);
+}
+
+td.buckler {
+  background: rgba(86, 65, 12, 0.1);
+}
+
 .button_link {
   display: flex;
   align-items: center;
@@ -929,6 +1069,10 @@ body {
   font-size: 20px;
   text-decoration: none;
   border: none;
+
+  @media screen and (max-width: 600px) {
+    padding: 0 25px;
+  }
 
   @media screen and (max-width: 400px) {
     font-size: 15px;
