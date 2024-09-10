@@ -76,7 +76,7 @@ body {
 }
 
 .promo {
-  height: calc(100vh - $navbarHeight);
+  min-height: calc(100vh - $navbarHeight);
   @media screen and (max-width: 1200px) {
     height: auto;
   }
@@ -85,7 +85,7 @@ body {
     background: url('../img/banner.jpg') center;
     background-size: cover;
     padding-top: 75px;
-    height: 60%;
+    height: 650px;
     @media screen and (max-width: 1200px) {
       height: calc(100vh - $navbarHeight);
     }
@@ -1118,6 +1118,67 @@ td.buckler {
   color: white;
 }
 
+.howToGo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .map {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 450px;
+    text-align: center;
+    font-family: "Centure Gothic";
+    font-size: 20px;
+    color: $grey;
+    line-height: 24px;
+
+    b {
+      font-family: "Centure Gothic Bold";
+    }
+
+  }
+
+  .button_link {
+    margin: 50px 0;
+    color: white;
+  }
+
+  a {
+    color: grey;
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+
+    img {
+      filter: brightness(60%);
+    }
+  }
+}
+
+.map {
+  position: relative;
+  filter: grayscale(1);
+
+  &:after {
+    content: "''";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+  }
+}
 
 @font-face {
   font-family: "Algerian TYGRA";

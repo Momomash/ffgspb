@@ -49,7 +49,7 @@ body {
 }
 
 .promo {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 @media screen and (max-width: 1200px) {
   .promo {
@@ -60,7 +60,7 @@ body {
   background: url("../img/banner.jpg") center;
   background-size: cover;
   padding-top: 75px;
-  height: 60%;
+  height: 650px;
 }
 @media screen and (max-width: 1200px) {
   .promo .promo-top {
@@ -1135,6 +1135,60 @@ td.buckler {
 .prevArrow:hover, .nextArrow:hover {
   cursor: pointer;
   color: white;
+}
+
+.howToGo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.howToGo .map {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.howToGo .address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 450px;
+  text-align: center;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  color: #9A9A9A;
+  line-height: 24px;
+}
+.howToGo .address b {
+  font-family: "Centure Gothic Bold";
+}
+.howToGo .button_link {
+  margin: 50px 0;
+  color: white;
+}
+.howToGo a {
+  color: grey;
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+}
+.howToGo a img {
+  filter: brightness(60%);
+}
+
+.map {
+  position: relative;
+  filter: grayscale(1);
+}
+.map:after {
+  content: "''";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
 }
 
 @font-face {
