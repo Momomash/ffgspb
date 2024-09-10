@@ -657,6 +657,14 @@ body {
     margin: 20px 0 60px 0;
   }
 }
+.schedule-page .days .day {
+  max-width: 545px;
+}
+@media screen and (max-width: 570px) {
+  .schedule-page .days .day {
+    max-width: 480px;
+  }
+}
 .schedule-page .days .day .head {
   font-family: "Algerian TYGRA";
   font-size: 32px;
@@ -678,6 +686,14 @@ body {
 }
 .schedule-page .days .day table td.day {
   font-size: 24px;
+  text-align: center;
+  width: 165px;
+}
+@media screen and (max-width: 570px) {
+  .schedule-page .days .day table td.day {
+    font-size: 16px;
+    width: 70px;
+  }
 }
 .schedule-page .days .day table td.master {
   max-width: 170px;

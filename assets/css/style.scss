@@ -649,6 +649,11 @@ body {
     }
 
     .day {
+      max-width: 545px;
+      @media screen and (max-width: 570px) {
+        max-width: 480px;
+      }
+
       .head {
         font-family: "Algerian TYGRA";
         font-size: 32px;
@@ -669,6 +674,12 @@ body {
 
           &.day {
             font-size: 24px;
+            text-align: center;
+            width: 165px;
+            @media screen and (max-width: 570px) {
+              font-size: 16px;
+              width: 70px;
+            }
           }
 
           &.master {
