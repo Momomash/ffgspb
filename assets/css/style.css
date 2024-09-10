@@ -330,36 +330,36 @@ body {
   text-transform: capitalize;
 }
 
-.groups-page {
+.groups-page, .groups {
   gap: 50px;
 }
-.groups-page h2, .groups-page h1 {
+.groups-page h2, .groups-page h1, .groups h2, .groups h1 {
   font-family: "Algerian TYGRA";
   font-size: 48px;
   text-align: center;
 }
 @media screen and (max-width: 500px) {
-  .groups-page h2, .groups-page h1 {
+  .groups-page h2, .groups-page h1, .groups h2, .groups h1 {
     font-size: 30px;
   }
 }
-.groups-page .image {
+.groups-page .image, .groups .image {
   width: 100%;
   background-position: center;
   background-size: cover;
   height: 400px;
 }
 @media screen and (max-width: 1200px) {
-  .groups-page .image {
+  .groups-page .image, .groups .image {
     height: 250px;
   }
 }
 @media screen and (max-width: 765px) {
-  .groups-page .image {
+  .groups-page .image, .groups .image {
     display: none;
   }
 }
-.groups-page .promo {
+.groups-page .promo, .groups .promo {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -367,20 +367,20 @@ body {
   height: 250px;
 }
 @media screen and (max-width: 765px) {
-  .groups-page .promo {
+  .groups-page .promo, .groups .promo {
     display: none;
   }
 }
-.groups-page .cards {
+.groups-page .cards, .groups .cards {
   gap: 20px;
   margin-bottom: 80px;
 }
 @media screen and (max-width: 1200px) {
-  .groups-page .cards {
+  .groups-page .cards, .groups .cards {
     gap: 10px;
   }
 }
-.groups-page .cards .card {
+.groups-page .cards .card, .groups .cards .card {
   display: flex;
   justify-content: end;
   width: 100%;
@@ -392,29 +392,29 @@ body {
   text-align: center;
   text-decoration: none;
 }
-.groups-page .cards .card:hover {
+.groups-page .cards .card:hover, .groups .cards .card:hover {
   background-size: 115% 115%;
   transition: all 0.5s ease-out;
 }
 @media screen and (max-width: 1400px) {
-  .groups-page .cards .card {
+  .groups-page .cards .card, .groups .cards .card {
     height: 350px;
   }
 }
 @media screen and (max-width: 578px) {
-  .groups-page .cards .card {
+  .groups-page .cards .card, .groups .cards .card {
     height: 450px;
   }
 }
-.groups-page .cards .card .text {
+.groups-page .cards .card .text, .groups .cards .card .text {
   height: 94px;
 }
-.groups-page .cards .card .text .name {
+.groups-page .cards .card .text .name, .groups .cards .card .text .name {
   height: 34px;
   margin: 0;
   font-size: 18px;
 }
-.groups-page .cards .card .text .description {
+.groups-page .cards .card .text .description, .groups .cards .card .text .description {
   color: #9A9A9A;
   font-size: 12px;
   margin: 0;
