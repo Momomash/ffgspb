@@ -1,0 +1,1270 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-image: url("../img/background.jpg");
+  background-color: black;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1520px;
+  }
+}
+.navbar {
+  background-color: black;
+  height: 50px;
+  font-family: "Centure Gothic";
+}
+@media screen and (max-width: 991px) {
+  .navbar {
+    height: 70px;
+    padding: 0;
+  }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+}
+.nav-link.active {
+  text-decoration: underline;
+}
+.nav-link.main {
+  font-family: "Centure Gothic Bold";
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.promo {
+  min-height: calc(100vh - 50px);
+}
+@media screen and (max-width: 1200px) {
+  .promo {
+    height: auto;
+  }
+}
+.promo .promo-top {
+  background: url("../img/banner.jpg") center;
+  background-size: cover;
+  padding-top: 75px;
+  height: 650px;
+}
+@media screen and (max-width: 1200px) {
+  .promo .promo-top {
+    height: calc(100vh - 50px);
+  }
+}
+.promo .logo-text {
+  max-width: 874px;
+  height: 148px;
+}
+@media screen and (max-width: 900px) {
+  .promo .logo-text {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.what {
+  height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  line-height: 26px;
+}
+@media screen and (max-width: 1200px) {
+  .what {
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+.what p {
+  margin: 0;
+}
+.what h2 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 500px) {
+  .what h2 {
+    font-size: 30px;
+  }
+}
+.what .row {
+  gap: 22px;
+  height: 100%;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .what .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+.what .left, .what .right {
+  display: flex;
+  border-radius: 10px;
+  height: 100%;
+  max-height: 850px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.what .left {
+  background-image: url("../img/background.jpg");
+  filter: brightness(1.5);
+  color: #9A9A9A;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
+}
+.what .left b {
+  font-family: "Centure Gothic Bold";
+}
+@media screen and (max-width: 1400px) {
+  .what .left {
+    padding: 20px;
+  }
+}
+.what .left .hema {
+  margin: 10px 0;
+  width: 180px;
+  text-align: left;
+}
+.what .left .hema span {
+  font-family: "Algerian TYGRA";
+  font-size: 30px;
+}
+.what .left .hema p {
+  margin: 0;
+}
+.what .right {
+  background-position: top;
+  background-size: cover;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .what .right {
+    height: 400px;
+  }
+}
+
+.promo-with-photo {
+  height: 100vh;
+  min-height: 1080px;
+  padding-top: 50px;
+  padding-bottom: 110px;
+}
+@media screen and (max-width: 1200px) {
+  .promo-with-photo {
+    height: auto;
+    min-height: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+.promo-with-photo .image {
+  height: 650px;
+  border-radius: 12px;
+  background-color: transparent;
+  background-image: url("../img/promo-photo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 1200px) {
+  .promo-with-photo .image {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .promo-with-photo .image {
+    height: 300px;
+  }
+}
+
+.why {
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  gap: 68px;
+  background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+}
+@media screen and (max-width: 1400px) {
+  .why {
+    background-size: 600px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .why {
+    background-image: url("../img/meyer-left.png");
+  }
+}
+.why h2 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  margin: 50px 10px;
+  max-width: 940px;
+}
+@media screen and (max-width: 500px) {
+  .why h2 {
+    font-size: 30px;
+  }
+}
+.why .cards-wrapper {
+  width: calc(100vw - 40%);
+  height: 650px;
+  position: relative;
+  overflow-x: scroll;
+  margin-left: 40%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 1000px) {
+  .why .cards-wrapper {
+    margin-left: 0;
+    width: 100%;
+    overflow-x: visible;
+  }
+}
+.why .cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.why .cards-wrapper .cards {
+  position: absolute;
+  overflow-x: scroll;
+  z-index: 1;
+  height: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .why .cards-wrapper .cards {
+    position: inherit;
+    overflow-x: visible;
+  }
+}
+.why .cards-wrapper .cards .card {
+  width: 490px;
+  height: 100%;
+  padding: 50px;
+  color: #9A9A9A;
+  text-align: center;
+  background-color: rgba(40, 40, 40, 0.3);
+  margin: 0 12px;
+}
+.why .cards-wrapper .cards .card:first-child {
+  margin-left: 0;
+}
+.why .cards-wrapper .cards .card:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 1400px) {
+  .why .cards-wrapper .cards .card {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .why .cards-wrapper .cards .card {
+    position: inherit;
+    overflow-x: visible;
+  }
+}
+@media screen and (max-width: 700px) {
+  .why .cards-wrapper .cards .card {
+    margin: 0;
+  }
+}
+.why .cards-wrapper .cards .card .title {
+  font-size: 48px;
+  margin-bottom: 50px;
+  font-family: "Algerian TYGRA";
+}
+@media screen and (max-width: 1400px) {
+  .why .cards-wrapper .cards .card .title {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .why .cards-wrapper .cards .card .title {
+    font-size: 38px;
+  }
+}
+.why .cards-wrapper .cards .card .description {
+  font-family: "Centure Gothic";
+  line-height: 24px;
+}
+.why .cards-wrapper .cards .slick-list, .why .cards-wrapper .cards .slick-track {
+  height: 100%;
+}
+
+.aboutGuild {
+  padding: 50px 10px;
+  gap: 55px;
+  background: url("../img/meyersMens.png") center;
+  background-size: cover;
+}
+.aboutGuild p {
+  max-width: 1000px;
+  text-align: center;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  color: #9A9A9A;
+}
+.aboutGuild p span {
+  font-family: "Algerian TYGRA";
+  text-transform: capitalize;
+}
+
+.groups-page, .groups {
+  gap: 50px;
+}
+.groups-page h2, .groups-page h1, .groups h2, .groups h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .groups-page h2, .groups-page h1, .groups h2, .groups h1 {
+    font-size: 30px;
+  }
+}
+.groups-page .image, .groups .image {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+@media screen and (max-width: 1200px) {
+  .groups-page .image, .groups .image {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .groups-page .image, .groups .image {
+    display: none;
+  }
+}
+.groups-page .promo, .groups .promo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+@media screen and (max-width: 765px) {
+  .groups-page .promo, .groups .promo {
+    display: none;
+  }
+}
+.groups-page .cards, .groups .cards {
+  gap: 20px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1200px) {
+  .groups-page .cards, .groups .cards {
+    gap: 10px;
+  }
+}
+.groups-page .cards .card, .groups .cards .card {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 450px;
+  background-position: center;
+  background-size: 110% 110%;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.groups-page .cards .card:hover, .groups .cards .card:hover {
+  background-size: 115% 115%;
+  transition: all 0.5s ease-out;
+}
+@media screen and (max-width: 1400px) {
+  .groups-page .cards .card, .groups .cards .card {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 578px) {
+  .groups-page .cards .card, .groups .cards .card {
+    height: 450px;
+  }
+}
+.groups-page .cards .card .text, .groups .cards .card .text {
+  height: 94px;
+}
+.groups-page .cards .card .text .name, .groups .cards .card .text .name {
+  height: 34px;
+  margin: 0;
+  font-size: 18px;
+}
+.groups-page .cards .card .text .description, .groups .cards .card .text .description {
+  color: #9A9A9A;
+  font-size: 12px;
+  margin: 0;
+}
+
+.masters-page {
+  gap: 50px;
+}
+.masters-page h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .masters-page h1 {
+    font-size: 30px;
+  }
+}
+.masters-page .promo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+@media screen and (max-width: 765px) {
+  .masters-page .promo {
+    display: none;
+  }
+}
+.masters-page .cards {
+  gap: 20px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1200px) {
+  .masters-page .cards {
+    gap: 10px;
+  }
+}
+.masters-page .cards .card {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 450px;
+  background-position: center;
+  background-size: 110% 110%;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.masters-page .cards .card:hover {
+  background-size: 115% 115%;
+  transition: all 0.5s ease-out;
+}
+@media screen and (max-width: 1400px) {
+  .masters-page .cards .card {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 578px) {
+  .masters-page .cards .card {
+    height: 450px;
+  }
+}
+.masters-page .cards .card .text {
+  height: 94px;
+}
+.masters-page .cards .card .text .name {
+  height: 34px;
+  margin: 0;
+  font-size: 18px;
+}
+.masters-page .cards .card .text .description {
+  color: #9A9A9A;
+  font-size: 12px;
+  margin: 0;
+}
+
+.master-page {
+  padding-top: 50px;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #9A9A9A;
+}
+.master-page h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 500px) {
+  .master-page h1 {
+    font-size: 30px;
+  }
+}
+.master-page h2 {
+  line-height: 24px;
+  font-size: 20px;
+}
+.master-page .controls {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 0 10px;
+}
+.master-page .photos img {
+  border-radius: 15px;
+  margin: 0 12px;
+}
+@media screen and (max-width: 1200px) {
+  .master-page .photos img {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .master-page .photos img {
+    height: 350px;
+  }
+}
+.master-page .about {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+.master-page .schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.master-page .schedule .card {
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 10px;
+  padding: 20px 10px;
+  width: 185px;
+  min-height: 250px;
+  display: flex;
+  justify-content: flex-start;
+  color: #9A9A9A;
+  gap: 14px;
+}
+.master-page .schedule .card.big {
+  min-height: 400px;
+}
+@media screen and (max-width: 430px) {
+  .master-page .schedule .card.big {
+    min-height: auto;
+  }
+}
+@media screen and (max-width: 430px) {
+  .master-page .schedule .card {
+    min-height: auto;
+    width: 100%;
+    margin: 0 10px;
+  }
+}
+.master-page .schedule .card .day {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  line-height: 43px;
+  height: 50px;
+  text-transform: capitalize;
+}
+.master-page .schedule .card .time {
+  color: white;
+  line-height: 25px;
+  font-family: "Centure Gothic Bold";
+}
+.master-page .schedule .card .group_name {
+  font-size: 16px;
+  height: 70px;
+}
+@media screen and (max-width: 430px) {
+  .master-page .schedule .card .group_name {
+    height: auto;
+  }
+}
+.master-page .schedule .card .divider {
+  width: 46px;
+  height: 3px;
+  background: white;
+  margin: 6px auto 24px auto;
+}
+.master-page .button_link {
+  margin: 50px auto;
+}
+.master-page .footer-image {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 760px) {
+  .master-page .footer-image {
+    height: 200px;
+  }
+}
+
+.schedule-page {
+  padding: 50px 0 90px 0;
+  background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+}
+@media screen and (max-width: 1400px) {
+  .schedule-page {
+    background-size: 600px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .schedule-page {
+    background-image: url("../img/meyer-left.png");
+  }
+}
+.schedule-page h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .schedule-page h1 {
+    font-size: 30px;
+  }
+}
+.schedule-page .days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px 24px;
+  margin: 40px 0 120px 0;
+}
+@media screen and (max-width: 1200px) {
+  .schedule-page .days {
+    margin: 20px 0 60px 0;
+  }
+}
+.schedule-page .days .day {
+  max-width: 545px;
+}
+@media screen and (max-width: 570px) {
+  .schedule-page .days .day {
+    max-width: 480px;
+  }
+}
+.schedule-page .days .day .head {
+  font-family: "Algerian TYGRA";
+  font-size: 32px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.schedule-page .days .day table {
+  border-collapse: collapse;
+  font-family: "Centure Gothic";
+}
+.schedule-page .days .day table td {
+  border: 3px solid #9A9A9A;
+  padding: 10px;
+}
+@media screen and (max-width: 760px) {
+  .schedule-page .days .day table td {
+    padding: 5px;
+  }
+}
+.schedule-page .days .day table td.day {
+  font-size: 24px;
+  text-align: center;
+  width: 165px;
+}
+@media screen and (max-width: 570px) {
+  .schedule-page .days .day table td.day {
+    font-size: 16px;
+    width: 70px;
+  }
+}
+.schedule-page .days .day table td.master {
+  max-width: 170px;
+  padding-right: 20px;
+}
+@media screen and (max-width: 760px) {
+  .schedule-page .days .day table td.master {
+    padding-right: 5px;
+  }
+}
+
+.price-page .promo {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price-page .promo h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .price-page .promo h1 {
+    font-size: 30px;
+  }
+}
+.price-page .wrapper {
+  background-image: url("../img/mensBackground.png");
+  background-position: center;
+  background-size: cover;
+}
+.price-page .subsriptions {
+  margin: 0 auto;
+  padding: 40px 10px 0 10px;
+  max-width: 1520px;
+  width: 100%;
+}
+.price-page .subsriptions .button_link {
+  margin: 0 auto 70px auto;
+}
+.price-page .subsription {
+  padding: 40px 0;
+  margin-bottom: 50px;
+  color: #9A9A9A;
+}
+.price-page .subsription .head {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 500px) {
+  .price-page .subsription .head {
+    font-size: 30px;
+  }
+}
+.price-page .subsription .cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.price-page .subsription .cards .card {
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 360px;
+  height: 245px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px 20px 20px;
+  color: #9A9A9A;
+}
+.price-page .subsription .cards .card p {
+  margin: 0;
+}
+.price-page .subsription .cards .card .description {
+  text-align: center;
+  width: 200px;
+  font-family: "Centure Gothic";
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.price-page .subsription .cards .card .cost {
+  font-family: "Algerian TYGRA";
+  font-size: 32px;
+}
+.price-page .subsription .text {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  color: #9A9A9A;
+  margin: 50px auto 0 auto;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.group-page {
+  padding: 50px 0 130px 0;
+  background-image: url("../img/meyer-ochs.png"), url("../img/logo_transparent.png");
+  background-position: left bottom, right bottom 70px;
+  background-repeat: no-repeat, no-repeat;
+}
+@media screen and (max-width: 1300px) {
+  .group-page {
+    background-image: url("../img/meyer-ochs.png");
+  }
+}
+@media screen and (max-width: 800px) {
+  .group-page {
+    background-size: 700px 700px;
+  }
+}
+.group-page h1, .group-page h2 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .group-page h1, .group-page h2 {
+    font-size: 30px;
+  }
+}
+.group-page .promo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  gap: 24px;
+}
+@media screen and (max-width: 1200px) {
+  .group-page .promo {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .group-page .promo {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.group-page .promo .left {
+  border-radius: 10px;
+  flex-shrink: 0;
+  width: 500px;
+  height: 100%;
+  padding: 10px 40px;
+  background-image: url("../img/background.jpg");
+  filter: brightness(1.5);
+  color: #9A9A9A;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Centure Gothic";
+}
+@media screen and (max-width: 1200px) {
+  .group-page .promo .left {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .group-page .promo .left {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+.group-page .promo .right {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 990px) {
+  .group-page .promo .right {
+    height: 300px;
+  }
+}
+.group-page .description {
+  max-width: 1000px;
+  color: #9A9A9A;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Centure Gothic";
+}
+.group-page .divider {
+  margin: 50px 0;
+}
+.group-page .schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 750px;
+}
+.group-page .schedule table {
+  border-collapse: collapse;
+  font-family: "Centure Gothic";
+  line-height: 18px;
+}
+.group-page .schedule table td {
+  border: 3px solid #9A9A9A;
+  padding: 10px;
+  font-size: 20px;
+}
+@media screen and (max-width: 760px) {
+  .group-page .schedule table td {
+    padding: 5px;
+    font-size: 16px;
+  }
+}
+.group-page .schedule table td.day {
+  width: 130px;
+  font-size: 24px;
+  text-align: center;
+}
+@media screen and (max-width: 760px) {
+  .group-page .schedule table td.day {
+    font-size: 20px;
+  }
+}
+.group-page .schedule table td.time {
+  font-size: 24px;
+  text-align: center;
+  width: 160px;
+  padding: 10px 0;
+}
+@media screen and (max-width: 760px) {
+  .group-page .schedule table td.time {
+    font-size: 20px;
+  }
+}
+.group-page .schedule table td.master {
+  width: 180px;
+  padding-right: 20px;
+}
+@media screen and (max-width: 760px) {
+  .group-page .schedule table td.master {
+    padding-right: 5px;
+  }
+}
+
+.aboutGuild-page h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  margin: 50px 0;
+}
+@media screen and (max-width: 500px) {
+  .aboutGuild-page h1 {
+    font-size: 30px;
+  }
+}
+.aboutGuild-page .row {
+  gap: 22px;
+  height: 100%;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .aboutGuild-page .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+.aboutGuild-page .row .left, .aboutGuild-page .row .right {
+  display: flex;
+  border-radius: 10px;
+  height: 740px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.aboutGuild-page .row .left {
+  background-image: url("../img/background.jpg");
+  filter: brightness(1.5);
+  color: #9A9A9A;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+  padding: 30px;
+  text-align: center;
+  gap: 16px;
+}
+@media screen and (max-width: 1400px) {
+  .aboutGuild-page .row .left {
+    padding: 20px;
+  }
+}
+.aboutGuild-page .row .right {
+  background-position: top;
+  background-size: cover;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .aboutGuild-page .row .right {
+    height: 400px;
+  }
+}
+.aboutGuild-page .text {
+  max-width: 1000px;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+  color: #9A9A9A;
+  text-align: center;
+}
+
+.promo-text {
+  max-width: 1000px;
+  align-items: center;
+  background-image: url("../img/background.jpg");
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+}
+.promo-text b {
+  font-family: "Centure Gothic Bold";
+}
+@media screen and (max-width: 1200px) {
+  .promo-text {
+    min-height: 300px;
+    height: auto;
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+.promo-text p {
+  max-width: 1000px;
+  color: #9A9A9A;
+  text-align: center;
+}
+
+.footer {
+  padding: 30px 0;
+  min-height: 190px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.footer ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+@media screen and (max-width: 900px) {
+  .footer ul {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .footer ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.to_trains {
+  text-align: center;
+  padding: 30px 10px;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/meyersMens.png") center;
+  background-size: cover;
+}
+@media screen and (max-width: 650px) {
+  .to_trains {
+    height: auto;
+    padding: 50px 10px;
+  }
+}
+.to_trains h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 38px;
+  text-align: center;
+}
+.to_trains p {
+  font-size: 15px;
+  color: #9A9A9A;
+}
+.to_trains .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 362px;
+  width: 100%;
+}
+.to_trains .socials a {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  gap: 20px;
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 50px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.divider {
+  width: 46px;
+  height: 3px;
+  background: white;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 1200px) {
+  .mb-70 {
+    margin-bottom: 30px;
+  }
+}
+
+td {
+  background-color: rgba(40, 40, 40, 0.3);
+}
+
+td.sword {
+  background: rgba(12, 86, 19, 0.1);
+}
+
+td.saber {
+  background: rgba(12, 33, 86, 0.1);
+}
+
+td.rapier {
+  background: rgba(94, 29, 96, 0.1);
+}
+
+td.buckler {
+  background: rgba(86, 65, 12, 0.1);
+}
+
+.button_link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 50px;
+  max-width: 390px;
+  padding: 0 50px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 50px;
+  font-family: "Algerian TYGRA";
+  background-color: rgba(40, 40, 40, 0.3);
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+}
+@media screen and (max-width: 600px) {
+  .button_link {
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .button_link {
+    font-size: 15px;
+  }
+}
+.button_link:hover {
+  background-color: rgba(40, 40, 40, 0.6);
+}
+
+.controls-wrapper {
+  width: 100%;
+  position: relative;
+}
+.controls-wrapper .controls {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 0 10px;
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .controls-wrapper .controls {
+    display: flex;
+  }
+}
+
+.prevArrow:hover, .nextArrow:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.howToGo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.howToGo .map {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.howToGo .address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 450px;
+  text-align: center;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  color: #9A9A9A;
+  line-height: 24px;
+}
+.howToGo .address b {
+  font-family: "Centure Gothic Bold";
+}
+.howToGo .button_link {
+  margin: 50px 0;
+  color: white;
+}
+.howToGo a {
+  color: grey;
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+}
+.howToGo a img {
+  filter: brightness(60%);
+}
+
+.map {
+  position: relative;
+  filter: grayscale(1);
+}
+.map:after {
+  content: "''";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "Algerian TYGRA";
+  src: url("../fonts/algeriantygra.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Centure Gothic";
+  src: url("../fonts/centurygothic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Centure Gothic Bold";
+  src: url("../fonts/centurygothic_bold.ttf") format("truetype");
+}
+
+/*# sourceMappingURL=style.css.map */
