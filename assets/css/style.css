@@ -153,7 +153,7 @@ body {
   margin: 0;
 }
 .what .right {
-  background-position: center;
+  background-position: top;
   background-size: cover;
   border-radius: 12px;
 }
@@ -944,6 +944,69 @@ body {
   .group-page .schedule table td.master {
     padding-right: 5px;
   }
+}
+
+.aboutGuild-page h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  margin: 50px 0;
+}
+@media screen and (max-width: 500px) {
+  .aboutGuild-page h1 {
+    font-size: 30px;
+  }
+}
+.aboutGuild-page .row {
+  gap: 22px;
+  height: 100%;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .aboutGuild-page .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+.aboutGuild-page .row .left, .aboutGuild-page .row .right {
+  display: flex;
+  border-radius: 10px;
+  height: 740px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.aboutGuild-page .row .left {
+  background-image: url("../img/background.jpg");
+  filter: brightness(1.5);
+  color: #9A9A9A;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+  padding: 30px;
+  text-align: center;
+  gap: 16px;
+}
+@media screen and (max-width: 1400px) {
+  .aboutGuild-page .row .left {
+    padding: 20px;
+  }
+}
+.aboutGuild-page .row .right {
+  background-position: top;
+  background-size: cover;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .aboutGuild-page .row .right {
+    height: 400px;
+  }
+}
+.aboutGuild-page .text {
+  max-width: 1000px;
+  font-family: "Centure Gothic";
+  font-size: 20px;
+  line-height: 26px;
+  color: #9A9A9A;
+  text-align: center;
 }
 
 .promo-text {

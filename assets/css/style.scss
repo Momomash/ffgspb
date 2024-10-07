@@ -175,7 +175,7 @@ body {
   }
 
   .right {
-    background-position: center;
+    background-position: top;
     background-size: cover;
     border-radius: 12px;
 
@@ -922,8 +922,65 @@ body {
       }
     }
   }
+}
 
+.aboutGuild-page {
+  h1 {
+    @include mainH;
+    margin: 50px 0;
+  }
 
+  .row {
+    gap: 22px;
+    height: 100%;
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .left, .right {
+      display: flex;
+      border-radius: 10px;
+      height: 740px;
+      box-shadow: $shadow;
+    }
+
+    .left {
+      @include light-grey-back;
+      color: $grey;
+      font-family: 'Centure Gothic';
+      font-size: 20px;
+      line-height: 26px;
+      padding: 30px;
+      text-align: center;
+      gap: 16px;
+
+      @media screen and (max-width: 1400px) {
+        padding: 20px;
+      }
+    }
+
+    .right {
+      background-position: top;
+      background-size: cover;
+      border-radius: 12px;
+
+      @media screen and (max-width: 1200px) {
+        height: 400px;
+      }
+    }
+  }
+
+  .text {
+    max-width: 1000px;
+    font-family: 'Centure Gothic';
+    font-size: 20px;
+    line-height: 26px;
+    color: $grey;
+    text-align: center;
+  }
 }
 
 .promo-text {
