@@ -42,301 +42,576 @@ body {
   }
 }
 
-.navbar {
-  background-color: black;
-  height: $navbarHeight;
-  font-family: 'Centure Gothic';
+nav {
 
-  @media screen and (max-width: 991px) {
-    height: $navbarMobileHeight;
-    padding: 0;
-  }
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.nav-link {
-  color: white;
-  font-size: 16px;
-
-  &.active {
-    text-decoration: underline;
-  }
-
-  &.main {
-    font-family: 'Centure Gothic Bold';
-  }
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.promo {
-  min-height: calc(100vh - $navbarHeight);
-  @media screen and (max-width: 1200px) {
-    height: auto;
-  }
-
-  .promo-top {
-    background: url('../img/banner.jpg') center;
-    background-size: cover;
-    padding-top: 75px;
-    height: 650px;
-    @media screen and (max-width: 1200px) {
-      height: calc(100vh - $navbarHeight);
-    }
-  }
-
-  .logo-text {
-    max-width: 874px;
-    height: 148px;
-
-    @media screen and (max-width: 900px) {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-}
-
-.what {
-  height: 100vh;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  line-height: 26px;
-
-  @media screen and (max-width: 1200px) {
-    height: 100%;
-    padding-top: 20px;
-    padding-bottom: 30px;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  h2 {
-    @include mainH;
-    margin-bottom: 50px;
-  }
-
-  .row {
-    gap: 22px;
-    height: 100%;
-    flex-wrap: nowrap;
-
-    @media screen and (max-width: 1200px) {
-      flex-direction: column;
-      flex-wrap: wrap;
-    }
-  }
-
-  .left, .right {
-    display: flex;
-    border-radius: 10px;
-    height: 100%;
-    max-height: 850px;
-    box-shadow: $shadow;
-  }
-
-  .left {
-    @include light-grey-back;
-    color: $grey;
+  &.navbar {
+    background-color: black;
+    height: $navbarHeight;
     font-family: 'Centure Gothic';
-    font-size: 20px;
-    padding: 40px;
-    text-align: center;
 
-    b {
+    @media screen and (max-width: 991px) {
+      height: $navbarMobileHeight;
+      padding: 0;
+    }
+  }
+
+  &.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &.navbar .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.navbar .navbar-toggler {
+    margin-left: 16px;
+  }
+
+  .navbar-collapse {
+    background: black;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 16px;
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    &.main {
       font-family: 'Centure Gothic Bold';
     }
 
-    @media screen and (max-width: 1400px) {
-      padding: 20px;
+    &:hover {
+      text-decoration: underline;
     }
   }
 
-  .left .hema {
-    margin: 10px 0;
-    width: 180px;
-    text-align: left;
+}
 
-    span {
-      font-family: "Algerian TYGRA";
-      font-size: 30px;
+.footer {
+  padding: 30px 0;
+  min-height: 190px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    @media screen and (max-width: 900px) {
+      gap: 10px;
+    }
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.to_trains {
+  text-align: center;
+  padding: 30px 10px;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/meyersMens.png') center;
+  background-size: cover;
+
+  @media screen and (max-width: 650px) {
+    height: auto;
+    padding: 50px 10px;
+  }
+
+  h1 {
+    font-family: "Algerian TYGRA";
+    font-size: 38px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    color: $grey;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 362px;
+    width: 100%;
+
+    a {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #ffffff;
+      gap: 20px;
+      background-color: $transparentGrey;
+      border-radius: 50px;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+.divider {
+  width: 46px;
+  height: 3px;
+  background: white;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+}
+
+td {
+  background-color: $transparentGrey;
+}
+
+td.sword {
+  background: rgba(12, 86, 19, 0.1);
+}
+
+td.saber {
+  background: rgba(12, 33, 86, 0.1);
+}
+
+td.rapier {
+  background: rgba(94, 29, 96, 0.1);
+}
+
+td.buckler {
+  background: rgba(86, 65, 12, 0.1);
+}
+
+.button_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 50px;
+  max-width: 390px;
+  padding: 0 50px;
+  box-shadow: $shadow;
+  border-radius: 50px;
+  font-family: "Algerian TYGRA";
+  background-color: $transparentGrey;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+
+  @media screen and (max-width: 600px) {
+    padding: 0 25px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+  }
+
+  &:hover {
+    background-color: rgba(40, 40, 40, 0.6);
+  }
+}
+
+.controls-wrapper {
+  width: 100%;
+  position: relative;
+
+  .controls {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    padding: 0 10px;
+    display: none;
+
+    @media screen and (max-width: 1000px) {
+      display: flex;
+    }
+  }
+}
+
+.prevArrow:hover, .nextArrow:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.map {
+  position: relative;
+  filter: grayscale(1);
+
+  &:after {
+    content: "''";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+  }
+}
+
+// Pages
+
+.main-page {
+  .promo {
+    min-height: calc(100vh - $navbarHeight);
+    @media screen and (max-width: 1200px) {
+      height: auto;
+    }
+
+    .promo-top {
+      background: url('../img/banner.jpg') center;
+      background-size: cover;
+      padding-top: 75px;
+      height: 650px;
+      @media screen and (max-width: 1200px) {
+        height: calc(100vh - $navbarHeight);
+      }
+    }
+
+    .logo-text {
+      max-width: 874px;
+      height: 148px;
+
+      @media screen and (max-width: 900px) {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .what {
+    height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    line-height: 26px;
+
+    @media screen and (max-width: 1200px) {
+      height: 100%;
+      padding-top: 20px;
+      padding-bottom: 30px;
     }
 
     p {
       margin: 0;
     }
-  }
 
-  .right {
-    background-position: top;
-    background-size: cover;
-    border-radius: 12px;
+    h2 {
+      @include mainH;
+      margin-bottom: 50px;
+    }
 
-    @media screen and (max-width: 1200px) {
-      height: 400px;
+    .row {
+      gap: 22px;
+      height: 100%;
+      flex-wrap: nowrap;
+
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+
+    .left, .right {
+      display: flex;
+      border-radius: 10px;
+      height: 100%;
+      max-height: 850px;
+      box-shadow: $shadow;
+    }
+
+    .left {
+      @include light-grey-back;
+      color: $grey;
+      font-family: 'Centure Gothic';
+      font-size: 20px;
+      padding: 40px;
+      text-align: center;
+
+      b {
+        font-family: 'Centure Gothic Bold';
+      }
+
+      @media screen and (max-width: 1400px) {
+        padding: 20px;
+      }
+    }
+
+    .left .hema {
+      margin: 10px 0;
+      width: 180px;
+      text-align: left;
+
+      span {
+        font-family: "Algerian TYGRA";
+        font-size: 30px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .right {
+      background-position: top;
+      background-size: cover;
+      border-radius: 12px;
+
+      @media screen and (max-width: 1200px) {
+        height: 400px;
+      }
     }
   }
-}
 
-.promo-with-photo {
-  height: 100vh;
-  min-height: 1080px;
-  padding-top: 50px;
-  padding-bottom: 110px;
-
-  @media screen and (max-width: 1200px) {
-    height: auto;
-    min-height: auto;
-    padding-top: 20px;
-    padding-bottom: 50px;
-  }
-
-  .image {
-    height: 650px;
-    border-radius: 12px;
-    background-color: transparent;
-    background-image: url("../img/promo-photo.jpg");
-    background-position: center;
-    background-size: cover;
+  .promo-with-photo {
+    height: 100vh;
+    min-height: 1080px;
+    padding-top: 50px;
+    padding-bottom: 110px;
 
     @media screen and (max-width: 1200px) {
-      height: 400px;
+      height: auto;
+      min-height: auto;
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+
+    .image {
+      height: 650px;
+      border-radius: 12px;
+      background-color: transparent;
+      background-image: url("../img/promo-photo.jpg");
+      background-position: center;
+      background-size: cover;
+
+      @media screen and (max-width: 1200px) {
+        height: 400px;
+      }
+      @media screen and (max-width: 800px) {
+        height: 300px;
+      }
+    }
+  }
+
+  .why {
+    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    gap: 68px;
+    background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+
+    @media screen and (max-width: 1400px) {
+      background-size: 600px;
     }
     @media screen and (max-width: 800px) {
-      height: 300px;
-    }
-  }
-}
-
-.why {
-  min-height: 100vh;
-  padding-top: 60px;
-  padding-bottom: 90px;
-  gap: 68px;
-  background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
-  background-position: left top, right top;
-  background-repeat: no-repeat, no-repeat;
-
-  @media screen and (max-width: 1400px) {
-    background-size: 600px;
-  }
-  @media screen and (max-width: 800px) {
-    background-image: url("../img/meyer-left.png");
-  }
-
-  h2 {
-    @include mainH;
-    margin: 50px 10px;
-    max-width: 940px;
-  }
-
-  .cards-wrapper {
-    width: calc(100vw - 40%);
-    height: 650px;
-    position: relative;
-    overflow-x: scroll;
-    margin-left: 40%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    @media screen and (max-width: 1000px) {
-      margin-left: 0;
-      width: 100%;
-      overflow-x: visible;
+      background-image: url("../img/meyer-left.png");
     }
 
-    &::-webkit-scrollbar {
-      display: none;
+    h2 {
+      @include mainH;
+      margin: 50px 10px;
+      max-width: 940px;
     }
 
-    .cards {
-      position: absolute;
+    .cards-wrapper {
+      width: calc(100vw - 40%);
+      height: 650px;
+      position: relative;
       overflow-x: scroll;
-      z-index: 1;
-      height: 100%;
+      margin-left: 40%;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
 
       @media screen and (max-width: 1000px) {
-        position: inherit;
+        margin-left: 0;
+        width: 100%;
         overflow-x: visible;
       }
 
-      .card {
-        width: 490px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .cards {
+        position: absolute;
+        overflow-x: scroll;
+        z-index: 1;
         height: 100%;
-        padding: 50px;
-        color: $grey;
-        text-align: center;
-        background-color: $transparentGrey;
-        margin: 0 12px;
-
-        &:first-child {
-          margin-left: 0;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        @media screen and (max-width: 1400px) {
-          width: 400px;
-        }
 
         @media screen and (max-width: 1000px) {
           position: inherit;
           overflow-x: visible;
         }
-        @media screen and (max-width: 700px) {
-          margin: 0;
-        }
 
-        .title {
-          font-size: 48px;
-          margin-bottom: 50px;
-          font-family: "Algerian TYGRA";
+        .card {
+          width: 490px;
+          height: 100%;
+          padding: 50px;
+          color: $grey;
+          text-align: center;
+          background-color: $transparentGrey;
+          margin: 0 12px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
           @media screen and (max-width: 1400px) {
-            margin-bottom: 25px;
+            width: 400px;
           }
+
           @media screen and (max-width: 1000px) {
-            font-size: 38px;
+            position: inherit;
+            overflow-x: visible;
+          }
+          @media screen and (max-width: 700px) {
+            margin: 0;
+          }
+
+          .title {
+            font-size: 48px;
+            margin-bottom: 50px;
+            font-family: "Algerian TYGRA";
+            @media screen and (max-width: 1400px) {
+              margin-bottom: 25px;
+            }
+            @media screen and (max-width: 1000px) {
+              font-size: 38px;
+            }
+          }
+
+          .description {
+            font-family: 'Centure Gothic';
+            line-height: 24px;
           }
         }
 
-        .description {
-          font-family: 'Centure Gothic';
-          line-height: 24px;
+        .slick-list, .slick-track {
+          height: 100%;
         }
-      }
-
-      .slick-list, .slick-track {
-        height: 100%;
       }
     }
   }
-}
 
-.aboutGuild {
-  padding: 50px 10px;
-  gap: 55px;
-  background: url('../img/meyersMens.png') center;
-  background-size: cover;
+  .aboutGuild {
+    padding: 50px 10px;
+    gap: 55px;
+    background: url('../img/meyersMens.png') center;
+    background-size: cover;
 
-  p {
+    p {
+      max-width: 1000px;
+      text-align: center;
+      font-family: 'Centure Gothic';
+      font-size: 20px;
+      color: $grey;
+
+      span {
+        font-family: "Algerian TYGRA";
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .promo-text {
     max-width: 1000px;
-    text-align: center;
+
+    align-items: center;
+    background-image: url('../img/background.jpg');
     font-family: 'Centure Gothic';
     font-size: 20px;
-    color: $grey;
+    line-height: 26px;
 
-    span {
-      font-family: "Algerian TYGRA";
-      text-transform: capitalize;
+    b {
+      font-family: 'Centure Gothic Bold';
+    }
+
+    @media screen and (max-width: 1200px) {
+      min-height: 300px;
+      height: auto;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    p {
+      max-width: 1000px;
+      color: $grey;
+      text-align: center;
+    }
+  }
+
+  .howToGo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .map {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .address {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 450px;
+      text-align: center;
+      font-family: "Centure Gothic";
+      font-size: 20px;
+      color: $grey;
+      line-height: 24px;
+
+      b {
+        font-family: "Centure Gothic Bold";
+      }
+
+    }
+
+    .button_link {
+      margin: 50px 0;
+      color: white;
+    }
+
+    a {
+      color: grey;
+      display: flex;
+      gap: 15px;
+      text-decoration: none;
+
+      img {
+        filter: brightness(60%);
+      }
     }
   }
 }
@@ -378,6 +653,10 @@ body {
     margin-bottom: 80px;
     @media screen and (max-width: 1200px) {
       gap: 10px;
+    }
+    @media screen and (max-width: 578px) {
+      max-width: 350px;
+      margin: 0 auto 80px auto;
     }
 
     .card {
@@ -449,6 +728,10 @@ body {
     margin-bottom: 80px;
     @media screen and (max-width: 1200px) {
       gap: 10px;
+    }
+    @media screen and (max-width: 578px) {
+      max-width: 350px;
+      margin: 0 auto 80px auto;
     }
 
     .card {
@@ -980,260 +1263,6 @@ body {
     line-height: 26px;
     color: $grey;
     text-align: center;
-  }
-}
-
-.promo-text {
-  max-width: 1000px;
-
-  align-items: center;
-  background-image: url('../img/background.jpg');
-  font-family: 'Centure Gothic';
-  font-size: 20px;
-  line-height: 26px;
-
-  b {
-    font-family: 'Centure Gothic Bold';
-  }
-
-  @media screen and (max-width: 1200px) {
-    min-height: 300px;
-    height: auto;
-    justify-content: center;
-    font-size: 16px;
-  }
-
-  p {
-    max-width: 1000px;
-    color: $grey;
-    text-align: center;
-  }
-}
-
-.footer {
-  padding: 30px 0;
-  min-height: 190px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-
-  ul {
-    padding-left: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    @media screen and (max-width: 900px) {
-      gap: 10px;
-    }
-    @media screen and (max-width: 650px) {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-}
-
-
-.to_trains {
-  text-align: center;
-  padding: 30px 10px;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/meyersMens.png') center;
-  background-size: cover;
-
-  @media screen and (max-width: 650px) {
-    height: auto;
-    padding: 50px 10px;
-  }
-
-  h1 {
-    font-family: "Algerian TYGRA";
-    font-size: 38px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 15px;
-    color: $grey;
-  }
-
-  .socials {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    max-width: 362px;
-    width: 100%;
-
-    a {
-      width: 100%;
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      color: #ffffff;
-      gap: 20px;
-      background-color: $transparentGrey;
-      border-radius: 50px;
-      box-shadow: $shadow;
-    }
-  }
-}
-
-
-.divider {
-  width: 46px;
-  height: 3px;
-  background: white;
-}
-
-.mb-30 {
-  margin-bottom: 30px;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
-}
-
-.mb-70 {
-  margin-bottom: 70px;
-  @media screen and (max-width: 1200px) {
-    margin-bottom: 30px;
-  }
-}
-
-td {
-  background-color: $transparentGrey;
-}
-
-td.sword {
-  background: rgba(12, 86, 19, 0.1);
-}
-
-td.saber {
-  background: rgba(12, 33, 86, 0.1);
-}
-
-td.rapier {
-  background: rgba(94, 29, 96, 0.1);
-}
-
-td.buckler {
-  background: rgba(86, 65, 12, 0.1);
-}
-
-.button_link {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  height: 50px;
-  max-width: 390px;
-  padding: 0 50px;
-  box-shadow: $shadow;
-  border-radius: 50px;
-  font-family: "Algerian TYGRA";
-  background-color: $transparentGrey;
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  border: none;
-
-  @media screen and (max-width: 600px) {
-    padding: 0 25px;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 15px;
-  }
-
-  &:hover {
-    background-color: rgba(40, 40, 40, 0.6);
-  }
-}
-
-.controls-wrapper {
-  width: 100%;
-  position: relative;
-
-  .controls {
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    padding: 0 10px;
-    display: none;
-
-    @media screen and (max-width: 1000px) {
-      display: flex;
-    }
-  }
-}
-
-.prevArrow:hover, .nextArrow:hover {
-  cursor: pointer;
-  color: white;
-}
-
-.howToGo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .map {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 450px;
-    text-align: center;
-    font-family: "Centure Gothic";
-    font-size: 20px;
-    color: $grey;
-    line-height: 24px;
-
-    b {
-      font-family: "Centure Gothic Bold";
-    }
-
-  }
-
-  .button_link {
-    margin: 50px 0;
-    color: white;
-  }
-
-  a {
-    color: grey;
-    display: flex;
-    gap: 15px;
-    text-decoration: none;
-
-    img {
-      filter: brightness(60%);
-    }
-  }
-}
-
-.map {
-  position: relative;
-  filter: grayscale(1);
-
-  &:after {
-    content: "''";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    pointer-events: none;
   }
 }
 
