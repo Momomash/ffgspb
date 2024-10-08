@@ -249,6 +249,9 @@ td.buckler {
     @media screen and (max-width: 1000px) {
       display: flex;
     }
+    .prevArrow, .nextArrow {
+      pointer-events: auto;
+    }
   }
 }
 
