@@ -41,6 +41,7 @@ nav.navbar .navbar-toggler {
 }
 nav .navbar-collapse {
   background: black;
+  z-index: 2;
 }
 nav .nav-link {
   color: white;
