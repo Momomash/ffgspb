@@ -218,6 +218,9 @@ td.buckler {
     display: flex;
   }
 }
+.controls-wrapper .controls .prevArrow, .controls-wrapper .controls .nextArrow {
+  pointer-events: auto;
+}
 
 .prevArrow:hover, .nextArrow:hover {
   cursor: pointer;
