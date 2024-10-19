@@ -250,6 +250,7 @@ td.buckler {
     @media screen and (max-width: 1000px) {
       display: flex;
     }
+
     .prevArrow, .nextArrow {
       pointer-events: auto;
     }
@@ -264,18 +265,6 @@ td.buckler {
 .map {
   position: relative;
   filter: grayscale(1);
-
-  &:after {
-    content: "''";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-  }
 }
 
 // Pages
@@ -1242,10 +1231,32 @@ td.buckler {
       line-height: 26px;
       padding: 30px;
       text-align: center;
-      gap: 16px;
+      gap: 24px;
+
+      p {
+        margin: 0;
+      }
 
       @media screen and (max-width: 1400px) {
         padding: 20px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        height: auto;
+        padding: 10px;
+        gap: 8px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+
+        .logo {
+          width: 110px;
+          height: 160px;
+        }
+        .logo-text {
+          width: 270px;
+          height: 46px;
+        }
       }
     }
 
@@ -1260,6 +1271,28 @@ td.buckler {
     }
   }
 
+  .controls {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 0 10px;
+  }
+
+  .photos {
+    img {
+      border-radius: 10px;
+      margin: 0 5px;
+      height: 450px;
+
+      @media screen and (max-width: 750px) {
+        height: 350px;
+      }
+    }
+  }
+
   .text {
     max-width: 1000px;
     font-family: 'Centure Gothic';
@@ -1267,6 +1300,10 @@ td.buckler {
     line-height: 26px;
     color: $grey;
     text-align: center;
+
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+    }
   }
 }
 
