@@ -1307,6 +1307,112 @@ td.buckler {
   }
 }
 
+.contacts-page {
+  h1 {
+    @include mainH;
+    margin: 50px 0;
+  }
+
+  .row {
+    width: 100%;
+    gap: 40px;
+    height: 100%;
+    flex-wrap: nowrap;
+    color: $grey;
+
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .left, .right {
+      padding: 0;
+    }
+
+    .left {
+      width: 100%;
+      flex-shrink: 1;
+      @media screen and (max-width: 990px) {
+        order: 2;
+      }
+
+      iframe {
+        border-radius: 10px;
+      }
+    }
+  ;
+
+    .right {
+      width: 450px;
+      flex-shrink: 0;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media screen and (max-width: 990px) {
+        order: 1;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $grey;
+        text-decoration: navajowhite;
+      }
+    }
+  }
+
+  .sub-pages {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 50px 0 80px 0;
+    width: 100%;
+
+    @media screen and (max-width: 765px) {
+      flex-direction: column;
+      margin: 20px 0 40px 0;
+    }
+
+    a {
+      height: 150px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: rgba(154, 154, 154, 0.1);
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-family: "Centure Gothic";
+
+      &:hover {
+        background: rgba(154, 154, 154, 0.2);
+      }
+      @media screen and (max-width: 990px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 765px) {
+        height: 100px;
+        gap: 10px;
+      }
+    }
+  }
+}
+
 @font-face {
   font-family: "Algerian TYGRA";
   src: url('../fonts/algeriantygra.ttf') format('truetype');
