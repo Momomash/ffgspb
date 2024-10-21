@@ -1402,6 +1402,7 @@ td.buckler {
       &:hover {
         background: rgba(154, 154, 154, 0.2);
       }
+
       @media screen and (max-width: 990px) {
         font-size: 16px;
       }
@@ -1409,6 +1410,67 @@ td.buckler {
         height: 100px;
         gap: 10px;
       }
+    }
+  }
+}
+
+.hall-page {
+  gap: 50px;
+  padding: 50px;
+  color: $grey;
+  font-size: 20px;
+  font-family: "Centure Gothic";
+  text-align: center;
+
+  h1 {
+    @include mainH;
+    color: white;
+  }
+
+  p {
+    max-width: 1000px;
+    margin: 0;
+  }
+
+  b {
+    font-family: "Centure Gothic Bold";
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+
+      @media screen and (max-width: 1400px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 995px) {
+        width: 250px;
+      }
+    }
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: $grey;
     }
   }
 }
