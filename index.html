@@ -324,10 +324,9 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
     $(document).ready(function () {
-        let $window = $(window)
+        const $window = $(window)
             , $whyCards = $('#whyCards')
-            , $groupsCards = $('#groupsCards')
-            , toggleSlick;
+            , $groupsCards = $('#groupsCards');
 
         const generalSettings = {
             slidesToScroll: 1,
@@ -347,7 +346,7 @@
             nextArrow: $groupsCards.parent().find('.nextArrow'),
         };
 
-        toggleSlick = function () {
+        const toggleSlick = function () {
             if ($window.width() < 1000) {
                 $whyCards.slick({
                     slidesToShow: 2,
@@ -393,6 +392,14 @@
         }
         $window.resize(toggleSlick);
         toggleSlick();
+    });
+
+    $('#whyCards').bind('mousewheel', function (event) {
+        if (event.deltaX === 1 || event.deltaY === 1) {
+            this.scrollLeft -= 15;
+        } else {
+            this.scrollLeft += 15;
+        }
     });
 </script>
 </body>

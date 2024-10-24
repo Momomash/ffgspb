@@ -379,6 +379,7 @@ td.buckler {
   }
 }
 .main-page .why {
+  overflow: hidden;
   min-height: 100vh;
   padding-top: 60px;
   padding-bottom: 90px;
@@ -386,6 +387,11 @@ td.buckler {
   background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.main-page .why ::-webkit-scrollbar {
+  display: none;
 }
 @media screen and (max-width: 1400px) {
   .main-page .why {

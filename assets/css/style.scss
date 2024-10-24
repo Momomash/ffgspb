@@ -411,6 +411,7 @@ td.buckler {
   }
 
   .why {
+    overflow: hidden;
     min-height: 100vh;
     padding-top: 60px;
     padding-bottom: 90px;
@@ -418,6 +419,12 @@ td.buckler {
     background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
     background-position: left top, right top;
     background-repeat: no-repeat, no-repeat;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 
     @media screen and (max-width: 1400px) {
       background-size: 600px;
