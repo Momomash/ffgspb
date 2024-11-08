@@ -263,7 +263,7 @@ td.buckler {
 }
 @media screen and (max-width: 900px) {
   .main-page .promo .logo-text {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
   }
 }
