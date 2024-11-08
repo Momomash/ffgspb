@@ -223,6 +223,11 @@ td.buckler {
   pointer-events: auto;
 }
 
+.prevArrow, .nextArrow {
+  width: 40px;
+  height: 40px;
+}
+
 .prevArrow:hover, .nextArrow:hover {
   cursor: pointer;
   color: white;
@@ -258,7 +263,7 @@ td.buckler {
 }
 @media screen and (max-width: 900px) {
   .main-page .promo .logo-text {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
   }
 }
@@ -630,7 +635,7 @@ td.buckler {
 }
 @media screen and (max-width: 578px) {
   .groups-page .cards, .groups .cards {
-    max-width: 350px;
+    max-width: 300px;
     margin: 0 auto 80px auto;
   }
 }
@@ -710,7 +715,7 @@ td.buckler {
 }
 @media screen and (max-width: 578px) {
   .masters-page .cards {
-    max-width: 350px;
+    max-width: 300px;
     margin: 0 auto 80px auto;
   }
 }

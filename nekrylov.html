@@ -14,7 +14,7 @@
 <body>
 <!--Navbar-->
 <div class="menu">
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg sticky-top" data-bs-theme="dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
                     aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,12 +60,12 @@
             <img src="assets/img/masters/nekrylov/4.jpg">
         </div>
         <div class="controls justify-content-between align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="leftArrow"
+            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" id="leftArrow"
                  class="bi bi-arrow-left-circle prevArrow" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                       d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="rightArrow"
+            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" id="rightArrow"
                  class="bi bi-arrow-right-circle nextArrow" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                       d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
@@ -82,37 +82,35 @@
         практикует длинный меч, саблю, меч&баклер, рапиру Ренессанса
     </p>
     <div class="schedule">
-        <div class="card big">
+        <div class="card">
             <span class="day">ПН</span>
             <span class="time">21.00-22.30</span>
             <span class="group_name">Сабля. Младшая группа</span>
-            <span class="divider"></span>
         </div>
-        <div class="card big">
+        <div class="card">
             <span class="day">ВТ</span>
             <span class="time">21.00-22.30</span>
             <span class="group_name">Длинный меч. Младшая группа</span>
-            <span class="divider"></span>
         </div>
-        <div class="card big">
+        <div class="card">
             <span class="day">СР</span>
             <span class="time">19.30-21.00</span>
             <span class="group_name">Сабля. Младшая группа</span>
-            <span class="divider"></span>
-            <span class="time">21.00-22.30</span>
-            <span class="group_name">Меч&Баклер.Общая группа</span>
         </div>
-        <div class="card big">
+        <div class="card">
             <span class="day">ЧТ</span>
             <span class="time">21.00-22.30</span>
             <span class="group_name">Длинный меч. Младшая группа</span>
-            <span class="divider"></span>
         </div>
-        <div class="card big">
+        <div class="card">
             <span class="day">ПТ</span>
             <span class="time">21.00-22.30</span>
             <span class="group_name">Меч&Баклер.Общая группа</span>
-            <span class="divider"></span>
+        </div>
+        <div class="card">
+            <span class="day">ВС</span>
+            <span class="time">14.30-16.00</span>
+            <span class="group_name">Меч&Баклер.Общая группа</span>
         </div>
     </div>
     <a href="https://vk.me/ffgspb" target="_blank" class="button_link">ЗАПИСАТЬСЯ НА ТРЕНИРОВКУ</a>
@@ -142,7 +140,6 @@
         const $slider = $('#masterSlider');
         $slider.slick({
             slidesToScroll: 1,
-            autoplaySpeed: 3000,
             infinite: true,
             swipeToSlide: true,
             centerMode: true,

@@ -257,6 +257,11 @@ td.buckler {
   }
 }
 
+.prevArrow, .nextArrow {
+  width: 40px;
+  height: 40px;
+}
+
 .prevArrow:hover, .nextArrow:hover {
   cursor: pointer;
   color: white;
@@ -291,7 +296,7 @@ td.buckler {
       height: 148px;
 
       @media screen and (max-width: 900px) {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
       }
     }
@@ -423,8 +428,9 @@ td.buckler {
     ::-webkit-scrollbar {
       display: none;
     }
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 
     @media screen and (max-width: 1400px) {
       background-size: 600px;
@@ -655,7 +661,7 @@ td.buckler {
       gap: 10px;
     }
     @media screen and (max-width: 578px) {
-      max-width: 350px;
+      max-width: 300px;
       margin: 0 auto 80px auto;
     }
 
@@ -730,7 +736,7 @@ td.buckler {
       gap: 10px;
     }
     @media screen and (max-width: 578px) {
-      max-width: 350px;
+      max-width: 300px;
       margin: 0 auto 80px auto;
     }
 
