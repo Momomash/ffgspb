@@ -72,11 +72,44 @@ nav {
   .navbar-collapse {
     background: black;
     z-index: 2;
+    max-width: 1620px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    justify-content: space-between !important;
+
+    .header-socials {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      a {
+        text-decoration: none;
+
+      }
+
+      @media screen and (max-width: 1060px) {
+        gap: 10px;
+      }
+      @media screen and (max-width: 990px) {
+        padding: 20px 0 20px 10px;
+      }
+    }
   }
 
   .nav-link {
     color: white;
     font-size: 16px;
+
+    @media screen and (min-width: 990px) and (max-width: 1060px) {
+      font-size: 15px;
+    }
+
+    &.to_main {
+      @media screen and (max-width: 990px) {
+        padding-left: 10px;
+      }
+    }
 
     &.active {
       text-decoration: underline;
@@ -269,7 +302,6 @@ td.buckler {
 
 .map {
   position: relative;
-  filter: grayscale(1);
 }
 
 // Pages
