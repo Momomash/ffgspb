@@ -241,11 +241,14 @@ td.buckler {
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
   border-radius: 50px;
   font-family: "Algerian TYGRA";
-  background-color: rgba(40, 40, 40, 0.3);
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 20px;
   text-decoration: none;
   border: none;
+}
+.button_link:hover {
+  background-color: rgba(40, 40, 40, 0.6);
 }
 @media screen and (max-width: 600px) {
   .button_link {
@@ -256,9 +259,6 @@ td.buckler {
   .button_link {
     font-size: 15px;
   }
-}
-.button_link:hover {
-  background-color: rgba(40, 40, 40, 0.6);
 }
 
 .controls-wrapper {
@@ -310,7 +310,7 @@ td.buckler {
   background: url("../img/banner.jpg") center;
   background-size: cover;
   padding-top: 75px;
-  height: 650px;
+  height: 570px;
 }
 @media screen and (max-width: 1200px) {
   .main-page .promo .promo-top {
@@ -631,7 +631,7 @@ td.buckler {
 }
 .main-page .howToGo .button_link {
   margin: 50px 0;
-  color: white;
+  color: black;
 }
 .main-page .howToGo a {
   color: grey;
@@ -1064,7 +1064,7 @@ td.buckler {
 }
 .price-page .subsription {
   padding: 40px 0;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   color: #9A9A9A;
 }
 .price-page .subsription .head {

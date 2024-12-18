@@ -278,11 +278,15 @@ td.buckler {
   box-shadow: $shadow;
   border-radius: 50px;
   font-family: "Algerian TYGRA";
-  background-color: $transparentGrey;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 20px;
   text-decoration: none;
   border: none;
+
+  &:hover {
+    background-color: rgba(40, 40, 40, 0.6);
+  }
 
   @media screen and (max-width: 600px) {
     padding: 0 25px;
@@ -292,9 +296,6 @@ td.buckler {
     font-size: 15px;
   }
 
-  &:hover {
-    background-color: rgba(40, 40, 40, 0.6);
-  }
 }
 
 .controls-wrapper {
@@ -348,7 +349,7 @@ td.buckler {
       background: url('../img/banner.jpg') center;
       background-size: cover;
       padding-top: 75px;
-      height: 650px;
+      height: 570px;
       @media screen and (max-width: 1200px) {
         height: calc(100vh - $navbarHeight);
       }
@@ -669,7 +670,7 @@ td.buckler {
 
     .button_link {
       margin: 50px 0;
-      color: white;
+      color: black;
     }
 
     a {
@@ -1080,7 +1081,7 @@ td.buckler {
 
   .subsription {
     padding: 40px 0;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     color: $grey;
 
     .head {
