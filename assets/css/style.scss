@@ -127,11 +127,12 @@ nav {
 }
 
 .footer {
-  padding: 30px 0;
+  padding: 10px 0;
   min-height: 190px;
   background-color: black;
   display: flex;
   justify-content: center;
+  align-items: start;
 
   .wrapper {
     max-width: 1620px;
@@ -268,6 +269,7 @@ td.buckler {
 }
 
 .button_link {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,7 +287,8 @@ td.buckler {
   border: none;
 
   &:hover {
-    background-color: rgba(40, 40, 40, 0.6);
+    background: #B78A66;
+    transition: background-color 0.2s linear;
   }
 
   @media screen and (max-width: 600px) {
@@ -340,9 +343,10 @@ td.buckler {
 
 .main-page {
   .promo {
-    min-height: calc(100vh - $navbarHeight);
+    min-height: 800px;
     @media screen and (max-width: 1200px) {
       height: auto;
+      min-height: auto;
     }
 
     .promo-top {
@@ -350,14 +354,16 @@ td.buckler {
       background-size: cover;
       padding-top: 75px;
       height: 570px;
-      @media screen and (max-width: 1200px) {
-        height: calc(100vh - $navbarHeight);
+      @media screen and (max-width: 600px) {
+        max-height: 500px;
+        height: 100%;
       }
     }
 
     .logo-text {
       max-width: 874px;
       height: 148px;
+      margin-bottom: 45px;
 
       @media screen and (max-width: 900px) {
         max-width: 80%;
@@ -367,7 +373,6 @@ td.buckler {
   }
 
   .what {
-    height: 100vh;
     padding-top: 30px;
     padding-bottom: 50px;
     line-height: 26px;
@@ -382,99 +387,69 @@ td.buckler {
       margin: 0;
     }
 
-    h2 {
-      @include mainH;
-      margin-bottom: 50px;
-    }
-
     .row {
       gap: 22px;
-      height: 100%;
+      height: 600px;
       flex-wrap: nowrap;
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 990px) {
         flex-direction: column;
         flex-wrap: wrap;
+        height: 100%;
+      }
+
+
+      .left, .right {
+        display: flex;
+        border-radius: 10px;
+        height: 100%;
+        max-height: 850px;
+        box-shadow: $shadow;
+      }
+
+      .left {
+        @include light-grey-back;
+        color: $grey;
+        font-family: 'Centure Gothic';
+        font-size: 20px;
+        padding: 40px;
+        text-align: center;
+        background-image: url("../img/meyersMens.png");
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        @media screen and (max-width: 990px) {
+          background-image: none;
+        }
+
+        p {
+          color: $grey;
+        }
+
+        @media screen and (max-width: 1400px) {
+          padding: 20px;
+        }
+      }
+
+      .right {
+        background-position: top;
+        background-size: cover;
+        border-radius: 12px;
+
+        @media screen and (max-width: 990px) {
+          height: 400px;
+        }
       }
     }
 
-    .left, .right {
-      display: flex;
-      border-radius: 10px;
-      height: 100%;
-      max-height: 850px;
-      box-shadow: $shadow;
-    }
-
-    .left {
-      @include light-grey-back;
-      color: $grey;
-      font-family: 'Centure Gothic';
-      font-size: 20px;
-      padding: 40px;
-      text-align: center;
-
-      b {
-        font-family: 'Centure Gothic Bold';
-      }
-
-      @media screen and (max-width: 1400px) {
-        padding: 20px;
-      }
-    }
-
-    .left .hema {
-      margin: 10px 0;
-      width: 180px;
-      text-align: left;
-
-      span {
-        font-family: "Algerian TYGRA";
-        font-size: 30px;
-      }
-
+    .promo-text {
       p {
-        margin: 0;
+        margin-bottom: 50px;
       }
-    }
 
-    .right {
-      background-position: top;
-      background-size: cover;
-      border-radius: 12px;
-
-      @media screen and (max-width: 1200px) {
-        height: 400px;
-      }
-    }
-  }
-
-  .promo-with-photo {
-    height: 100vh;
-    min-height: 1080px;
-    padding-top: 50px;
-    padding-bottom: 110px;
-
-    @media screen and (max-width: 1200px) {
-      height: auto;
-      min-height: auto;
-      padding-top: 20px;
-      padding-bottom: 50px;
-    }
-
-    .image {
-      height: 650px;
-      border-radius: 12px;
-      background-color: transparent;
-      background-image: url("../img/promo-photo.jpg");
-      background-position: center;
-      background-size: cover;
-
-      @media screen and (max-width: 1200px) {
-        height: 400px;
-      }
-      @media screen and (max-width: 800px) {
-        height: 300px;
+      a {
+        color: $grey
       }
     }
   }
@@ -496,17 +471,22 @@ td.buckler {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 
-    @media screen and (max-width: 1400px) {
-      background-size: 600px;
+    @media screen and (max-width: 990px) {
+      background-image: none;
+      padding-top: 0;
+      min-height: auto;
+      gap: 30px;
     }
-    @media screen and (max-width: 800px) {
-      background-image: url("../img/meyer-left.png");
-    }
+
 
     h2 {
       @include mainH;
       margin: 50px 10px;
       max-width: 940px;
+
+      @media screen and (max-width: 900px) {
+        margin: 25px 10px;
+      }
     }
 
     .cards-wrapper {
@@ -522,6 +502,10 @@ td.buckler {
         margin-left: 0;
         width: 100%;
         overflow-x: visible;
+      }
+
+      @media screen and (max-width: 765px) {
+        height: 450px;
       }
 
       &::-webkit-scrollbar {
@@ -547,6 +531,16 @@ td.buckler {
           text-align: center;
           background-color: $transparentGrey;
           margin: 0 12px;
+          background-size: 100% 322px;
+          background-repeat: no-repeat;
+          background-position: bottom;
+
+          @media screen and (max-width: 990px) {
+            background-size: 80% 322px;
+          }
+          @media screen and (max-width: 765px) {
+            color: white;
+          }
 
           &:first-child {
             margin-left: 0;
@@ -570,6 +564,7 @@ td.buckler {
 
           .title {
             font-size: 48px;
+            line-height: 67px;
             margin-bottom: 50px;
             font-family: "Algerian TYGRA";
             @media screen and (max-width: 1400px) {
@@ -593,23 +588,46 @@ td.buckler {
     }
   }
 
-  .aboutGuild {
+  .promo-videos {
     padding: 50px 10px;
-    gap: 55px;
-    background: url('../img/meyersMens.png') center;
-    background-size: cover;
+    gap: 50px;
 
-    p {
-      max-width: 1000px;
-      text-align: center;
-      font-family: 'Centure Gothic';
-      font-size: 20px;
-      color: $grey;
+    h2 {
+      @include mainH;
+    }
 
-      span {
-        font-family: "Algerian TYGRA";
-        text-transform: capitalize;
+    .row {
+      height: 750px;
+
+      @media screen and (max-width: 900px) {
+        height: auto;
+        gap: 24px;
+
+        iframe {
+          height: 300px;
+        }
       }
+
+      @media screen and (max-width: 650px) {
+        gap: 12px;
+        iframe {
+          height: 200px;
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: 900px) {
+          gap: 24px;
+        }
+        @media screen and (max-width: 650px) {
+          gap: 12px;
+        }
+      }
+    ;
     }
   }
 
@@ -627,7 +645,7 @@ td.buckler {
     }
 
     @media screen and (max-width: 1200px) {
-      min-height: 300px;
+      min-height: 80px;
       height: auto;
       justify-content: center;
       font-size: 16px;
@@ -647,41 +665,6 @@ td.buckler {
 
     .map {
       width: 100%;
-      margin-bottom: 30px;
-    }
-
-    .address {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      max-width: 450px;
-      text-align: center;
-      font-family: "Centure Gothic";
-      font-size: 20px;
-      color: $grey;
-      line-height: 24px;
-
-      b {
-        font-family: "Centure Gothic Bold";
-      }
-
-    }
-
-    .button_link {
-      margin: 50px 0;
-      color: black;
-    }
-
-    a {
-      color: grey;
-      display: flex;
-      gap: 15px;
-      text-decoration: none;
-
-      img {
-        filter: brightness(60%);
-      }
     }
   }
 }

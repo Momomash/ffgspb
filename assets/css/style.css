@@ -91,11 +91,12 @@ nav .nav-link:hover {
 }
 
 .footer {
-  padding: 30px 0;
+  padding: 10px 0;
   min-height: 190px;
   background-color: black;
   display: flex;
   justify-content: center;
+  align-items: start;
 }
 .footer .wrapper {
   max-width: 1620px;
@@ -231,6 +232,7 @@ td.buckler {
 }
 
 .button_link {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,7 +250,8 @@ td.buckler {
   border: none;
 }
 .button_link:hover {
-  background-color: rgba(40, 40, 40, 0.6);
+  background: #B78A66;
+  transition: background-color 0.2s linear;
 }
 @media screen and (max-width: 600px) {
   .button_link {
@@ -299,11 +302,12 @@ td.buckler {
 }
 
 .main-page .promo {
-  min-height: calc(100vh - 50px);
+  min-height: 800px;
 }
 @media screen and (max-width: 1200px) {
   .main-page .promo {
     height: auto;
+    min-height: auto;
   }
 }
 .main-page .promo .promo-top {
@@ -312,14 +316,16 @@ td.buckler {
   padding-top: 75px;
   height: 570px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .main-page .promo .promo-top {
-    height: calc(100vh - 50px);
+    max-height: 500px;
+    height: 100%;
   }
 }
 .main-page .promo .logo-text {
   max-width: 874px;
   height: 148px;
+  margin-bottom: 45px;
 }
 @media screen and (max-width: 900px) {
   .main-page .promo .logo-text {
@@ -328,7 +334,6 @@ td.buckler {
   }
 }
 .main-page .what {
-  height: 100vh;
   padding-top: 30px;
   padding-bottom: 50px;
   line-height: 26px;
@@ -343,36 +348,26 @@ td.buckler {
 .main-page .what p {
   margin: 0;
 }
-.main-page .what h2 {
-  font-family: "Algerian TYGRA";
-  font-size: 48px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-@media screen and (max-width: 500px) {
-  .main-page .what h2 {
-    font-size: 30px;
-  }
-}
 .main-page .what .row {
   gap: 22px;
-  height: 100%;
+  height: 600px;
   flex-wrap: nowrap;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 990px) {
   .main-page .what .row {
     flex-direction: column;
     flex-wrap: wrap;
+    height: 100%;
   }
 }
-.main-page .what .left, .main-page .what .right {
+.main-page .what .row .left, .main-page .what .row .right {
   display: flex;
   border-radius: 10px;
   height: 100%;
   max-height: 850px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.main-page .what .left {
+.main-page .what .row .left {
   background-image: url("../img/background.jpg");
   filter: brightness(1.5);
   color: #9A9A9A;
@@ -380,68 +375,39 @@ td.buckler {
   font-size: 20px;
   padding: 40px;
   text-align: center;
+  background-image: url("../img/meyersMens.png");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
-.main-page .what .left b {
-  font-family: "Centure Gothic Bold";
+@media screen and (max-width: 990px) {
+  .main-page .what .row .left {
+    background-image: none;
+  }
+}
+.main-page .what .row .left p {
+  color: #9A9A9A;
 }
 @media screen and (max-width: 1400px) {
-  .main-page .what .left {
+  .main-page .what .row .left {
     padding: 20px;
   }
 }
-.main-page .what .left .hema {
-  margin: 10px 0;
-  width: 180px;
-  text-align: left;
-}
-.main-page .what .left .hema span {
-  font-family: "Algerian TYGRA";
-  font-size: 30px;
-}
-.main-page .what .left .hema p {
-  margin: 0;
-}
-.main-page .what .right {
+.main-page .what .row .right {
   background-position: top;
   background-size: cover;
   border-radius: 12px;
 }
-@media screen and (max-width: 1200px) {
-  .main-page .what .right {
+@media screen and (max-width: 990px) {
+  .main-page .what .row .right {
     height: 400px;
   }
 }
-.main-page .promo-with-photo {
-  height: 100vh;
-  min-height: 1080px;
-  padding-top: 50px;
-  padding-bottom: 110px;
+.main-page .what .promo-text p {
+  margin-bottom: 50px;
 }
-@media screen and (max-width: 1200px) {
-  .main-page .promo-with-photo {
-    height: auto;
-    min-height: auto;
-    padding-top: 20px;
-    padding-bottom: 50px;
-  }
-}
-.main-page .promo-with-photo .image {
-  height: 650px;
-  border-radius: 12px;
-  background-color: transparent;
-  background-image: url("../img/promo-photo.jpg");
-  background-position: center;
-  background-size: cover;
-}
-@media screen and (max-width: 1200px) {
-  .main-page .promo-with-photo .image {
-    height: 400px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .main-page .promo-with-photo .image {
-    height: 300px;
-  }
+.main-page .what .promo-text a {
+  color: #9A9A9A;
 }
 .main-page .why {
   overflow: hidden;
@@ -458,14 +424,12 @@ td.buckler {
 .main-page .why ::-webkit-scrollbar {
   display: none;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 990px) {
   .main-page .why {
-    background-size: 600px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .main-page .why {
-    background-image: url("../img/meyer-left.png");
+    background-image: none;
+    padding-top: 0;
+    min-height: auto;
+    gap: 30px;
   }
 }
 .main-page .why h2 {
@@ -478,6 +442,11 @@ td.buckler {
 @media screen and (max-width: 500px) {
   .main-page .why h2 {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main-page .why h2 {
+    margin: 25px 10px;
   }
 }
 .main-page .why .cards-wrapper {
@@ -494,6 +463,11 @@ td.buckler {
     margin-left: 0;
     width: 100%;
     overflow-x: visible;
+  }
+}
+@media screen and (max-width: 765px) {
+  .main-page .why .cards-wrapper {
+    height: 450px;
   }
 }
 .main-page .why .cards-wrapper::-webkit-scrollbar {
@@ -519,6 +493,19 @@ td.buckler {
   text-align: center;
   background-color: rgba(40, 40, 40, 0.3);
   margin: 0 12px;
+  background-size: 100% 322px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+@media screen and (max-width: 990px) {
+  .main-page .why .cards-wrapper .cards .card {
+    background-size: 80% 322px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .main-page .why .cards-wrapper .cards .card {
+    color: white;
+  }
 }
 .main-page .why .cards-wrapper .cards .card:first-child {
   margin-left: 0;
@@ -544,6 +531,7 @@ td.buckler {
 }
 .main-page .why .cards-wrapper .cards .card .title {
   font-size: 48px;
+  line-height: 67px;
   margin-bottom: 50px;
   font-family: "Algerian TYGRA";
 }
@@ -564,22 +552,54 @@ td.buckler {
 .main-page .why .cards-wrapper .cards .slick-list, .main-page .why .cards-wrapper .cards .slick-track {
   height: 100%;
 }
-.main-page .aboutGuild {
+.main-page .promo-videos {
   padding: 50px 10px;
-  gap: 55px;
-  background: url("../img/meyersMens.png") center;
-  background-size: cover;
+  gap: 50px;
 }
-.main-page .aboutGuild p {
-  max-width: 1000px;
-  text-align: center;
-  font-family: "Centure Gothic";
-  font-size: 20px;
-  color: #9A9A9A;
-}
-.main-page .aboutGuild p span {
+.main-page .promo-videos h2 {
   font-family: "Algerian TYGRA";
-  text-transform: capitalize;
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .main-page .promo-videos h2 {
+    font-size: 30px;
+  }
+}
+.main-page .promo-videos .row {
+  height: 750px;
+}
+@media screen and (max-width: 900px) {
+  .main-page .promo-videos .row {
+    height: auto;
+    gap: 24px;
+  }
+  .main-page .promo-videos .row iframe {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main-page .promo-videos .row {
+    gap: 12px;
+  }
+  .main-page .promo-videos .row iframe {
+    height: 200px;
+  }
+}
+.main-page .promo-videos .row .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .main-page .promo-videos .row .right {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main-page .promo-videos .row .right {
+    gap: 12px;
+  }
 }
 .main-page .promo-text {
   max-width: 1000px;
@@ -594,7 +614,7 @@ td.buckler {
 }
 @media screen and (max-width: 1200px) {
   .main-page .promo-text {
-    min-height: 300px;
+    min-height: 80px;
     height: auto;
     justify-content: center;
     font-size: 16px;
@@ -612,35 +632,6 @@ td.buckler {
 }
 .main-page .howToGo .map {
   width: 100%;
-  margin-bottom: 30px;
-}
-.main-page .howToGo .address {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  max-width: 450px;
-  text-align: center;
-  font-family: "Centure Gothic";
-  font-size: 20px;
-  color: #9A9A9A;
-  line-height: 24px;
-}
-.main-page .howToGo .address b {
-  font-family: "Centure Gothic Bold";
-}
-.main-page .howToGo .button_link {
-  margin: 50px 0;
-  color: black;
-}
-.main-page .howToGo a {
-  color: grey;
-  display: flex;
-  gap: 15px;
-  text-decoration: none;
-}
-.main-page .howToGo a img {
-  filter: brightness(60%);
 }
 
 .groups-page, .groups {
