@@ -223,6 +223,43 @@ nav {
       background-color: $transparentGrey;
       border-radius: 50px;
       box-shadow: $shadow;
+
+      &:hover {
+        background-color: rgba(40, 40, 40, 0.6);
+        font-size: 18px;
+        transition: 0.1s linear;
+
+      }
+    }
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 450px;
+    text-align: center;
+    font-family: "Centure Gothic";
+    font-size: 20px;
+    color: $grey;
+    line-height: 24px;
+
+    p {
+      font-size: 20px;
+    }
+
+    b {
+      font-family: "Centure Gothic Bold";
+    }
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: $grey;
     }
   }
 }
@@ -333,10 +370,6 @@ td.buckler {
 .prevArrow:hover, .nextArrow:hover {
   cursor: pointer;
   color: white;
-}
-
-.map {
-  position: relative;
 }
 
 // Pages
@@ -658,6 +691,13 @@ td.buckler {
     }
   }
 
+  .footer-promo {
+    height: 360px;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
   .howToGo {
     display: flex;
     flex-direction: column;
@@ -667,6 +707,7 @@ td.buckler {
       width: 100%;
     }
   }
+
 }
 
 .groups-page, .groups {
