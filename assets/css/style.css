@@ -532,6 +532,7 @@ td.buckler {
 @media screen and (max-width: 765px) {
   .main-page .why .cards-wrapper .cards .card {
     color: white;
+    background-image: none !important;
   }
 }
 .main-page .why .cards-wrapper .cards .card:first-child {
