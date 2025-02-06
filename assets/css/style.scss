@@ -421,7 +421,6 @@ td.buckler {
     }
 
     .row {
-      gap: 22px;
       height: 600px;
       flex-wrap: nowrap;
 
@@ -451,6 +450,7 @@ td.buckler {
         background-size: 100% 50%;
         background-repeat: no-repeat;
         background-position: bottom;
+        margin-right: 11px;
 
         @media screen and (max-width: 990px) {
           background-image: none;
@@ -519,6 +519,9 @@ td.buckler {
 
       @media screen and (max-width: 900px) {
         margin: 25px 10px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 24px;
       }
     }
 
