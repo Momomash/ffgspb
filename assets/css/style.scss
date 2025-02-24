@@ -1312,7 +1312,6 @@ td.buckler {
   }
 
   .row {
-    gap: 22px;
     height: 100%;
     flex-wrap: nowrap;
 
@@ -1337,6 +1336,12 @@ td.buckler {
       padding: 30px;
       text-align: center;
       gap: 24px;
+      margin-right: 11px;
+
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 22px;
+        margin-right: 0px;
+      }
 
       p {
         margin: 0;
@@ -1372,108 +1377,6 @@ td.buckler {
 
       @media screen and (max-width: 1200px) {
         height: 400px;
-      }
-    }
-  }
-
-  .controls {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    padding: 0 10px;
-  }
-
-  .photos {
-    img {
-      border-radius: 10px;
-      margin: 0 5px;
-      height: 450px;
-
-      @media screen and (max-width: 750px) {
-        height: 350px;
-      }
-    }
-  }
-
-  .text {
-    max-width: 1000px;
-    font-family: 'Centure Gothic';
-    font-size: 20px;
-    line-height: 26px;
-    color: $grey;
-    text-align: center;
-
-    @media screen and (max-width: 600px) {
-      font-size: 16px;
-    }
-  }
-}
-
-.contacts-page {
-  h1 {
-    @include mainH;
-    margin: 50px 0;
-  }
-
-  .row {
-    width: 100%;
-    gap: 40px;
-    height: 100%;
-    flex-wrap: nowrap;
-    color: $grey;
-
-    @media screen and (max-width: 990px) {
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .left, .right {
-      padding: 0;
-    }
-
-    .left {
-      width: 100%;
-      flex-shrink: 1;
-      @media screen and (max-width: 990px) {
-        order: 2;
-      }
-
-      iframe {
-        border-radius: 10px;
-      }
-    }
-  ;
-
-    .right {
-      width: 450px;
-      flex-shrink: 0;
-      font-size: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      @media screen and (max-width: 990px) {
-        order: 1;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-      }
-
-      p {
-        margin: 0;
-      }
-
-      a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: $grey;
-        text-decoration: navajowhite;
       }
     }
   }
@@ -1515,6 +1418,41 @@ td.buckler {
         height: 100px;
         gap: 10px;
       }
+    }
+  }
+
+  .controls {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 0 10px;
+  }
+
+  .photos {
+    img {
+      border-radius: 10px;
+      margin: 0 5px;
+      height: 450px;
+
+      @media screen and (max-width: 750px) {
+        height: 350px;
+      }
+    }
+  }
+
+  .text {
+    max-width: 1000px;
+    font-family: 'Centure Gothic';
+    font-size: 20px;
+    line-height: 26px;
+    color: $grey;
+    text-align: center;
+
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
     }
   }
 }
