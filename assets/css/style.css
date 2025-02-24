@@ -1315,7 +1315,6 @@ td.buckler {
   }
 }
 .aboutGuild-page .row {
-  gap: 22px;
   height: 100%;
   flex-wrap: nowrap;
 }
@@ -1341,6 +1340,13 @@ td.buckler {
   padding: 30px;
   text-align: center;
   gap: 24px;
+  margin-right: 11px;
+}
+@media screen and (max-width: 1200px) {
+  .aboutGuild-page .row .left {
+    margin-bottom: 22px;
+    margin-right: 0px;
+  }
 }
 .aboutGuild-page .row .left p {
   margin: 0;
@@ -1378,6 +1384,47 @@ td.buckler {
 @media screen and (max-width: 1200px) {
   .aboutGuild-page .row .right {
     height: 400px;
+  }
+}
+.aboutGuild-page .sub-pages {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 50px 0 80px 0;
+  width: 100%;
+}
+@media screen and (max-width: 765px) {
+  .aboutGuild-page .sub-pages {
+    flex-direction: column;
+    margin: 20px 0 40px 0;
+  }
+}
+.aboutGuild-page .sub-pages a {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(154, 154, 154, 0.1);
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Centure Gothic";
+}
+.aboutGuild-page .sub-pages a:hover {
+  background: rgba(154, 154, 154, 0.2);
+}
+@media screen and (max-width: 990px) {
+  .aboutGuild-page .sub-pages a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .aboutGuild-page .sub-pages a {
+    height: 100px;
+    gap: 10px;
   }
 }
 .aboutGuild-page .controls {
