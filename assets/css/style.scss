@@ -520,7 +520,7 @@ td.buckler {
       min-height: auto;
       gap: 30px;
     }
-    
+
     .controls {
       position: absolute;
       z-index: 2;
@@ -974,6 +974,14 @@ td.buckler {
       .group_name {
         font-size: 16px;
         height: 70px;
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         @media screen and (max-width: 430px) {
           height: auto;
         }
@@ -1307,6 +1315,16 @@ td.buckler {
         &.master {
           width: 180px;
           padding-right: 20px;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
           @media screen and (max-width: 760px) {
             padding-right: 5px;
           }
