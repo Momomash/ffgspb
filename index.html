@@ -20,21 +20,31 @@
 </head>
 <body>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) {
+                return;
+            }
+        }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(100118268, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+    ym(100118268, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/100118268" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/100118268" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 
 <header id="header"></header>
@@ -144,8 +154,8 @@
                           d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                 </svg>
             </div>
-            <div class="cards-wrapper" id="scrollable">
-                <div id="whyCards" class="cards d-flex justify-space-between align-items-center">
+            <div class="cards-wrapper">
+                <div id="whyCards" class="cards d-flex align-items-center">
                     <div class="card" style="background-image: url('assets/img/why/1.png')">
                         <p class="title">Спорт</p>
                         <p class="description">Фехтование развивает человека буквально во всех аспектах: внимание,
@@ -279,22 +289,17 @@
         };
 
         const toggleSlick = function () {
+            $whyCards.slick({
+                slidesToShow: 4,
+                autoscroll: true,
+                centerMode: true,
+                variableWidth: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                ...generalSettings,
+                ...whyCardsArrows,
+            });
             if ($window.width() < 1000) {
-                $whyCards.slick({
-                    slidesToShow: 2,
-                    ...generalSettings,
-                    ...whyCardsArrows,
-                    responsive: [
-                        {
-                            breakpoint: 700,
-                            settings: {
-                                slidesToShow: 1,
-                                ...generalSettings,
-                                ...whyCardsArrows,
-                            }
-                        },
-                    ]
-                });
                 $groupsCards.slick({
                     slidesToShow: 3,
                     ...generalSettings,
@@ -319,23 +324,11 @@
                     ]
                 })
             } else {
-                [$whyCards, $groupsCards].forEach(el => el.slick('unslick'))
+                [$groupsCards].forEach(el => el.slick('unslick'))
             }
         }
         $window.resize(toggleSlick);
         toggleSlick();
-    });
-
-    $('#scrollable').on('wheel', function (event) {
-        const deltaY = event.originalEvent.deltaY;
-        const deltaX = event.originalEvent.deltaX;
-        // Проверка направления прокрутки
-        if (window.innerWidth > 999 && (deltaY !== 0 || deltaX !== 0)) {
-            event.preventDefault(); // Предотвращаем стандартное вертикальное поведение
-            this.scrollLeft += deltaY + deltaX; // Изменяем левую прокрутка элемента
-        }
-
-
     });
 </script>
 </body>
