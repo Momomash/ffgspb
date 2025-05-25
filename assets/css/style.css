@@ -251,6 +251,14 @@ td {
   background-color: rgba(40, 40, 40, 0.3);
 }
 
+td.sword a, td.saber a, td.rapier a, td.buckler a {
+  text-decoration: none;
+  color: inherit;
+}
+td.sword a:hover, td.saber a:hover, td.rapier a:hover, td.buckler a:hover {
+  text-decoration: underline;
+}
+
 td.sword {
   background: rgba(12, 86, 19, 0.1);
 }
@@ -1070,6 +1078,13 @@ td.buckler {
 .schedule-page .days .day table td.master {
   max-width: 170px;
   padding-right: 20px;
+}
+.schedule-page .days .day table td.master a {
+  text-decoration: none;
+  color: inherit;
+}
+.schedule-page .days .day table td.master a:hover {
+  text-decoration: underline;
 }
 @media screen and (max-width: 760px) {
   .schedule-page .days .day table td.master {
