@@ -32,6 +32,12 @@ body {
   }
 }
 
+@media(min-width: 980px){
+  a[href^="tel"] {
+    pointer-events: none;
+  }
+}
+
 @mixin mainH {
   font-family: "Algerian TYGRA";
   font-size: 48px;
@@ -180,7 +186,7 @@ nav {
   }
 }
 
-.to_trainings {
+.join_us {
   text-align: center;
   padding: 30px 10px;
   height: 100vh;
