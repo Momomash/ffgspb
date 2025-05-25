@@ -757,6 +757,11 @@ td.buckler {
     height: 350px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .groups-page .cards .card, .groups .cards .card {
+    margin: 0 2px;
+  }
+}
 @media screen and (max-width: 578px) {
   .groups-page .cards .card, .groups .cards .card {
     height: 450px;
@@ -835,6 +840,11 @@ td.buckler {
 @media screen and (max-width: 1400px) {
   .masters-page .cards .card {
     height: 350px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .masters-page .cards .card {
+    margin: 0 2px;
   }
 }
 @media screen and (max-width: 578px) {

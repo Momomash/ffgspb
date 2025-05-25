@@ -32,7 +32,7 @@ body {
   }
 }
 
-@media(min-width: 980px){
+@media(min-width: 980px) {
   a[href^="tel"] {
     pointer-events: none;
   }
@@ -784,6 +784,10 @@ td.buckler {
         height: 350px;
       }
 
+      @media screen and (max-width: 1000px) {
+        margin: 0 2px;
+      }
+
       @media screen and (max-width: 578px) {
         height: 450px;
       }
@@ -857,6 +861,10 @@ td.buckler {
 
       @media screen and (max-width: 1400px) {
         height: 350px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        margin: 0 2px;
       }
 
       @media screen and (max-width: 578px) {
