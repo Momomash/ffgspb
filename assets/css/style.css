@@ -144,7 +144,7 @@ nav .nav-link:hover {
   }
 }
 
-.to_trains {
+.to_trainings {
   text-align: center;
   padding: 30px 10px;
   height: 100vh;
@@ -152,21 +152,21 @@ nav .nav-link:hover {
   background-size: cover;
 }
 @media screen and (max-width: 650px) {
-  .to_trains {
+  .to_trainings {
     height: auto;
     padding: 50px 10px;
   }
 }
-.to_trains h1 {
+.to_trainings h1 {
   font-family: "Algerian TYGRA";
   font-size: 38px;
   text-align: center;
 }
-.to_trains p {
+.to_trainings p {
   font-size: 15px;
   color: #9A9A9A;
 }
-.to_trains .socials {
+.to_trainings .socials {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -174,7 +174,7 @@ nav .nav-link:hover {
   max-width: 362px;
   width: 100%;
 }
-.to_trains .socials a {
+.to_trainings .socials a {
   width: 100%;
   height: 100px;
   display: flex;
@@ -187,12 +187,12 @@ nav .nav-link:hover {
   border-radius: 50px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.to_trains .socials a:hover {
+.to_trainings .socials a:hover {
   background-color: rgba(40, 40, 40, 0.6);
   font-size: 18px;
   transition: 0.1s linear;
 }
-.to_trains .address {
+.to_trainings .address {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,13 +204,13 @@ nav .nav-link:hover {
   color: #9A9A9A;
   line-height: 24px;
 }
-.to_trains .address p {
+.to_trainings .address p {
   font-size: 20px;
 }
-.to_trains .address b {
+.to_trainings .address b {
   font-family: "Centure Gothic Bold";
 }
-.to_trains .address a {
+.to_trainings .address a {
   display: flex;
   flex-direction: row;
   align-items: center;
