@@ -1689,6 +1689,14 @@ td.buckler {
         align-items: center;
       }
 
+      .image{
+        max-width: 510px;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+      }
+
       img {
         width: 50%;
         @media screen and (max-width: 990px) {

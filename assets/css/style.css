@@ -1703,6 +1703,13 @@ td.buckler {
     align-items: center;
   }
 }
+.path-page .steps .step .image {
+  max-width: 510px;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
 .path-page .steps .step img {
   width: 50%;
 }
