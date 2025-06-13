@@ -806,6 +806,12 @@ td.buckler {
     @include mainH;
   }
 
+  @media screen and (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1590px;
+    }
+  }
+
   .promo {
     width: 100%;
     display: flex;
@@ -818,13 +824,20 @@ td.buckler {
     }
   }
 
+  @media screen and (max-width: 1440px) {
+    .controls-wrapper .controls {
+      display: flex;
+    }
+  }
+
   .cards {
-    gap: 20px;
+    gap: 16px;
     margin-bottom: 80px;
-    @media screen and (max-width: 1200px) {
+    justify-content: center;
+    @media screen and (max-width: 1600px) {
       gap: 10px;
     }
-    @media screen and (max-width: 578px) {
+    @media screen and (max-width: 600px) {
       max-width: 300px;
       margin: 0 auto 80px auto;
     }
@@ -832,8 +845,11 @@ td.buckler {
     .card {
       display: flex;
       justify-content: end;
-      width: 100%;
+      width: 250px;
       height: 450px;
+      flex-shrink: 0;
+      background-color: #0F0F0F;
+      background-repeat: no-repeat;
       background-position: center;
       background-size: 110% 110%;
       color: white;
@@ -841,21 +857,22 @@ td.buckler {
       text-align: center;
       text-decoration: none;
 
-      &:hover {
-        background-size: 115% 115%;
-        transition: all 0.5s ease-out;
+      @media screen and (max-width: 1600px) {
+        width: 240px;
+        height: 430px;
+        background-size: cover;
       }
-
-      @media screen and (max-width: 1400px) {
-        height: 350px;
+      @media screen and (max-width: 1500px) {
+        width: 230px;
+        height: 412px;
       }
-
-      @media screen and (max-width: 1000px) {
-        margin: 0 2px;
-      }
-
-      @media screen and (max-width: 578px) {
+      @media screen and (max-width: 1440px) {
+        margin: 10px;
         height: 450px;
+        background-position: top center;
+      }
+      @media screen and (max-width: 900px) {
+        margin: 5px;
       }
 
       .text {
@@ -974,6 +991,7 @@ td.buckler {
       .group_name {
         font-size: 16px;
         height: 70px;
+
         a {
           text-decoration: none;
           color: inherit;
@@ -982,6 +1000,7 @@ td.buckler {
             text-decoration: underline;
           }
         }
+
         @media screen and (max-width: 430px) {
           height: auto;
         }
