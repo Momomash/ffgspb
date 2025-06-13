@@ -589,7 +589,7 @@ td.buckler {
   }
 }
 .main-page .promo-videos .row {
-  height: 750px;
+  height: 450px;
 }
 @media screen and (max-width: 900px) {
   .main-page .promo-videos .row {
