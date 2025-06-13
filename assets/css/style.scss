@@ -32,6 +32,12 @@ body {
   }
 }
 
+@media(min-width: 980px) {
+  a[href^="tel"] {
+    pointer-events: none;
+  }
+}
+
 @mixin mainH {
   font-family: "Algerian TYGRA";
   font-size: 48px;
@@ -180,10 +186,10 @@ nav {
   }
 }
 
-.to_trains {
+.join_us {
   text-align: center;
   padding: 30px 10px;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/meyersMens.png') center;
   background-size: cover;
 
@@ -287,6 +293,17 @@ nav {
 
 td {
   background-color: $transparentGrey;
+}
+
+td.sword, td.saber, td.rapier, td.buckler {
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 td.sword {
@@ -497,13 +514,6 @@ td.buckler {
     background-position: left top, right top;
     background-repeat: no-repeat, no-repeat;
 
-    ::-webkit-scrollbar {
-      display: none;
-    }
-
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-
     @media screen and (max-width: 990px) {
       background-image: none;
       padding-top: 0;
@@ -511,6 +521,15 @@ td.buckler {
       gap: 30px;
     }
 
+    .controls {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      padding: 0 10px;
+    }
 
     h2 {
       @include mainH;
@@ -526,42 +545,16 @@ td.buckler {
     }
 
     .cards-wrapper {
-      width: calc(100vw - 40%);
       height: 650px;
-      position: relative;
-      overflow-x: scroll;
-      margin-left: 40%;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-
-      @media screen and (max-width: 1000px) {
-        margin-left: 0;
-        width: 100%;
-        overflow-x: visible;
-      }
 
       @media screen and (max-width: 765px) {
         height: 450px;
       }
 
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
       .cards {
-        position: absolute;
-        overflow-x: scroll;
-        z-index: 1;
-        height: 100%;
-
-        @media screen and (max-width: 1000px) {
-          position: inherit;
-          overflow-x: visible;
-        }
-
         .card {
           width: 490px;
-          height: 100%;
+          height: 650px;
           padding: 50px;
           color: $grey;
           text-align: center;
@@ -634,7 +627,7 @@ td.buckler {
     }
 
     .row {
-      height: 750px;
+      height: 450px;
 
       @media screen and (max-width: 900px) {
         height: auto;
@@ -778,6 +771,10 @@ td.buckler {
         height: 350px;
       }
 
+      @media screen and (max-width: 1000px) {
+        margin: 0 2px;
+      }
+
       @media screen and (max-width: 578px) {
         height: 450px;
       }
@@ -809,6 +806,12 @@ td.buckler {
     @include mainH;
   }
 
+  @media screen and (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1590px;
+    }
+  }
+
   .promo {
     width: 100%;
     display: flex;
@@ -821,13 +824,20 @@ td.buckler {
     }
   }
 
+  @media screen and (max-width: 1440px) {
+    .controls-wrapper .controls {
+      display: flex;
+    }
+  }
+
   .cards {
-    gap: 20px;
+    gap: 16px;
     margin-bottom: 80px;
-    @media screen and (max-width: 1200px) {
+    justify-content: center;
+    @media screen and (max-width: 1600px) {
       gap: 10px;
     }
-    @media screen and (max-width: 578px) {
+    @media screen and (max-width: 600px) {
       max-width: 300px;
       margin: 0 auto 80px auto;
     }
@@ -835,8 +845,11 @@ td.buckler {
     .card {
       display: flex;
       justify-content: end;
-      width: 100%;
+      width: 250px;
       height: 450px;
+      flex-shrink: 0;
+      background-color: #0F0F0F;
+      background-repeat: no-repeat;
       background-position: center;
       background-size: 110% 110%;
       color: white;
@@ -844,17 +857,22 @@ td.buckler {
       text-align: center;
       text-decoration: none;
 
-      &:hover {
-        background-size: 115% 115%;
-        transition: all 0.5s ease-out;
+      @media screen and (max-width: 1600px) {
+        width: 240px;
+        height: 430px;
+        background-size: cover;
       }
-
-      @media screen and (max-width: 1400px) {
-        height: 350px;
+      @media screen and (max-width: 1500px) {
+        width: 230px;
+        height: 412px;
       }
-
-      @media screen and (max-width: 578px) {
+      @media screen and (max-width: 1440px) {
+        margin: 10px;
         height: 450px;
+        background-position: top center;
+      }
+      @media screen and (max-width: 900px) {
+        margin: 5px;
       }
 
       .text {
@@ -973,6 +991,16 @@ td.buckler {
       .group_name {
         font-size: 16px;
         height: 70px;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
         @media screen and (max-width: 430px) {
           height: auto;
         }
@@ -1066,6 +1094,16 @@ td.buckler {
           &.master {
             max-width: 170px;
             padding-right: 20px;
+
+            a {
+              text-decoration: none;
+              color: inherit;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+
             @media screen and (max-width: 760px) {
               padding-right: 5px;
             }
@@ -1296,6 +1334,16 @@ td.buckler {
         &.master {
           width: 180px;
           padding-right: 20px;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
           @media screen and (max-width: 760px) {
             padding-right: 5px;
           }
@@ -1639,6 +1687,14 @@ td.buckler {
         flex-direction: column;
         height: 100%;
         align-items: center;
+      }
+
+      .image{
+        max-width: 510px;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
       }
 
       img {

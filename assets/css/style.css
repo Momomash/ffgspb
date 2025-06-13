@@ -17,6 +17,11 @@ body {
     max-width: 1520px;
   }
 }
+@media (min-width: 980px) {
+  a[href^=tel] {
+    pointer-events: none;
+  }
+}
 nav.navbar {
   background-color: black;
   height: 50px;
@@ -144,29 +149,29 @@ nav .nav-link:hover {
   }
 }
 
-.to_trains {
+.join_us {
   text-align: center;
   padding: 30px 10px;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/meyersMens.png") center;
   background-size: cover;
 }
 @media screen and (max-width: 650px) {
-  .to_trains {
+  .join_us {
     height: auto;
     padding: 50px 10px;
   }
 }
-.to_trains h1 {
+.join_us h1 {
   font-family: "Algerian TYGRA";
   font-size: 38px;
   text-align: center;
 }
-.to_trains p {
+.join_us p {
   font-size: 15px;
   color: #9A9A9A;
 }
-.to_trains .socials {
+.join_us .socials {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -174,7 +179,7 @@ nav .nav-link:hover {
   max-width: 362px;
   width: 100%;
 }
-.to_trains .socials a {
+.join_us .socials a {
   width: 100%;
   height: 100px;
   display: flex;
@@ -187,12 +192,12 @@ nav .nav-link:hover {
   border-radius: 50px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.to_trains .socials a:hover {
+.join_us .socials a:hover {
   background-color: rgba(40, 40, 40, 0.6);
   font-size: 18px;
   transition: 0.1s linear;
 }
-.to_trains .address {
+.join_us .address {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,13 +209,13 @@ nav .nav-link:hover {
   color: #9A9A9A;
   line-height: 24px;
 }
-.to_trains .address p {
+.join_us .address p {
   font-size: 20px;
 }
-.to_trains .address b {
+.join_us .address b {
   font-family: "Centure Gothic Bold";
 }
-.to_trains .address a {
+.join_us .address a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -244,6 +249,14 @@ nav .nav-link:hover {
 
 td {
   background-color: rgba(40, 40, 40, 0.3);
+}
+
+td.sword a, td.saber a, td.rapier a, td.buckler a {
+  text-decoration: none;
+  color: inherit;
+}
+td.sword a:hover, td.saber a:hover, td.rapier a:hover, td.buckler a:hover {
+  text-decoration: underline;
 }
 
 td.sword {
@@ -445,11 +458,6 @@ td.buckler {
   background-image: url("../img/meyer-left.png"), url("../img/meyer-right.png");
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.main-page .why ::-webkit-scrollbar {
-  display: none;
 }
 @media screen and (max-width: 990px) {
   .main-page .why {
@@ -458,6 +466,15 @@ td.buckler {
     min-height: auto;
     gap: 30px;
   }
+}
+.main-page .why .controls {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 0 10px;
 }
 .main-page .why h2 {
   font-family: "Algerian TYGRA";
@@ -482,44 +499,16 @@ td.buckler {
   }
 }
 .main-page .why .cards-wrapper {
-  width: calc(100vw - 40%);
   height: 650px;
-  position: relative;
-  overflow-x: scroll;
-  margin-left: 40%;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-@media screen and (max-width: 1000px) {
-  .main-page .why .cards-wrapper {
-    margin-left: 0;
-    width: 100%;
-    overflow-x: visible;
-  }
 }
 @media screen and (max-width: 765px) {
   .main-page .why .cards-wrapper {
     height: 450px;
   }
 }
-.main-page .why .cards-wrapper::-webkit-scrollbar {
-  display: none;
-}
-.main-page .why .cards-wrapper .cards {
-  position: absolute;
-  overflow-x: scroll;
-  z-index: 1;
-  height: 100%;
-}
-@media screen and (max-width: 1000px) {
-  .main-page .why .cards-wrapper .cards {
-    position: inherit;
-    overflow-x: visible;
-  }
-}
 .main-page .why .cards-wrapper .cards .card {
   width: 490px;
-  height: 100%;
+  height: 650px;
   padding: 50px;
   color: #9A9A9A;
   text-align: center;
@@ -600,7 +589,7 @@ td.buckler {
   }
 }
 .main-page .promo-videos .row {
-  height: 750px;
+  height: 450px;
 }
 @media screen and (max-width: 900px) {
   .main-page .promo-videos .row {
@@ -752,6 +741,11 @@ td.buckler {
     height: 350px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .groups-page .cards .card, .groups .cards .card {
+    margin: 0 2px;
+  }
+}
 @media screen and (max-width: 578px) {
   .groups-page .cards .card, .groups .cards .card {
     height: 450px;
@@ -784,6 +778,11 @@ td.buckler {
     font-size: 30px;
   }
 }
+@media screen and (min-width: 1400px) {
+  .masters-page .container, .masters-page .container-lg, .masters-page .container-md, .masters-page .container-sm, .masters-page .container-xl, .masters-page .container-xxl {
+    max-width: 1590px;
+  }
+}
 .masters-page .promo {
   width: 100%;
   display: flex;
@@ -796,16 +795,22 @@ td.buckler {
     display: none;
   }
 }
-.masters-page .cards {
-  gap: 20px;
-  margin-bottom: 80px;
+@media screen and (max-width: 1440px) {
+  .masters-page .controls-wrapper .controls {
+    display: flex;
+  }
 }
-@media screen and (max-width: 1200px) {
+.masters-page .cards {
+  gap: 16px;
+  margin-bottom: 80px;
+  justify-content: center;
+}
+@media screen and (max-width: 1600px) {
   .masters-page .cards {
     gap: 10px;
   }
 }
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 600px) {
   .masters-page .cards {
     max-width: 300px;
     margin: 0 auto 80px auto;
@@ -814,8 +819,11 @@ td.buckler {
 .masters-page .cards .card {
   display: flex;
   justify-content: end;
-  width: 100%;
+  width: 250px;
   height: 450px;
+  flex-shrink: 0;
+  background-color: #0F0F0F;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: 110% 110%;
   color: white;
@@ -823,18 +831,29 @@ td.buckler {
   text-align: center;
   text-decoration: none;
 }
-.masters-page .cards .card:hover {
-  background-size: 115% 115%;
-  transition: all 0.5s ease-out;
-}
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
   .masters-page .cards .card {
-    height: 350px;
+    width: 240px;
+    height: 430px;
+    background-size: cover;
   }
 }
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 1500px) {
   .masters-page .cards .card {
+    width: 230px;
+    height: 412px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .masters-page .cards .card {
+    margin: 10px;
     height: 450px;
+    background-position: top center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .masters-page .cards .card {
+    margin: 5px;
   }
 }
 .masters-page .cards .card .text {
@@ -951,6 +970,13 @@ td.buckler {
   font-size: 16px;
   height: 70px;
 }
+.master-page .schedule .card .group_name a {
+  text-decoration: none;
+  color: inherit;
+}
+.master-page .schedule .card .group_name a:hover {
+  text-decoration: underline;
+}
 @media screen and (max-width: 430px) {
   .master-page .schedule .card .group_name {
     height: auto;
@@ -1055,6 +1081,13 @@ td.buckler {
 .schedule-page .days .day table td.master {
   max-width: 170px;
   padding-right: 20px;
+}
+.schedule-page .days .day table td.master a {
+  text-decoration: none;
+  color: inherit;
+}
+.schedule-page .days .day table td.master a:hover {
+  text-decoration: underline;
 }
 @media screen and (max-width: 760px) {
   .schedule-page .days .day table td.master {
@@ -1296,6 +1329,13 @@ td.buckler {
 .group-page .schedule table td.master {
   width: 180px;
   padding-right: 20px;
+}
+.group-page .schedule table td.master a {
+  text-decoration: none;
+  color: inherit;
+}
+.group-page .schedule table td.master a:hover {
+  text-decoration: underline;
 }
 @media screen and (max-width: 760px) {
   .group-page .schedule table td.master {
@@ -1662,6 +1702,13 @@ td.buckler {
     height: 100%;
     align-items: center;
   }
+}
+.path-page .steps .step .image {
+  max-width: 510px;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }
 .path-page .steps .step img {
   width: 50%;
