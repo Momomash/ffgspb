@@ -1743,7 +1743,6 @@ td.buckler {
 }
 .path-page .steps .step .text p {
   padding: 0 20px;
-  max-width: 400px;
 }
 @media screen and (max-width: 990px) {
   .path-page .steps .step .text p {
@@ -1773,20 +1772,20 @@ td.buckler {
     display: none;
   }
 }
-.path-page .steps .step#step-1, .path-page .steps .step#step-3, .path-page .steps .step#step-5, .path-page .steps .step#step-7 {
+.path-page .steps .step#step-1, .path-page .steps .step#step-3, .path-page .steps .step#step-5, .path-page .steps .step#step-7, .path-page .steps .step#step-9 {
   text-align: left;
 }
-.path-page .steps .step#step-1 span, .path-page .steps .step#step-3 span, .path-page .steps .step#step-5 span, .path-page .steps .step#step-7 span {
+.path-page .steps .step#step-1 span, .path-page .steps .step#step-3 span, .path-page .steps .step#step-5 span, .path-page .steps .step#step-7 span, .path-page .steps .step#step-9 span {
   right: 0;
 }
-.path-page .steps .step#step-2, .path-page .steps .step#step-4, .path-page .steps .step#step-6 {
+.path-page .steps .step#step-2, .path-page .steps .step#step-4, .path-page .steps .step#step-6, .path-page .steps .step#step-8 {
   text-align: right;
 }
-.path-page .steps .step#step-2 span, .path-page .steps .step#step-4 span, .path-page .steps .step#step-6 span {
+.path-page .steps .step#step-2 span, .path-page .steps .step#step-4 span, .path-page .steps .step#step-6 span, .path-page .steps .step#step-8 span {
   right: 50%;
 }
 @media screen and (max-width: 990px) {
-  .path-page .steps .step#step-2 span, .path-page .steps .step#step-4 span, .path-page .steps .step#step-6 span {
+  .path-page .steps .step#step-2 span, .path-page .steps .step#step-4 span, .path-page .steps .step#step-6 span, .path-page .steps .step#step-8 span {
     right: 40%;
   }
 }
