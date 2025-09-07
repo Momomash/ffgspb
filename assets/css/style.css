@@ -1685,6 +1685,13 @@ td.buckler {
     gap: 20px;
   }
 }
+@media screen and (max-width: 990px) {
+  .path-page .steps .pathVideo {
+    margin: 0 auto;
+    max-width: 510px;
+    height: 300px;
+  }
+}
 .path-page .steps .step {
   display: flex;
   flex-direction: row;
