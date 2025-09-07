@@ -1820,6 +1820,91 @@ td.buckler {
   color: #9A9A9A;
 }
 
+.notFound-page {
+  padding: 35px 0 100px 0;
+  gap: 30px;
+  color: #ffffff;
+  font-family: "Centure Gothic";
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/meyersMens.png") center;
+}
+@media screen and (max-width: 650px) {
+  .notFound-page {
+    height: 100vh;
+  }
+}
+.notFound-page h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 350px;
+}
+@media screen and (max-width: 1500px) {
+  .notFound-page h1 {
+    font-size: 250px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .notFound-page h1 {
+    font-size: 180px;
+  }
+}
+.notFound-page h2 {
+  font-size: 48px;
+}
+@media screen and (max-width: 1500px) {
+  .notFound-page h2 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .notFound-page h2 {
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .notFound-page h2 {
+    font-size: 26px;
+  }
+}
+.notFound-page .longsword {
+  margin-top: -220px;
+  margin-bottom: -120px;
+}
+@media screen and (max-width: 1500px) {
+  .notFound-page .longsword {
+    width: 1100px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .notFound-page .longsword {
+    display: none;
+  }
+}
+.notFound-page .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.notFound-page .buttons .button_link:nth-child(2) {
+  background: transparent;
+  color: white;
+  border: 2px solid #ffffff;
+}
+.notFound-page .buttons .button_link:nth-child(2):hover {
+  border-color: #B78A66;
+  color: #B78A66;
+}
+@media screen and (max-width: 650px) {
+  .notFound-page .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 @font-face {
   font-family: "Algerian TYGRA";
   src: url("../fonts/algeriantygra.ttf") format("truetype");
