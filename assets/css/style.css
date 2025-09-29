@@ -639,6 +639,9 @@ td.buckler {
   color: #9A9A9A;
   text-align: center;
 }
+.main-page .promo-text a {
+  color: #9A9A9A;
+}
 .main-page .footer-promo {
   height: 360px;
 }
