@@ -1107,6 +1107,9 @@ td.buckler {
             @media screen and (max-width: 760px) {
               padding-right: 5px;
             }
+            @media screen and (max-width: 500px) {
+              font-size: 12px;
+            }
           }
         }
       }

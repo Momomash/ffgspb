@@ -1094,6 +1094,11 @@ td.buckler {
     padding-right: 5px;
   }
 }
+@media screen and (max-width: 500px) {
+  .schedule-page .days .day table td.master {
+    font-size: 12px;
+  }
+}
 
 .price-page .promo {
   height: 250px;
