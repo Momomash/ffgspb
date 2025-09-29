@@ -83,24 +83,6 @@ nav {
     padding: 0 10px;
     margin: 0 auto;
     justify-content: space-between !important;
-
-    .nav-socials {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-
-      a {
-        text-decoration: none;
-
-      }
-
-      @media screen and (max-width: 1060px) {
-        gap: 10px;
-      }
-      @media screen and (max-width: 990px) {
-        padding: 20px 0 20px 10px;
-      }
-    }
   }
 
   .nav-link {
@@ -112,6 +94,7 @@ nav {
     }
 
     &.to_main {
+      font-family: "Algerian TYGRA";
       @media screen and (max-width: 990px) {
         padding-left: 10px;
       }
@@ -119,10 +102,6 @@ nav {
 
     &.active {
       text-decoration: underline;
-    }
-
-    &.main {
-      font-family: 'Centure Gothic Bold';
     }
 
     &:hover {
