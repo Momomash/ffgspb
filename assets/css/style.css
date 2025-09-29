@@ -323,9 +323,6 @@ td.buckler {
   color: white;
 }
 
-.main-page .promo {
-  min-height: 800px;
-}
 @media screen and (max-width: 1200px) {
   .main-page .promo {
     height: auto;
@@ -336,24 +333,33 @@ td.buckler {
   background: url("../img/banner.jpg") center;
   background-size: cover;
   padding-top: 75px;
-  height: 570px;
+  text-align: center;
+  justify-content: end;
 }
 @media screen and (max-width: 600px) {
   .main-page .promo .promo-top {
-    max-height: 500px;
     height: 100%;
   }
 }
-.main-page .promo .logo-text {
-  max-width: 874px;
-  height: 148px;
-  margin-bottom: 45px;
+.main-page .promo .promo-top h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 50px;
+  text-align: center;
 }
-@media screen and (max-width: 900px) {
-  .main-page .promo .logo-text {
-    max-width: 80%;
-    height: auto;
+@media screen and (max-width: 500px) {
+  .main-page .promo .promo-top h1 {
+    font-size: 30px;
   }
+}
+.main-page .promo .promo-top h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Centure Gothic";
+}
+.main-page .promo .promo-top p {
+  line-height: 100%;
+  font-size: 20px;
+  font-family: "Centure Gothic";
 }
 .main-page .what {
   padding-top: 30px;

@@ -372,7 +372,6 @@ td.buckler {
 
 .main-page {
   .promo {
-    min-height: 800px;
     @media screen and (max-width: 1200px) {
       height: auto;
       min-height: auto;
@@ -382,23 +381,33 @@ td.buckler {
       background: url('../img/banner.jpg') center;
       background-size: cover;
       padding-top: 75px;
-      height: 570px;
+      text-align: center;
+      justify-content: end;
+
       @media screen and (max-width: 600px) {
-        max-height: 500px;
         height: 100%;
       }
-    }
+      h1{
+        font-family: "Algerian TYGRA";
+        font-size: 50px;
+        text-align: center;
 
-    .logo-text {
-      max-width: 874px;
-      height: 148px;
-      margin-bottom: 45px;
-
-      @media screen and (max-width: 900px) {
-        max-width: 80%;
-        height: auto;
+        @media screen and (max-width: 500px) {
+          font-size: 30px;
+        }
+      }
+      h2{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: "Centure Gothic";
+      }
+      p{
+        line-height: 100%;
+        font-size: 20px;
+        font-family: "Centure Gothic";
       }
     }
+
   }
 
   .what {
