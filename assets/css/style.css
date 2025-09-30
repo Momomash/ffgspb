@@ -53,24 +53,6 @@ nav .navbar-collapse {
   margin: 0 auto;
   justify-content: space-between !important;
 }
-nav .navbar-collapse .nav-socials {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-nav .navbar-collapse .nav-socials a {
-  text-decoration: none;
-}
-@media screen and (max-width: 1060px) {
-  nav .navbar-collapse .nav-socials {
-    gap: 10px;
-  }
-}
-@media screen and (max-width: 990px) {
-  nav .navbar-collapse .nav-socials {
-    padding: 20px 0 20px 10px;
-  }
-}
 nav .nav-link {
   color: white;
   font-size: 16px;
@@ -80,6 +62,9 @@ nav .nav-link {
     font-size: 15px;
   }
 }
+nav .nav-link.to_main {
+  font-family: "Algerian TYGRA";
+}
 @media screen and (max-width: 990px) {
   nav .nav-link.to_main {
     padding-left: 10px;
@@ -87,9 +72,6 @@ nav .nav-link {
 }
 nav .nav-link.active {
   text-decoration: underline;
-}
-nav .nav-link.main {
-  font-family: "Centure Gothic Bold";
 }
 nav .nav-link:hover {
   text-decoration: underline;
@@ -230,6 +212,10 @@ nav .nav-link:hover {
   background: white;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -341,9 +327,6 @@ td.buckler {
   color: white;
 }
 
-.main-page .promo {
-  min-height: 800px;
-}
 @media screen and (max-width: 1200px) {
   .main-page .promo {
     height: auto;
@@ -354,24 +337,33 @@ td.buckler {
   background: url("../img/banner.jpg") center;
   background-size: cover;
   padding-top: 75px;
-  height: 570px;
+  text-align: center;
+  justify-content: end;
 }
 @media screen and (max-width: 600px) {
   .main-page .promo .promo-top {
-    max-height: 500px;
     height: 100%;
   }
 }
-.main-page .promo .logo-text {
-  max-width: 874px;
-  height: 148px;
-  margin-bottom: 45px;
+.main-page .promo .promo-top h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 50px;
+  text-align: center;
 }
-@media screen and (max-width: 900px) {
-  .main-page .promo .logo-text {
-    max-width: 80%;
-    height: auto;
+@media screen and (max-width: 500px) {
+  .main-page .promo .promo-top h1 {
+    font-size: 30px;
   }
+}
+.main-page .promo .promo-top h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Centure Gothic";
+}
+.main-page .promo .promo-top p {
+  line-height: 100%;
+  font-size: 20px;
+  font-family: "Centure Gothic";
 }
 .main-page .what {
   padding-top: 30px;
@@ -646,6 +638,9 @@ td.buckler {
   max-width: 1000px;
   color: #9A9A9A;
   text-align: center;
+}
+.main-page .promo-text a {
+  color: #9A9A9A;
 }
 .main-page .footer-promo {
   height: 360px;
@@ -1092,6 +1087,11 @@ td.buckler {
 @media screen and (max-width: 760px) {
   .schedule-page .days .day table td.master {
     padding-right: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .schedule-page .days .day table td.master {
+    font-size: 12px;
   }
 }
 
@@ -1818,6 +1818,116 @@ td.buckler {
   gap: 16px;
   text-decoration: none;
   color: #9A9A9A;
+}
+
+.contacts-page h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+  margin: 50px 0;
+}
+@media screen and (max-width: 500px) {
+  .contacts-page h1 {
+    font-size: 30px;
+  }
+}
+.contacts-page .row {
+  width: 100%;
+  gap: 40px;
+  height: 100%;
+  flex-wrap: nowrap;
+  color: #9A9A9A;
+}
+@media screen and (max-width: 990px) {
+  .contacts-page .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.contacts-page .row .left, .contacts-page .row .right {
+  padding: 0;
+}
+.contacts-page .row .left {
+  width: 100%;
+  flex-shrink: 1;
+}
+@media screen and (max-width: 990px) {
+  .contacts-page .row .left {
+    order: 2;
+  }
+}
+.contacts-page .row .left iframe {
+  border-radius: 10px;
+}
+.contacts-page .row .right {
+  width: 450px;
+  flex-shrink: 0;
+  font-size: 20px;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 990px) {
+  .contacts-page .row .right {
+    order: 1;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+.contacts-page .row .right p {
+  margin: 0;
+}
+.contacts-page .row .right a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9A9A9A;
+  text-decoration: navajowhite;
+}
+.contacts-page .sub-pages {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 50px 0 80px 0;
+  width: 100%;
+}
+@media screen and (max-width: 765px) {
+  .contacts-page .sub-pages {
+    flex-direction: column;
+    margin: 20px 0 40px 0;
+  }
+}
+.contacts-page .sub-pages a {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(154, 154, 154, 0.1);
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Centure Gothic";
+}
+.contacts-page .sub-pages a:hover {
+  background: rgba(154, 154, 154, 0.2);
+}
+@media screen and (max-width: 990px) {
+  .contacts-page .sub-pages a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .contacts-page .sub-pages a {
+    height: 100px;
+    gap: 10px;
+  }
 }
 
 .notFound-page {

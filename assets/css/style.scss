@@ -83,24 +83,6 @@ nav {
     padding: 0 10px;
     margin: 0 auto;
     justify-content: space-between !important;
-
-    .nav-socials {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-
-      a {
-        text-decoration: none;
-
-      }
-
-      @media screen and (max-width: 1060px) {
-        gap: 10px;
-      }
-      @media screen and (max-width: 990px) {
-        padding: 20px 0 20px 10px;
-      }
-    }
   }
 
   .nav-link {
@@ -112,6 +94,7 @@ nav {
     }
 
     &.to_main {
+      font-family: "Algerian TYGRA";
       @media screen and (max-width: 990px) {
         padding-left: 10px;
       }
@@ -119,10 +102,6 @@ nav {
 
     &.active {
       text-decoration: underline;
-    }
-
-    &.main {
-      font-family: 'Centure Gothic Bold';
     }
 
     &:hover {
@@ -276,6 +255,10 @@ nav {
   background: white;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -393,7 +376,6 @@ td.buckler {
 
 .main-page {
   .promo {
-    min-height: 800px;
     @media screen and (max-width: 1200px) {
       height: auto;
       min-height: auto;
@@ -403,23 +385,33 @@ td.buckler {
       background: url('../img/banner.jpg') center;
       background-size: cover;
       padding-top: 75px;
-      height: 570px;
+      text-align: center;
+      justify-content: end;
+
       @media screen and (max-width: 600px) {
-        max-height: 500px;
         height: 100%;
       }
-    }
+      h1{
+        font-family: "Algerian TYGRA";
+        font-size: 50px;
+        text-align: center;
 
-    .logo-text {
-      max-width: 874px;
-      height: 148px;
-      margin-bottom: 45px;
-
-      @media screen and (max-width: 900px) {
-        max-width: 80%;
-        height: auto;
+        @media screen and (max-width: 500px) {
+          font-size: 30px;
+        }
+      }
+      h2{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: "Centure Gothic";
+      }
+      p{
+        line-height: 100%;
+        font-size: 20px;
+        font-family: "Centure Gothic";
       }
     }
+
   }
 
   .what {
@@ -685,6 +677,10 @@ td.buckler {
       max-width: 1000px;
       color: $grey;
       text-align: center;
+    }
+
+    a {
+      color: $grey
     }
   }
 
@@ -1106,6 +1102,9 @@ td.buckler {
 
             @media screen and (max-width: 760px) {
               padding-right: 5px;
+            }
+            @media screen and (max-width: 500px) {
+              font-size: 12px;
             }
           }
         }
@@ -1811,6 +1810,115 @@ td.buckler {
     }
   }
 }
+
+.contacts-page {
+  h1 {
+    @include mainH;
+    margin: 50px 0;
+  }
+
+  .row {
+    width: 100%;
+    gap: 40px;
+    height: 100%;
+    flex-wrap: nowrap;
+    color: $grey;
+
+    @media screen and (max-width: 990px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .left, .right {
+      padding: 0;
+    }
+
+    .left {
+      width: 100%;
+      flex-shrink: 1;
+      @media screen and (max-width: 990px) {
+        order: 2;
+      }
+
+      iframe {
+        border-radius: 10px;
+      }
+    }
+  ;
+
+    .right {
+      width: 450px;
+      flex-shrink: 0;
+      font-size: 20px;
+      line-height: normal;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media screen and (max-width: 990px) {
+        order: 1;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $grey;
+        text-decoration: navajowhite;
+      }
+    }
+  }
+
+  .sub-pages {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 50px 0 80px 0;
+    width: 100%;
+
+    @media screen and (max-width: 765px) {
+      flex-direction: column;
+      margin: 20px 0 40px 0;
+    }
+
+    a {
+      height: 150px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: rgba(154, 154, 154, 0.1);
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-family: "Centure Gothic";
+
+      &:hover {
+        background: rgba(154, 154, 154, 0.2);
+      }
+
+      @media screen and (max-width: 990px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 765px) {
+        height: 100px;
+        gap: 10px;
+      }
+    }
+  }
+}
+
 
 .notFound-page {
   padding: 35px 0 100px 0;
