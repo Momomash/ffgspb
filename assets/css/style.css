@@ -22,6 +22,18 @@ body {
     pointer-events: none;
   }
 }
+nav .dropdown-menu {
+  border: none;
+  border-radius: 0;
+  background: black;
+}
+nav .dropdown-item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+nav .dropdown-toggle::after {
+  content: none;
+}
 nav.navbar {
   background-color: black;
   height: 50px;
@@ -52,6 +64,9 @@ nav .navbar-collapse {
   padding: 0 10px;
   margin: 0 auto;
   justify-content: space-between !important;
+}
+nav .nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
 }
 nav .nav-link {
   color: white;
@@ -1125,7 +1140,7 @@ td.buckler {
   width: 100%;
 }
 .price-page .subsriptions .button_link {
-  margin: 0 auto 70px auto;
+  margin: 0 auto;
 }
 .price-page .subsription {
   padding: 40px 0;
@@ -2013,6 +2028,119 @@ td.buckler {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+.gift-page .promo {
+  background: url("../img/gift/background.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+}
+@media screen and (max-width: 990px) {
+  .gift-page .promo {
+    height: 150px;
+  }
+}
+.gift-page .promo h1 {
+  font-family: "Algerian TYGRA";
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .gift-page .promo h1 {
+    font-size: 30px;
+  }
+}
+.gift-page .cards {
+  gap: 10px;
+}
+.gift-page .cards .card {
+  background-image: url("../img/background.jpg");
+  filter: brightness(1.5);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #9A9A9A;
+  width: 100%;
+  max-width: 510px;
+  height: 450px;
+  padding: 28px;
+  position: relative;
+  border-radius: 10px;
+  border: none;
+}
+@media screen and (max-width: 1200px) {
+  .gift-page .cards .card {
+    max-width: 450px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 990px) {
+  .gift-page .cards .card {
+    max-width: 320px;
+    height: auto;
+  }
+}
+.gift-page .cards .card:after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.gift-page .cards .card img {
+  height: 220px;
+  width: auto;
+}
+@media screen and (max-width: 990px) {
+  .gift-page .cards .card img {
+    height: 150px;
+  }
+}
+.gift-page .cards .card .text {
+  color: #9A9A9A;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.gift-page .cards .card .text.small {
+  font-size: 16px;
+  font-family: "Centure Gothic";
+  max-width: 350px;
+}
+@media screen and (max-width: 990px) {
+  .gift-page .cards .card .text.small {
+    font-size: 14px;
+  }
+}
+.gift-page .cards .card .text.big {
+  font-size: 32px;
+  font-family: "Algerian TYGRA";
+  max-width: 80%;
+}
+@media screen and (max-width: 990px) {
+  .gift-page .cards .card .text.big {
+    font-size: 26px;
+  }
+}
+.gift-page .text {
+  max-width: 990px;
+  margin: 0 auto;
+  text-align: center;
+  color: #9A9A9A;
+  font-size: 20px;
+}
+.gift-page .button_link {
+  margin: 70px auto 100px auto;
 }
 
 @font-face {
