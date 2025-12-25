@@ -12,7 +12,6 @@ $transparentGreyHover: rgba(40, 40, 40, 0.5);
   filter: brightness(1.5);
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -391,7 +390,8 @@ td.buckler {
       @media screen and (max-width: 600px) {
         height: 100%;
       }
-      h1{
+
+      h1 {
         font-family: "Algerian TYGRA";
         font-size: 50px;
         text-align: center;
@@ -400,12 +400,14 @@ td.buckler {
           font-size: 30px;
         }
       }
-      h2{
+
+      h2 {
         font-size: 20px;
         text-transform: uppercase;
         font-family: "Centure Gothic";
       }
-      p{
+
+      p {
         line-height: 100%;
         font-size: 20px;
         font-family: "Centure Gothic";
@@ -1140,7 +1142,7 @@ td.buckler {
     width: 100%;
 
     .button_link {
-      margin: 0 auto 70px auto;
+      margin: 0 auto;
     }
   }
 
@@ -1919,7 +1921,6 @@ td.buckler {
   }
 }
 
-
 .notFound-page {
   padding: 35px 0 100px 0;
   gap: 30px;
@@ -1978,7 +1979,7 @@ td.buckler {
     justify-content: center;
     gap: 50px;
 
-    .button_link:nth-child(2){
+    .button_link:nth-child(2) {
       background: transparent;
       color: white;
       border: 2px solid #ffffff;
@@ -1994,6 +1995,114 @@ td.buckler {
       gap: 20px;
     }
   }
+}
+
+.gift-page {
+  .promo {
+    background: url('../img/gift/background.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+
+    @media screen and (max-width: 990px) {
+      height: 150px;
+    }
+
+    h1 {
+      @include mainH;
+    }
+  }
+
+  .cards {
+    gap: 10px;
+
+    .card {
+      @include light-grey-back;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: $grey;
+      width: 100%;
+      max-width: 510px;
+      height: 450px;
+      padding: 28px;
+      position: relative;
+      border-radius: 10px;
+      border: none;
+
+      @media screen and (max-width: 1200px) {
+        max-width: 450px;
+        height: auto;
+      }
+      @media screen and (max-width: 990px) {
+        max-width: 320px;
+        height: auto;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      img {
+        height: 220px;
+        width: auto;
+        @media screen and (max-width: 990px) {
+          height: 150px;
+        }
+      }
+
+      .text {
+        color: $grey;
+        text-transform: uppercase;
+        margin: 0 auto;
+
+        &.small {
+          font-size: 16px;
+          font-family: "Centure Gothic";
+          max-width: 350px;
+          @media screen and (max-width: 990px) {
+            font-size: 14px;
+          }
+        }
+
+        &.big {
+          font-size: 32px;
+          font-family: "Algerian TYGRA";
+          max-width: 80%;
+          @media screen and (max-width: 990px) {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  .text {
+    max-width: 990px;
+    margin: 0 auto;
+    text-align: center;
+    color: $grey;
+    font-size: 20px;
+  }
+
+  .button_link {
+    margin: 70px auto 100px auto;
+  }
+
 }
 
 @font-face {
