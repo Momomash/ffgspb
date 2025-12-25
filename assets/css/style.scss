@@ -49,6 +49,19 @@ body {
 
 nav {
 
+  .dropdown-menu {
+    border: none;
+    border-radius: 0;
+    background: black;
+  }
+  .dropdown-item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .dropdown-toggle::after {
+    content: none;
+  }
+
   &.navbar {
     background-color: black;
     height: $navbarHeight;
@@ -82,6 +95,10 @@ nav {
     padding: 0 10px;
     margin: 0 auto;
     justify-content: space-between !important;
+  }
+
+  .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
   }
 
   .nav-link {

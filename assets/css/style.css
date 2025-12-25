@@ -22,6 +22,18 @@ body {
     pointer-events: none;
   }
 }
+nav .dropdown-menu {
+  border: none;
+  border-radius: 0;
+  background: black;
+}
+nav .dropdown-item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+nav .dropdown-toggle::after {
+  content: none;
+}
 nav.navbar {
   background-color: black;
   height: 50px;
@@ -52,6 +64,9 @@ nav .navbar-collapse {
   padding: 0 10px;
   margin: 0 auto;
   justify-content: space-between !important;
+}
+nav .nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
 }
 nav .nav-link {
   color: white;
