@@ -54,10 +54,12 @@ nav {
     border-radius: 0;
     background: black;
   }
+
   .dropdown-item {
     padding-top: 8px;
     padding-bottom: 8px;
   }
+
   .dropdown-toggle::after {
     content: none;
   }
@@ -843,6 +845,10 @@ td.buckler {
     .controls-wrapper .controls {
       display: flex;
     }
+  }
+
+  .controls {
+    display: flex;
   }
 
   .cards {
