@@ -810,6 +810,9 @@ td.buckler {
     display: flex;
   }
 }
+.masters-page .controls {
+  display: flex;
+}
 .masters-page .cards {
   gap: 16px;
   margin-bottom: 80px;

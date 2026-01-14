@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="assets/css/bootstrap-5.3.3.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/slick-1.8.1.css"/>
-    <link href="assets/css/style.css?v32" rel="stylesheet">
+    <link href="assets/css/style.css?v33" rel="stylesheet">
 </head>
 <body>
 <!-- Yandex.Metrika counter -->
@@ -59,7 +59,7 @@
          style="background-image: url('assets/img/masters/background.png')">
         <h1>Инструкторы</h1>
     </div>
-    <div class="container-xxl">
+    <div class="container-fluid">
         <div class="controls-wrapper">
             <div class="cards d-flex flex-row" id="mastersCards">
                 <a href="kultaev" class="card" style="background-image: url('assets/img/masters/kultaev.png')">
@@ -89,13 +89,31 @@
                 <a href="loginov" class="card" style="background-image: url('assets/img/masters/loginov.png')">
                     <div class="text">
                         <p class="name">Логинов Максим</p>
-                        <p class="description">Инструктор по сабле</p>
+                        <p class="description">Инструктор по сабле<br/> и рапире Ренессанса</p>
                     </div>
                 </a>
                 <a href="bunakov" class="card" style="background-image: url('assets/img/masters/bunakov.png')">
                     <div class="text">
                         <p class="name">Бунаков Константин</p>
                         <p class="description">Инструктор по классической рапире</p>
+                    </div>
+                </a>
+                <a href="solovyanov" class="card" style="background-image: url('assets/img/masters/solovyanov.jpg')">
+                    <div class="text">
+                        <p class="name">Соловьянов Сергей</p>
+                        <p class="description">Инструктор физподготовки</p>
+                    </div>
+                </a>
+                <a href="lukin" class="card" style="background-image: url('assets/img/masters/lukin.jpg')">
+                    <div class="text">
+                        <p class="name">Лукин Тимир</p>
+                        <p class="description">Инструктор по растяжке и физподготовке</p>
+                    </div>
+                </a>
+                <a href="shafranovsky" class="card" style="background-image: url('assets/img/masters/shafranovsky.jpg')">
+                    <div class="text">
+                        <p class="name">Шаврановский Алексей</p>
+                        <p class="description">Инструктор по двуручному мечу</p>
                     </div>
                 </a>
             </div>
@@ -131,7 +149,7 @@
             , toggleSlick;
 
         const settings = {
-            slidesToScroll: 1,
+            slidesToScroll: 5,
             infinite: true,
             swipeToSlide: true,
             prevArrow: $mastersCards.parent().find('.prevArrow'),
@@ -140,11 +158,24 @@
         };
 
         toggleSlick = function () {
-            if ($window.width() <= 1440) {
                 $mastersCards.slick({
-                    slidesToShow: 4,
+                    slidesToShow: 6,
                     ...settings,
                     responsive: [
+                        {
+                            breakpoint: 1880,
+                            settings: {
+                                slidesToShow: 5,
+                                ...settings,
+                            }
+                        },
+                        {
+                            breakpoint: 1440,
+                            settings: {
+                                slidesToShow: 4,
+                                ...settings,
+                            }
+                        },
                         {
                             breakpoint: 1100,
                             settings: {
@@ -168,9 +199,6 @@
                         },
                     ]
                 })
-            } else {
-                $mastersCards.slick('unslick');
-            }
         }
         $window.resize(toggleSlick);
         toggleSlick();
