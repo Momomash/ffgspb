@@ -837,8 +837,8 @@ td.buckler {
   flex-shrink: 0;
   background-color: #0F0F0F;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110% 110%;
+  background-position: center center;
+  background-size: cover;
   color: white;
   border-radius: 10px;
   text-align: center;
@@ -848,7 +848,6 @@ td.buckler {
   .masters-page .cards .card {
     width: 240px;
     height: 430px;
-    background-size: cover;
   }
 }
 @media screen and (max-width: 1500px) {
@@ -861,7 +860,6 @@ td.buckler {
   .masters-page .cards .card {
     margin: 10px;
     height: 450px;
-    background-position: top center;
   }
 }
 @media screen and (max-width: 900px) {
