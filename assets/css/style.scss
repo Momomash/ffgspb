@@ -1066,20 +1066,31 @@ td.buckler {
   }
 
   .days {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px 24px;
+    column-count: 2;
+    column-gap: 12px;
     margin: 40px 0 120px 0;
 
     @media screen and (max-width: 1200px) {
       margin: 20px 0 60px 0;
     }
 
+    @media screen and (max-width: 720px) {
+      column-count: 1;
+    }
+
     .day {
-      max-width: 545px;
+      width: 100%;
+      max-width: 555px;
+      break-inside: avoid;
+
+      @media screen and (max-width: 820px) {
+        max-width: 450px;
+        font-size: 12px;
+      }
+
       @media screen and (max-width: 570px) {
         max-width: 480px;
+        font-size: 12px;
       }
 
       .head {
@@ -1092,6 +1103,7 @@ td.buckler {
       table {
         border-collapse: collapse;
         font-family: 'Centure Gothic';
+        font-size: 15px;
 
         td {
           border: 3px solid $grey;
@@ -1104,10 +1116,12 @@ td.buckler {
             font-size: 24px;
             text-align: center;
             width: 165px;
-            @media screen and (max-width: 570px) {
+
+            @media screen and (max-width: 850px) {
               font-size: 16px;
               width: 70px;
             }
+
           }
 
           &.master {
