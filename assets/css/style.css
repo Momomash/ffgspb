@@ -715,6 +715,11 @@ td.buckler {
     display: none;
   }
 }
+@media screen and (max-width: 1400px) {
+  .groups-page .controls-wrapper .controls, .groups .controls-wrapper .controls {
+    display: flex;
+  }
+}
 .groups-page .cards, .groups .cards {
   gap: 20px;
   margin-bottom: 80px;
@@ -749,10 +754,6 @@ td.buckler {
 @media screen and (max-width: 1400px) {
   .groups-page .cards .card, .groups .cards .card {
     height: 350px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .groups-page .cards .card, .groups .cards .card {
     margin: 0 2px;
   }
 }

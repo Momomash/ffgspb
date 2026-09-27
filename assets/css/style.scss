@@ -756,6 +756,12 @@ td.buckler {
     }
   }
 
+  @media screen and (max-width: 1400px) {
+    .controls-wrapper .controls {
+      display: flex;
+    }
+  }
+
   .cards {
     gap: 20px;
     margin-bottom: 80px;
@@ -786,9 +792,6 @@ td.buckler {
 
       @media screen and (max-width: 1400px) {
         height: 350px;
-      }
-
-      @media screen and (max-width: 1000px) {
         margin: 0 2px;
       }
 
