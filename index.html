@@ -123,6 +123,12 @@
                             <p class="description">Мощь в атаке, надёжность в защитe</p>
                         </div>
                     </a>
+                    <a href="montante" class="card" style="background-image: url('assets/img/groups/montante.png')">
+                        <div class="text">
+                            <p class="name">Двуручный меч</p>
+                            <p class="description">Универсальное оружие — один против многих</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="controls justify-content-between align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" id="leftArrow"
@@ -298,12 +304,20 @@
                 ...generalSettings,
                 ...whyCardsArrows,
             });
-            if ($window.width() < 1000) {
+            if ($window.width() < 1400) {
                 $groupsCards.slick({
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     ...generalSettings,
                     ...groupsCardsArrows,
                     responsive: [
+                        {
+                            breakpoint: 1000,
+                            settings: {
+                                slidesToShow: 3,
+                                ...generalSettings,
+                                ...groupsCardsArrows
+                            }
+                        },
                         {
                             breakpoint: 768,
                             settings: {
