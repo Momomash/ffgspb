@@ -790,7 +790,7 @@ td.buckler {
   }
 }
 @media screen and (min-width: 1400px) {
-  .masters-page .container, .masters-page .container-lg, .masters-page .container-md, .masters-page .container-sm, .masters-page .container-xl, .masters-page .container-xxl {
+  .masters-page .container, .masters-page .container-fluid, .masters-page .container-lg, .masters-page .container-md, .masters-page .container-sm, .masters-page .container-xl, .masters-page .container-xxl {
     max-width: 1590px;
   }
 }
@@ -815,27 +815,32 @@ td.buckler {
   display: flex;
 }
 .masters-page .cards {
-  gap: 16px;
   margin-bottom: 80px;
   justify-content: center;
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 599px) {
   .masters-page .cards {
-    gap: 10px;
+    max-width: 320px;
+    margin: 0 auto 80px auto;
   }
 }
-@media screen and (max-width: 600px) {
-  .masters-page .cards {
-    max-width: 300px;
-    margin: 0 auto 80px auto;
+.masters-page .cards .slide {
+  width: 294px;
+  padding: 0 12px;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 900px) {
+  .masters-page .cards .slide {
+    padding: 0 6px;
   }
 }
 .masters-page .cards .card {
   display: flex;
   justify-content: end;
-  width: 250px;
-  height: 450px;
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  aspect-ratio: 2/3;
   background-color: #0F0F0F;
   background-repeat: no-repeat;
   background-position: center center;
@@ -844,29 +849,6 @@ td.buckler {
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
-}
-@media screen and (max-width: 1600px) {
-  .masters-page .cards .card {
-    width: 240px;
-    height: 430px;
-  }
-}
-@media screen and (max-width: 1500px) {
-  .masters-page .cards .card {
-    width: 230px;
-    height: 412px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .masters-page .cards .card {
-    margin: 10px;
-    height: 450px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .masters-page .cards .card {
-    margin: 5px;
-  }
 }
 .masters-page .cards .card .text {
   height: 94px;
