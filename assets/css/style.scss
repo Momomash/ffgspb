@@ -827,7 +827,7 @@ td.buckler {
   }
 
   @media screen and (min-width: 1400px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
       max-width: 1590px;
     }
   }
@@ -855,23 +855,32 @@ td.buckler {
   }
 
   .cards {
-    gap: 16px;
     margin-bottom: 80px;
     justify-content: center;
-    @media screen and (max-width: 1600px) {
-      gap: 10px;
-    }
-    @media screen and (max-width: 600px) {
-      max-width: 300px;
+    @media screen and (max-width: 599px) {
+      max-width: 320px;
       margin: 0 auto 80px auto;
+    }
+
+    // Ширину слайда slick задаёт инлайном, поэтому промежуток между карточками
+    // делается внутренним отступом обёртки — иначе трек переполняется и крайняя карточка обрезается.
+    .slide {
+      width: 294px;
+      padding: 0 12px;
+      flex-shrink: 0;
+
+      @media screen and (max-width: 900px) {
+        padding: 0 6px;
+      }
     }
 
     .card {
       display: flex;
       justify-content: end;
-      width: 250px;
-      height: 450px;
-      flex-shrink: 0;
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+      aspect-ratio: 2 / 3; // соотношение фотографий инструкторов
       background-color: #0F0F0F;
       background-repeat: no-repeat;
       background-position: center center;
@@ -880,22 +889,6 @@ td.buckler {
       border-radius: 10px;
       text-align: center;
       text-decoration: none;
-
-      @media screen and (max-width: 1600px) {
-        width: 240px;
-        height: 430px;
-      }
-      @media screen and (max-width: 1500px) {
-        width: 230px;
-        height: 412px;
-      }
-      @media screen and (max-width: 1440px) {
-        margin: 10px;
-        height: 450px;
-      }
-      @media screen and (max-width: 900px) {
-        margin: 5px;
-      }
 
       .text {
         height: 94px;
